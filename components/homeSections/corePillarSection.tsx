@@ -1,3 +1,5 @@
+import { BookIcon, ChipIcon, GlobalIcon, PeopleIcon } from '@/static-data/images'
+import { Pop_400 } from '../fontAids/Fonts'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import CorePillarCard from './ui/CorePillarCard'
@@ -5,35 +7,39 @@ import CorePillarCard from './ui/CorePillarCard'
 const CorePillarInfo  = [
     {
         title: "Tech Training",
-        description: "Hands-on bootcamps in AI, cloud computing, cybersecurity, and web development."
+        description: "Hands-on bootcamps in AI, cloud computing, cybersecurity, and web development.",
+        img: ChipIcon
     },
     {
         title: "Community Building",
-        description: "Vibrant developer communities — GDSC, HNG, Buildathon, and more — open to all."
+        description: "Vibrant developer communities — GDSC, HNG, Buildathon, and more — open to all.",
+        img: PeopleIcon
     },
     {
         title: "Research & Labs",
-        description: "State-of-the-art labs supporting cutting-edge research in emerging technologies."
+        description: "State-of-the-art labs supporting cutting-edge research in emerging technologies.",
+        img: BookIcon
     },
     {
         title: "Global Partnerships",
-        description: "Collaborations with Huawei, CISCO, Google, and top Nigerian tech organisations."
+        description: "Collaborations with Huawei, CISCO, Google, and top Nigerian tech organisations.",
+        img: GlobalIcon
     }
 ]
 
 const CorePillarSection = () => {
   return (
-    <section>
+    <section className='core-pillar-section-shadow core-pillar-section-bg common-section-padding'>
         <div className='text-center flex flex-col items-center justifty-center'>
             <SectionHeaderText text='Core Pillars' />
+            <div className='pt-4'/>
             <SectionSubHeaderText text='What We Offer' />
-            <h4 className='base-grey-text-100'> 
-                Four pillars that power every innovator who walks through our doors.
-            </h4>
+            <Pop_400 className='base-grey-text-200 text-[16px] pt-4 leading-[24px] tracking-[0px] w-128'  text='Four pillars that power every innovator who walks through our doors.' /> 
+                
         </div>
-        <div className='grid grid-cols-2 gap-10 '>
+        <div className='grid grid-cols-2 gap-10 pt-14  common-max-width mx-auto'>
             {CorePillarInfo.map((pillar, index) => (
-                <CorePillarCard key={index} title={pillar.title} description={pillar.description} />
+                <CorePillarCard key={index} title={pillar.title} description={pillar.description} img={pillar.img} />
             ))}
         </div>
     </section>

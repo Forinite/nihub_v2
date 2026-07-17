@@ -27,8 +27,8 @@ const navHeaders = `${jetbrainsmono.className} uppercase text-[10px] font-bold t
 const linksLabels = `${baiJamjuree_300.className} text-[14px] py-[6px]`
 const Footer = () => {
   return (
-    <footer  className='text-white base-purple-bg-2 pt-14 pb-8 lg:px-32'>
-      <div className='flex items-start justify-between '>
+    <footer  className='text-white base-purple-bg-2 pt-14 pb-8 lg:px-32 '>
+      <div className='flex items-start justify-between  '>
         <div className='min-w-[320px] w-[60%]'>
           <Image  src='/assets/images/nihub-logo-light.png' alt='NIHUB logo' width={186} height={40} />
           <p className={` ${baiJamjuree_400.className} text-[14px] font-normal leading-[24.5px] pt-4  max-w-[320px] `} >NIHUB — a community of innovators shaping the future through technology, collaboration, and growth.</p>

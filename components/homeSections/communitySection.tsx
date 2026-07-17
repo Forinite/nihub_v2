@@ -1,4 +1,3 @@
-import { title } from "process"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import SectionSubHeaderText from "../ui/SectionSubHeaderText"
 import CommentCard from "./ui/CommentCard"
@@ -26,13 +25,15 @@ const comments = [
 
 const CommunitySection = () => {
   return (
-    <section>
-        <div>
+    <section className="bg-white common-section-padding">
+        <div className="flex flex-col items-center">
+
             <SectionHeaderText text="Community Stories" />
+            <div className="mt-4" />
             <SectionSubHeaderText text="What Our Community Says" />
         </div>
 
-        <div>
+        <div className="pt-14 w-full max-w-[1004] grid grid-cols-3 gap-[21px] mx-auto">
             {comments.map((comment, index) => (
                 <CommentCard 
                     key={index}

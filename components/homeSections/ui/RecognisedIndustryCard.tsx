@@ -1,16 +1,19 @@
+import { Bai_600 } from "@/components/fontAids/Fonts"
+import { ArrowBentUpIcon, BoltIcon, MedalIcon, SheildIcon, StarIcon } from "@/static-data/images"
 import Image from "next/image"
 
 const icons = [
-    '/i.jpg','/i.jpg','/i.jpg','/i.jpg','/i.jpg','/i.jpg'
+    SheildIcon, BoltIcon, StarIcon, ArrowBentUpIcon, MedalIcon
 ]
 const RecognisedIndustryCard = ({text, index}: {text: string , index: number}) => {
   return (
-    <div className=" flex items-center justify-center rounded w-fit py-2 px-2 h-fit base-border-grey-100">
-        <div>
-            <Image src={icons[index]} alt='icon' width={10} height={10} /> 
+    <div className=" flex items-center justify-center rounded-full  w-fit py-2.5 px-5  h-fit base-border-grey-100 bg-white">
+        <div className="w-fit h-fit mr-2">
+            <Image src={icons[index]} alt='icon' width={13} height={13} /> 
         </div>
         
-        <p className="text-[13px]">{text}</p>
+        <Bai_600 className="text-[13px]" text={text} />
+          
     </div>
   )
 }

@@ -1,6 +1,6 @@
 export const heroStats = [
     { label: "Individuals Trained", value: "1000+" },
-    { label: "Events Hosted", value: "100+" },
+    { label: "Events Hosted", value: "50+" },
     { label: "Awards Won", value: "10+" },
 ]
 

@@ -1,3 +1,4 @@
+import { Bai_400, Bai_700, Pop_400 } from "@/components/fontAids/Fonts";
 import { getInitials } from "@/lib/utils"
 
 interface CommentCardProps {
@@ -14,20 +15,20 @@ const CommentCard = ({name, title, comment, index} : CommentCardProps) => {
 
 
   return (
-    <div className=''>
-        <div>
+    <div className='comment-cont rounded-[16px] p-[26px]'>
+        <div className="h-11">
 
         </div>
-        <p className='base-black-text'>
-           {comment}
-        </p>
-        <div className='flex items-center '>
+
+           <Bai_400 text={comment}  className="base-black-text pt-2 text-[15px] leading-[26.5px]"/>
+
+        <div className='flex items-center pt-6 gap-3'>
             <div className={`w-10 h-10 rounded-full text-[12px] text-white ${initialsBgs[index]} flex items-center justify-center`}>
-                { getInitials(name)}
+                <Bai_700 text={ getInitials(name)}  />
             </div>
             <div>
-                <h5 className='base-black-text text-[13px]'> {name} </h5>
-                <h5 className='base-grey-text-100 text-[12px]'>{title}</h5>
+                <Bai_700  text={name} className="base-black-text text-[13px]" /> 
+                <Pop_400 text={title} className="base-grey-text-100 text-[12px]" />
             </div>
 
         </div>

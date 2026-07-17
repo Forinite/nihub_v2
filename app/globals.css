@@ -62,12 +62,23 @@ body {
   color: #6B5B8A;
 }
 
+.base-purple-text-200{
+  color: #735F8B;
+}
+.base-purple-text-300{
+  color: #9B8AB0;
+}
+
+
+
+
+
 .base-black-text{
   color: #1C1C1C;
 }
 
 .base-border-grey-100 {
-  border-top: 1px solid #E0E0E0
+  border: 1px solid #E0E0E0
 }
 .link-text{
   color: #2B1043;
@@ -84,11 +95,96 @@ body {
   background-color: #F5F0FF;
 }
 
+.core-pillar-section-bg{
+  background-color: #F5F5F5;
+}
+
 .cta-service-link{
   border: 1px solid #2B104333;
 }
 .cta-community-link {
   box-shadow: 0px 4px 14px 0px #2B104359;
 
+}
+
+.comment-cont{
+  border-top: 1px solid #EEEEEE;
+  box-shadow: 0px 2px 12px 0px #0A0F2C0D;
+
+}
+
+.recognitionBoxShadow{
+  box-shadow: 0px 2px 20px 0px #2B104312;
+
+}
+
+.common-card-shadow{
+  box-shadow: 0px 2px 12px 0px #0A0F2C0F;
+}
+
+.core-pillar-section-shadow{
+  box-shadow: 0px 4px 15px 0px #00000040 inset;
+  box-shadow: 0px -4px 15px 0px #00000040 inset;
+}
+
+.about-card-shadow {
+  box-shadow: 0px 4px 20px 0px #0A0F2C24;
+}
+
+.hero-card-shadow {
+
+  box-shadow: 0px 4px 4px 0px #00000014;
+
+}
+
+.hero-section-shadow {
+  background: linear-gradient(180deg, rgba(245, 240, 255, 0) 30.57%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.link-shadow {
+  box-shadow: 0px 4px 14px 0px #2B104359;
+}
+
+.link-border {
+  border-top: 1px solid #2B104340
+}
+.common-rounding {
+  border-radius: 16px;
+}
+
+.common-section-padding{
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+.event-ongoing-bg {
+  background-color: #22C55E;
+}
+.event-upcoming-bg {
+  background-color: #F97316;
+}
+.event-past-bg {
+  background-color: #5d5f5e;
+}
+
+.common-max-width {
+  max-width: 1008px;
+}
+
+.icon-box-bg {
+  background-color: #2B104314;
+  
+}
+
+.clarity-text-gradient {
+  background: linear-gradient(120deg, #FFB234 7.74%, #6A3FA0 58.45%, #C084FC 92.26%);
+  background-clip: text;
+  color: transparent;
+
+}
+
+.bg-dots {
+  inset: 0;
+  background-image: radial-gradient(#FFB23426 1.5px, transparent 0px);
+  background-size: 12px 12px;
 }
 
