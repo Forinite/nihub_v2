@@ -13,8 +13,8 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="pt-20]">
-  
+    <main className="">
+
       <HeroSection />
       <AboutSection />
       <CorePillarSection />
@@ -22,7 +22,7 @@ export default function Home() {
       <ImpactSection  />
       <RecognitionSection />
       <CommunitySection />
-      <CTASection /> 
+      <CTASection />
       <Footer />
 
 
