@@ -1,7 +1,8 @@
 import { Bai_400, Bai_600, Bai_700, Jet_400, Pop_400 } from '@/components/fontAids/Fonts'
-import { TicketIcon } from '@/static-data/images'
+import {CalenderIcon, LocationIcon, TicketIcon} from '@/static-data/images'
 import Image from 'next/image'
 import Link from 'next/link'
+import {toLocaleString} from "eslint-config-next";
 
 const FeaturedEvent = {
     title: "Tech Week",
@@ -62,26 +63,23 @@ const FeaturedEventCard = () => {
 
         <Bai_600 text='Starts In' className='pt-4 text-[10px] base-grey-text-100 uppercase tracking-[1px]' />
         <div className='flex items-center justify-between pt-2 w-full '>
-            {["days", "hours", "minutes", "seconds"].map((unit, index) => (
+            {(["days", "hours", "minutes", "seconds"] as const).map((unit, index) => (
                 <div key={unit} className={"flex flex-col items-center justify-center text-center   w-[71px] h-[50px] rounded-[10px] p-2 bg-[#F5F5F5]"}>
-                    <Bai_700 className='text-[18px] leading-4.5' text={startsIn[unit]} />
+                    <Bai_700 className='text-[18px] leading-4.5' text={startsIn[unit].toString()} />
                     <Jet_400 text={unit} className='text-[9px] leading-[13.5px] base-grey-text-100 uppercase' />
                 </div>
             ))}
         </div>
 
         <div className='pt-4 flex items-center justify-between'>
-            <div className='flex items-center w-fit base-grey-text-100 space-x-0.5'>
-                <div className='w-[8.25px] h-[8.25px] p-[1.375] border border-[#9e9e9e]' >
-
-                </div>
+            <div className='flex items-center w-fit base-grey-text-100 space-x-2'>
+                <Image src={CalenderIcon} alt={'Date'} width={11} height={11}/>
                 <Bai_400 text={FeaturedEvent.dateString} className='text-[11px]'/>
             </div>
 
-            <div className='flex items-center w-fit base-grey-text-100 space-x-0.5'>
-                <div className='w-[8.25px] h-[8.25px] p-[1.375] border border-[#9e9e9e]' >
+            <div className='flex items-center w-fit base-grey-text-100 space-x-2'>
+                <Image src={LocationIcon} alt={'Date'} width={11} height={11}/>
 
-                </div>
                 <Bai_400 text={FeaturedEvent.Location} className='text-[11px]'/>
             </div>
         </div>

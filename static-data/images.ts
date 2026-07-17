@@ -30,6 +30,11 @@ import ArrowBentRight from '@/public/assets/images/icons/ArrowBentRightIcon.svg'
 import Ticket from '@/public/assets/images/icons/TicketIcon.svg'
 
 
+import Calender from '@/public/assets/images/icons/CalenderIcon.svg'
+import Location from '@/public/assets/images/icons/LocationIcon.svg'
+
+
+
 
 export const dotGridImage = dot_grid
 export const dotGridImage2 = dot_grid_2
@@ -60,5 +65,6 @@ export const  ArrowBentRightIcon = ArrowBentRight
 
 export const  TicketIcon = Ticket
 
-// cup
+export const  CalenderIcon = Calender
+export const  LocationIcon = Location
 
