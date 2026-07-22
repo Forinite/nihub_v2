@@ -30,15 +30,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       
-      <body className="min-h-full flex-col ">
-      <div className=" md:block hidden ">
+      <body className="min-h-full flex flex-col ">
         <Navbar />
         {children}
-      </div>
 
-        <div className="flex-col md:hidden flex items-center justify-center min-h-screen">
-          <Bai_600 className={'text-center text-2xl base-grey-text-200'} text={'Mobile View Under Construction, Please View On Desktop'} />
-        </div>
+        {/*<div className="flex-col hidden  items-center justify-center min-h-screen">*/}
+        {/*  <Bai_600 className={'text-center text-2xl base-grey-text-200'} text={'Mobile View Under Construction, Please View On Desktop'} />*/}
+        {/*</div>*/}
       </body>
 
 

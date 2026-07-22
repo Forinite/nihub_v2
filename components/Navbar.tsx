@@ -17,9 +17,9 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full h-20 z-50  flex items-center">
         <div className="flex items-center justify-between p-4 bg-white text-gray-400  w-full h-full">
-            <div>
+            <Link href={'/'}>
                 <Image src="/assets/images/nihub-logo-dark.png" alt="Logo" width={200} height={40} />
-            </div>
+            </Link>
 
             <nav>
                 <ul>

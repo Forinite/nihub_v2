@@ -33,6 +33,7 @@ import Ticket from '@/public/assets/images/icons/TicketIcon.svg'
 import Calender from '@/public/assets/images/icons/CalenderIcon.svg'
 import Location from '@/public/assets/images/icons/LocationIcon.svg'
 
+import Building from '@/public/assets/images/icons/BuildingIcon.png'
 
 
 
@@ -67,4 +68,7 @@ export const  TicketIcon = Ticket
 
 export const  CalenderIcon = Calender
 export const  LocationIcon = Location
+
+export const  BuildingIcon = Building
+
 

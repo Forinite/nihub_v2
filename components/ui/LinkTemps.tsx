@@ -7,7 +7,7 @@ import { ArrowBentRightIcon } from "@/static-data/images"
 
 export const LinkTemp1= ({href, className, linkIndex, text}: {href: string, className?: string, linkIndex?: number, text: string}) => {
   return (
-    <Link className={`${className} flex items-center justify-center space-x-2  capitalize`} href={href}>
+    <Link className={`${className} transition-all flex items-center justify-center space-x-2  capitalize`} href={href}>
        <Bai_700 text={text} />
        {linkIndex == 1  && 
        <div>

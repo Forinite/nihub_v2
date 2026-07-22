@@ -34,12 +34,21 @@ const CorePillarSection = () => {
             <SectionHeaderText text='Core Pillars' />
             <div className='pt-4'/>
             <SectionSubHeaderText text='What We Offer' />
-            <Pop_400 className='base-grey-text-200 text-[16px] pt-4 leading-[24px] tracking-[0px] w-128'  text='Four pillars that power every innovator who walks through our doors.' /> 
+            <Pop_400 className='base-grey-text-200 text-[16px] pt-4 leading-6  w-128'  text='Four pillars that power every innovator who walks through our doors.' /> 
                 
         </div>
-        <div className='grid grid-cols-2 gap-10 pt-14  common-max-width mx-auto'>
+        <div className='grid grid-cols-2 gap-10 mt-14  common-max-width mx-auto'>
             {CorePillarInfo.map((pillar, index) => (
-                <CorePillarCard key={index} title={pillar.title} description={pillar.description} img={pillar.img} />
+                <CorePillarCard 
+                    key={index} 
+                    title={pillar.title} 
+                    description={pillar.description} 
+                    img={pillar.img} 
+                    imgSize={{x:20, y:20}}
+                    iconContSize={{x:44, y:44}}
+                    headerClassName='base-black-text pt-4'
+                    textClassName='base-grey-text-200 text-[13px] leading-[21.13px] tracking-[0px] pt-2'
+                    />
             ))}
         </div>
     </section>

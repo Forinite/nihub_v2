@@ -69,6 +69,10 @@ body {
   color: #9B8AB0;
 }
 
+.base-purple-text-400 {
+  color: #7A6A94;
+
+}
 
 
 
@@ -91,7 +95,7 @@ body {
   line-height: 16.5px;
 }
 
-.impact-section-bg{
+.pink-bg{
   background-color: #F5F0FF;
 }
 
@@ -131,14 +135,45 @@ body {
   box-shadow: 0px 4px 20px 0px #0A0F2C24;
 }
 
+.aboutpage-about-minicard-shadow{
+  box-shadow: 0px 4px 20px 0px #2B10431F;
+
+}
+
+.about-page-card-shadow {
+  box-shadow: 0px 16px 60px 0px #2B104324;
+
+}
+
+.team-card-shadow {
+  box-shadow: 0px 2px 16px 0px #2B104312;
+
+}
+
+
 .hero-card-shadow {
 
   box-shadow: 0px 4px 4px 0px #00000014;
 
 }
+.about-page-common-card-shadow {
+  border-top: 1px solid #2B10430F;
+  box-shadow: 0px 2px 12px 0px #2B104312;
+}
+
+.achievement-card-shadow {
+  border-top: 1px solid #2B10430F;
+  box-shadow: 0px 2px 12px 0px #2B10430F;
+}
+
+
 
 .hero-section-shadow {
   background: linear-gradient(180deg, rgba(245, 240, 255, 0) 30.57%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.about-page-about-section-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #F5F0FF 100%);
 }
 
 .link-shadow {
@@ -168,11 +203,23 @@ body {
 
 .common-max-width {
   max-width: 1008px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.about-page-common-max-width {
+  max-width: 1023px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .icon-box-bg {
   background-color: #2B104314;
   
+}
+
+.icon-box-bg-100 {
+  background: #2B10430F;
 }
 
 .clarity-text-gradient {
@@ -188,3 +235,20 @@ body {
   background-size: 12px 12px;
 }
 
+
+.about-page-linear-gradient-dot-grid-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #F5F0FF 100%);
+
+}
+
+.story-link-shadow {
+  box-shadow: 0px 4px 18px 0px #FFB23473;
+}
+
+.story-cta-shadow {
+  box-shadow: 0px 8px 40px 0px #2B104340;
+}
+
+.story-cta-gradient {
+  background: radial-gradient(60% 80% at 100% 50%, rgba(255, 178, 52, 0.12) 0%, rgba(0, 0, 0, 0) 100%);
+}
