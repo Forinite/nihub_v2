@@ -12,37 +12,37 @@ const teamMembers = [
   },
 
   { 
-    name: 'Dr. Aliyu Musa Bade',
-    role: 'Director / Founder',
-    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
-    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
+    name: 'Maryam Abdullahi',
+    role: 'Community Managerr',
+    statement: "Dedicated to growing and nurturing NIHUB's vibrant ecosystem, ensuring every member finds their voice and their place.",
+    socials: ['/linkedin/link','/x/link']
   },
   
-  { 
-    name: 'Dr. Aliyu Musa Bade',
-    role: 'Director / Founder',
-    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
-    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
-  },
     { 
-    name: 'Dr. Aliyu Musa Bade',
-    role: 'Director / Founder',
-    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
-    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
+    name: 'Ibrahim Suleiman',
+    role: 'Head of Training & Programmes',
+    statement: 'Designs and delivers world-class bootcamps in AI, cloud, and web development — turning curriculum into careers.',
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
   },
 
   { 
-    name: 'Dr. Aliyu Musa Bade',
-    role: 'Director / Founder',
-    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
-    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
+    name: 'Fatima Umar',
+    role: 'Research & Innovation Lead',
+    statement: "Spearheads NIHUB's research initiatives and lab projects, connecting students with cutting-edge problems worth solving.",
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
   },
   
   { 
-    name: 'Dr. Aliyu Musa Bade',
-    role: 'Director / Founder',
-    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
-    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
+    name: 'David Okonkwo',
+    role: 'Partnerships & Sponsorships',
+    statement: "Builds and maintains NIHUB's relationships with Huawei, CISCO, Google, and other global and Nigerian partners.",
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  },
+  { 
+    name: 'Aisha Bello',
+    role: 'Events & Outreach Coordinator',
+    statement: "Orchestrates NIHUB's packed calendar of hackathons, workshops, and tech talks — making every event one to remember.",
+    socials: ['/linkedin/link','/x/link']
   },
 ]
 

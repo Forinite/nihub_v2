@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import {Bai_600} from "@/components/fontAids/Fonts";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NIHUB",
-  description: "The HUB of NI",
+  description: "The hub where ideas become impact",
 };
 
 export default function RootLayout({
@@ -31,12 +32,16 @@ export default function RootLayout({
     >
       
       <body className="min-h-full flex flex-col ">
-        <Navbar />
-        {children}
+        <div className="hidden md:block">
+          <Navbar />
+          {children}
+          <Footer />
 
-        {/*<div className="flex-col hidden  items-center justify-center min-h-screen">*/}
-        {/*  <Bai_600 className={'text-center text-2xl base-grey-text-200'} text={'Mobile View Under Construction, Please View On Desktop'} />*/}
-        {/*</div>*/}
+        </div>
+
+        <div className="flex-col md:hidden flex  items-center justify-center min-h-screen">
+         <Bai_600 className={'text-center text-2xl base-grey-text-200'} text={'Mobile View Under Construction, Please View On Desktop'} />
+        </div>
       </body>
 
 

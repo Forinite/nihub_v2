@@ -35,6 +35,23 @@ import Location from '@/public/assets/images/icons/LocationIcon.svg'
 
 import Building from '@/public/assets/images/icons/BuildingIcon.png'
 
+import BentRight from '@/public/assets/images/icons/BentRightIcon.svg'
+
+import PurpleBolt from '@/public/assets/images/icons/PurpleBoltIcon.svg'
+import PurpleMedal from '@/public/assets/images/icons/PurpleMedalIcon.svg'
+import PurpleSheild from '@/public/assets/images/icons/PurpleSheildIcon.svg'
+import StatUp from '@/public/assets/images/icons/StatUpIcon.svg'
+import PurpleStar from '@/public/assets/images/icons/PurpleStarIcon.svg'
+
+import GradientBar from '@/public/assets/images/icons/GradientBarVector.svg'
+import TeamCardDarkGradient from '@/public/assets/images/icons/TeamCardDarkGradientVector.svg'
+
+
+import Linkedin from '@/public/assets/images/icons/LinkedinIcon.svg'
+import Email from '@/public/assets/images/icons/EmailIcon.svg'
+import X from '@/public/assets/images/icons/XIcon.svg'
+
+
 
 
 export const dotGridImage = dot_grid
@@ -70,5 +87,26 @@ export const  CalenderIcon = Calender
 export const  LocationIcon = Location
 
 export const  BuildingIcon = Building
+
+export const  GreyBentRightArrow = BentRight
+export const  PurpleBoltIcon = PurpleBolt
+export const  PurpleSheildIcon = PurpleSheild
+export const  PurpleMedalIcon = PurpleMedal
+export const  StatUpIcon = StatUp
+export const  PurpleStarIcon = PurpleStar
+
+export const  GradientBarVector= GradientBar
+export const TeamCardDarkGradientVector = TeamCardDarkGradient
+
+export const  LinkedinIcon = Linkedin
+export const  EmailIcon = Email
+export const  XIcon = X
+
+
+
+
+
+
+
 
 

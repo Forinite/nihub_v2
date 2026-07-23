@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import AboutSection from "@/components/homeSections/aboutSection";
 import CommunitySection from "@/components/homeSections/communitySection";
 import CorePillarSection from "@/components/homeSections/corePillarSection";
@@ -8,7 +7,6 @@ import ImpactSection from "@/components/homeSections/impactSection";
 import RecognitionSection from "@/components/homeSections/recognitionSection";
 import TrainingSection from "@/components/homeSections/trainingSection";
 
-import Navbar from "@/components/Navbar";
 
 
 export default function Home() {
@@ -23,7 +21,6 @@ export default function Home() {
       <RecognitionSection />
       <CommunitySection />
       <CTASection />
-      <Footer />
 
 
     </main>

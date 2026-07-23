@@ -11,3 +11,8 @@ export const getInitials = ( text :string ) => {
         return textArray[0].charAt(0) + textArray[0].charAt(1)
     }
 }
+
+
+export const padNum = (num: number) => {
+    return num.toString().length === 1 ? '0' + num.toString() : num.toString()
+}

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Bai_700, Jet_400, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
-import { BuildingIcon, BulbIcon, GlobalIcon, PeopleIcon, SheildIcon } from "@/static-data/images"
+import { BuildingIcon, BulbIcon, GlobalIcon, GradientBarVector, PeopleIcon, PurpleSheildIcon } from "@/static-data/images"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import CorePillarCard from "../homeSections/ui/CorePillarCard"
 
@@ -20,7 +20,7 @@ const Statements = [
         {
             title: "Our Values",
             description: "Collaboration, excellence, inclusivity, and a relentless commitment to building technology that serves people — not the other way around.",
-            img: SheildIcon
+            img: PurpleSheildIcon
         },
  
     ]
@@ -92,7 +92,7 @@ const AboutSection = () => {
             </aside>
         </div>
 
-        <div className="pt-20 pb-3 flex items-center justify-center gap-6">
+        <div className="pt-20 pb-3 grid grid-cols-3 gap-6">
 
             {Statements.map((statement, index) => (
                 <CorePillarCard 
@@ -110,7 +110,9 @@ const AboutSection = () => {
         </div>
     </div>
 
-        <div className="w-full h-24 about-page-about-section-shadow  " />
+        <div className="w-full h-fit about-page-about-section-shadw  relative flex items-center justify-center overflow-hidden   " > 
+            <Image className="w-full"  width={1023} height={96} alt="gradient" src={GradientBarVector}  />
+        </div>
 
     </section>
   )
