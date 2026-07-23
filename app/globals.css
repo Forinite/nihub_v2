@@ -26,6 +26,9 @@ body {
 }
 
 
+section {
+  background: white;
+}
 .section-header-cont{
   display: flex;
   align-items: center;
