@@ -6,7 +6,7 @@ import PathIndicator from '@/components/PathIndicator'
 
 const AboutSectionOrganised = () => {
   return(
-        <div className='relative pt-40 overflow-hidden'>
+        <div className='relative pt-40 overflow-hidden bg-white'>
           <div className=' absolute w-full h-full top-0 scale-[333.904%] opacity-40 '>
               <div className=' absolute w-full h-full top-0 left-0 z-30 about-page-linear-gradient-dot-grid-overlay' />
               <DotGridBG />
