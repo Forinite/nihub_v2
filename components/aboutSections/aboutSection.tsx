@@ -1,29 +1,12 @@
 import Image from "next/image"
 import { Bai_700, Jet_400, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
-import { BuildingIcon, BulbIcon, GlobalIcon, GradientBarVector, PeopleIcon, PurpleSheildIcon } from "@/static-data/images"
+import { BuildingIcon, GradientBarVector, PeopleIcon } from "@/static-data/images"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import CorePillarCard from "../homeSections/ui/CorePillarCard"
+import { Statements } from "@/static-data/about_data"
 
-const Statements = [
-    
-        {
-            title: "Our Mission",
-            description: "To foster a thriving ecosystem where technology, entrepreneurship, and innovation converge — enabling the next generation of Nigerian tech leaders.",
-            img: BulbIcon
-        },
-        {
-            title: "Our Vision",
-            description: "A Nigeria where every student with a bold idea has access to the resources, mentorship, and community they need to make it a reality.",
-            img: GlobalIcon
-        },
-        {
-            title: "Our Values",
-            description: "Collaboration, excellence, inclusivity, and a relentless commitment to building technology that serves people — not the other way around.",
-            img: PurpleSheildIcon
-        },
- 
-    ]
+
 
 const AboutSection = () => {
   return (

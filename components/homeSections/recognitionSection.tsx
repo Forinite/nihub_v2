@@ -1,22 +1,11 @@
-import { AWSImage, CiscoImage, FUTMinnaImage, GDCImage, HuaweiImage, MSImage } from "@/static-data/images"
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import SectionSubHeaderText from "../ui/SectionSubHeaderText"
 import RecognisedIndustryCard from "./ui/RecognisedIndustryCard"
 import Image from "next/image"
+import { awards, trustedPartnersAndSponsors } from "@/static-data/home_data"
 
-const awards = [
-    "Huawei Awards", "Cisco Awards", "GOSC Awards", "Matlab Awards", "HG Awards"
-]
 
-const  trustedPartnersAndSponsors = [
-    {partner : "Huawei", img: HuaweiImage}, 
-    {partner : "Cisco", img: CiscoImage},
-    {partner :"MicroSoft", img : MSImage},
-    {partner:  "AWS", img: AWSImage}, 
-    {partner: "Google Developers Circle", img: GDCImage}, 
-    {partner: "FUTMinna", img: FUTMinnaImage}
-]
 
 const RecognitionSection = () => {
   return (

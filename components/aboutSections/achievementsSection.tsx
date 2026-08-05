@@ -5,54 +5,11 @@ import { BookIcon, ChipIcon,  PurpleBoltIcon, PurpleMedalIcon, PurpleStarIcon, S
 import AchievementCard from "./ui/AchievementCard"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import DotGridBG from "../homeSections/bg/DotGridBG"
+import { achievements } from "@/static-data/about_data"
 
 
 
-const achievements = [
 
-    {
-        year: '2023',
-        img : PurpleMedalIcon, 
-        title: 'Huawei ICT Competition — National Winners',
-        description: 'NIHUB students claimed first place at the Huawei ICT Competition Nigeria finals, competing against over 200 universities nationwide.',    
-    },
-    {
-        year: '2022',
-        img : PurpleBoltIcon, 
-        title: 'CISCO Networking Academy Gold Status',
-        description: 'Achieved Gold Academy status, placing NIHUB among the top CISCO-certified institutions on the African continent.',    
-    },
-
-    {
-        year: '2023',
-        img : PurpleStarIcon, 
-        title: 'Google Developer Student Club Recognition',
-        description: "NIHUB's GDSC chapter was recognised as one of the most active and impactful chapters across West Africa.",    
-    },
-
-    {
-        year: '2022',
-        img : StatUpIcon, 
-        title: 'HNG Internship — Top Finishers',
-        description: 'Multiple NIHUB community members ranked in the top 50 of the highly competitive HNG Internship programme cohort.',    
-    },
-
-    {
-        year: '2021',
-        img : BookIcon, 
-        title: 'Matlab & Simulink Student Ambassador',
-        description: 'Officially recognised by MathWorks as a campus ambassador hub, enabling access to industry tools for 500+ students.',    
-    },
-
-    {
-        year: '2020',
-        img : ChipIcon, 
-        title: 'MTN Foundation Digital Skills Grant',
-        description: 'Awarded a digital skills grant that funded six months of free training for over 300 underserved students in Niger State.',    
-    },
-
-    
-]
 const AchievementsSection = () => {
   return (
     <section className="  common-section-padding pink-bg">

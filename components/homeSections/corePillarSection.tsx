@@ -1,31 +1,11 @@
-import { BookIcon, ChipIcon, GlobalIcon, PeopleIcon } from '@/static-data/images'
+
 import { Pop_400 } from '../fontAids/Fonts'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import CorePillarCard from './ui/CorePillarCard'
+import { CorePillarInfo } from '@/static-data/home_data'
 
-const CorePillarInfo  = [
-    {
-        title: "Tech Training",
-        description: "Hands-on bootcamps in AI, cloud computing, cybersecurity, and web development.",
-        img: ChipIcon
-    },
-    {
-        title: "Community Building",
-        description: "Vibrant developer communities — GDSC, HNG, Buildathon, and more — open to all.",
-        img: PeopleIcon
-    },
-    {
-        title: "Research & Labs",
-        description: "State-of-the-art labs supporting cutting-edge research in emerging technologies.",
-        img: BookIcon
-    },
-    {
-        title: "Global Partnerships",
-        description: "Collaborations with Huawei, CISCO, Google, and top Nigerian tech organisations.",
-        img: GlobalIcon
-    }
-]
+
 
 const CorePillarSection = () => {
   return (

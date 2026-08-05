@@ -1,6 +1,4 @@
-import React from 'react'
 import SectionHeaderText from '../ui/SectionHeaderText'
-import Link from 'next/link'
 import Image from 'next/image'
 import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import { Bai_700, Pop_400 } from '../fontAids/Fonts'
@@ -44,8 +42,8 @@ const AboutSection = () => {
                   <Image  alt={'Bulb Icon'} src={BulbIcon} width={20} height={20}  /> 
               </div>
               <div className=''>
-                <Bai_700 text='Innovating the Future' className='text-[13px] leading-[19.5px] tracking-[0px] ' />
-                <Pop_400 text='Empowering People' className='text-[11px] leading-[16.5px] tracking-[0px] base-grey-100' />
+                <Bai_700 text='Innovating the Future' className='text-[13px] leading-[19.5px]  ' />
+                <Pop_400 text='Empowering People' className='text-[11px] leading-[16.5px]  base-grey-100' />
               </div>
             </div>
               

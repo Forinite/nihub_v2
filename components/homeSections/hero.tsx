@@ -1,11 +1,8 @@
-import Link from 'next/link'
 import FeaturedEventCard from './ui/FeaturedEventCard'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import { heroStats } from '@/static-data'
 import { Bai_700, Jet_400, Pop_400 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
-
-import DotGridBG_Hero from './bg/DotGridBG_Hero'
 import Image from 'next/image'
 import { LongArrowDownIcon } from '@/static-data/images'
 import DotGridBG from './bg/DotGridBG'
@@ -21,7 +18,7 @@ const HeroSection = () => {
         
         <div className='relative z-30 common-max-width mx-auto'>
             <div className="w-full flex items-center justify-between px-10 py-20 h-full">
-                <aside className='w-[44.8%] h-full flex flex-col items-center justify-center '>
+                <aside className='w-fit max-w-1/2 h-full flex flex-col items-center justify-center '>
                     <div>
                         <SectionHeaderText text="IT & Innovation Hub - Futminna" />
                         <div className='text-[58px] leading-[60.9px] tracking[-0.5px] uppercase pt-5 '>
@@ -36,7 +33,7 @@ const HeroSection = () => {
         
                     
 
-                        <div className='flex items-center space-x-3 pt-8'>
+                        <div className='flex items-center space-x-3 pt-8 w-fit'>
 
                             <LinkTemp1 href="/communities" className='px-6 py-3 text-[13px] w-fit h-fit base-purple-bg text-white rounded-[10px] link-shadow' text='Explore Communities' linkIndex={0} />
         
