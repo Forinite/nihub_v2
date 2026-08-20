@@ -1,13 +1,19 @@
-import { Bai_700 } from '@/components/fontAids/Fonts'
-import React from 'react'
+import AllServicesSection from "@/components/servicesSections/AllServicesSection"
+import ProcessSection from "@/components/servicesSections/ProcessSection"
+import ServiceCTASection from "@/components/servicesSections/ServiceCTASection"
+import ServicesHero from "@/components/servicesSections/ServicesHero"
+import WhyNihubSection from "@/components/servicesSections/WhyNihubSection"
+
 
 const ServicesPage = () => {
   return (
 
     <main>
-        <section className='w-screen h-screen flex items-center justify-center'>
-            <Bai_700 className='text-[56px] base-grey-text-200' text='Oh! The Great Services of Potatoes!' />
-        </section> 
+        <ServicesHero />
+        <ProcessSection />
+        <AllServicesSection />
+        <WhyNihubSection />
+        <ServiceCTASection />
     </main>
 
   )

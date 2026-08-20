@@ -21,7 +21,7 @@ const HeroSection = () => {
                 <aside className='w-fit max-w-1/2 h-full flex flex-col items-center justify-center '>
                     <div>
                         <SectionHeaderText text="IT & Innovation Hub - Futminna" />
-                        <div className='text-[58px] leading-[60.9px] tracking[-0.5px] uppercase pt-5 '>
+                        <div className='text-[58px] base-purple-text leading-[60.9px] tracking[-0.5px] uppercase pt-5 '>
                             <Bai_700 text='we give' />
                             <Bai_700 text='clarity'  className='clarity-text-gradient w-fit '/> 
                             <Bai_700 text='to ideas' />

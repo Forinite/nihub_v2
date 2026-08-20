@@ -1,13 +1,19 @@
-import { Bai_700 } from '@/components/fontAids/Fonts'
-import React from 'react'
+import AllCommuntiesSection from '@/components/communitySections/AllCommuntiesSection'
+import CommunitiesHero from '@/components/communitySections/CommunitiesHero'
+import FeaturedCommunitiesSection from '@/components/communitySections/FeaturedCommunities'
+import CommunityImpactSection from '@/components/communitySections/CommunityImpactSection'
+import NewCommunitySection from '@/components/communitySections/NewCommunitySection'
+
 
 const CommunitiesPage = () => {
   return (
 
     <main>
-        <section className='w-screen h-screen flex items-center justify-center'>
-            <Bai_700 className='text-[56px] base-grey-text-200' text='Communities Of Highly Esteemed Potatoes' />
-        </section> 
+      <CommunitiesHero />
+      <FeaturedCommunitiesSection />
+      <AllCommuntiesSection />
+      <CommunityImpactSection />
+      <NewCommunitySection />
     </main>
 
   )

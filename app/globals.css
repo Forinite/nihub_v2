@@ -143,6 +143,7 @@ section {
 
 }
 
+
 .about-page-card-shadow {
   box-shadow: 0px 16px 60px 0px #2B104324;
 
@@ -170,6 +171,11 @@ section {
 }
 
 
+.communities-stats-shadow {
+  border-top: 1px solid #2B104312;
+  box-shadow: 0px 2px 14px 0px #2B104314;
+
+}
 
 .hero-section-shadow {
   background: linear-gradient(180deg, rgba(245, 240, 255, 0) 30.57%, rgba(0, 0, 0, 0.1) 100%);
