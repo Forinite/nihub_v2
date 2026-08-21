@@ -17,7 +17,7 @@ const CommentCard = ({name, title, comment, index} : CommentCardProps) => {
   return (
     <div className='comment-cont rounded-[16px] p-[26px]'>
         <div className="h-11">
-
+            <Bai_700 text="''" className="text-[44px] leading-[44px] text-[#E0E0E0]" />
         </div>
 
            <Bai_400 text={comment}  className="base-black-text pt-2 text-[15px] leading-[26.5px]"/>

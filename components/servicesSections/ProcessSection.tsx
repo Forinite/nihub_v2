@@ -1,12 +1,13 @@
 import { padNum } from "@/lib/utils"
 import { Bai_700, Jet_800, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
+import { BulbIcon, CodeIcon, PeopleIcon, RocketIcon } from "../SVGAids/SVG"
 
 const ProcessList = [
-    {icon: '', header: 'Choose a Service', description: 'Browse our catalogue and identify the programme or resource that fits your goals.'},
-    {icon: '', header: 'Apply or Register', description: 'Fill out a short form — most programmes are free for FUTMinna students.'},
-    {icon: '', header: 'Learn & Build', description: 'Participate fully and put your skills to work on real projects and challenges.'},
-    {icon: '', header: 'Launch & Grow', description: 'Graduate with a portfolio, a network, and the confidence to take on the industry.'}
+    {icon: BulbIcon, header: 'Choose a Service', description: 'Browse our catalogue and identify the programme or resource that fits your goals.'},
+    {icon: PeopleIcon, header: 'Apply or Register', description: 'Fill out a short form — most programmes are free for FUTMinna students.'},
+    {icon: CodeIcon, header: 'Learn & Build', description: 'Participate fully and put your skills to work on real projects and challenges.'},
+    {icon: RocketIcon, header: 'Launch & Grow', description: 'Graduate with a portfolio, a network, and the confidence to take on the industry.'}
 ]
 const ProcessSection = () => {
   return (
@@ -26,7 +27,9 @@ const ProcessSection = () => {
                         <Jet_800 className=" absolute -top-[9.5px] md:block hidden text-[10px] text-white base-purple-bg px-2.5 py-0.5 rounded-full w-fit h-fit " text={padNum(index+1)} />
                         <div className="p-6 flex flex-col items-center justify-center ">
                             <div className="pt-2">
-                                <div className="bg-[#2B104312] rounded-[14px] w-12 h-12 mx-auto"> </div>
+                                <div className="bg-[#2B104312] rounded-[14px] w-12 h-12 mx-auto flex items-center justify-center"> 
+                                    <process.icon color="#2B1043" width="20" height="20" />
+                                </div>
                             </div>
                             <Bai_700 className="text-[15px] base-purple-text pt-4 text-center"  text={process.header}/>
                             <Pop_400 className="text-[13px] base-purple-text-200 pt-2 text-center" text={process.description} />

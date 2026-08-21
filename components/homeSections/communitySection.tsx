@@ -13,7 +13,6 @@ const CommunitySection = () => {
             <div className="mt-4" />
             <SectionSubHeaderText text="What Our Community Says" />
         </div>
-
         <div className="pt-14 w-full max-w-[1004] grid md:grid-cols-3 gap-[21px] mx-auto">
             {comments.map((comment, index) => (
                 <CommentCard 

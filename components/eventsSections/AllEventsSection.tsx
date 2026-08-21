@@ -2,6 +2,7 @@ import { Filter } from "lucide-react"
 import { Bai_700, Jet_400, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import EventCard from "./ui/EventCard"
+import { BoltIcon, BrainIcon, GlobeIcon, RocketIcon, SheildIcon, StarIcon } from "../SVGAids/SVG"
 
 
 const activeBG = {background: '#2B1043', borderTop: '1px solid #000000', boxShadow: '0px 4px 12px 0px #2B10434D'}
@@ -12,7 +13,7 @@ const filters = ['Hackathon', 'Workshop', 'Talk', 'Conference', 'Competition', '
 export const AllEventsList = [
     {
         rgb: [43, 16, 67],
-        icon: '',
+        icon: StarIcon,
         status: 'Upcoming',
         type: 'conference',
         name: 'NIHUB Tech Week 2026',
@@ -28,7 +29,7 @@ export const AllEventsList = [
     },
     {
         rgb: [124, 58, 237],
-        icon: '',
+        icon: BoltIcon,
         status: 'Open',
         type: 'Hackathon',
         name: 'NIHUB Buildathon',
@@ -44,7 +45,7 @@ export const AllEventsList = [
     },
         {
         rgb: [5, 150, 105],
-        icon: '',
+        icon: BrainIcon,
         status: 'Upcoming',
         type: 'Talk',
         name: 'AI in African - Fireside Series',
@@ -60,7 +61,7 @@ export const AllEventsList = [
     },
         {
         rgb: [66, 133, 244],
-        icon: '',
+        icon: GlobeIcon,
         status: 'Upcoming',
         type: 'Conference',
         name: 'GDSC',
@@ -76,7 +77,7 @@ export const AllEventsList = [
     },
         {
         rgb: [220, 38, 38],
-        icon: '',
+        icon: SheildIcon,
         status: 'Upcoming',
         type: 'Competition',
         name: 'NIHUB CTF Challenge Buildathon',
@@ -92,7 +93,7 @@ export const AllEventsList = [
     },
         {
         rgb: [202, 128, 4],
-        icon: '',
+        icon: RocketIcon,
         status: 'Upcoming',
         type: 'Workshop',
         name: 'NIHUB Startup Demo Day',

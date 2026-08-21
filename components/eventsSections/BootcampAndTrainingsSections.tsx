@@ -1,11 +1,12 @@
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
+import { BookIcon, BrainIcon, GlobeIcon, MedalIcon, SheildIcon, TechChipIcon } from "../SVGAids/SVG"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import TrainingsCard from "./ui/TrainingsCard"
 
 const TrainingsList = [
     {
         rgb: [124, 58, 237], 
-        icon: '', 
+        icon: BrainIcon, 
         name: 'Artificial Intelligence Bootcamp',
         description: "A 6-week intensive covering machine learning fundamentals, neural networks, computer vision, and real-world AI deployment — built with practitioners, not just professors." , 
         status: 'Ongoing',
@@ -19,7 +20,7 @@ const TrainingsList = [
     },
     {
         rgb: [43, 16, 67], 
-        icon: '', 
+        icon: TechChipIcon, 
         name: 'Full-Stack Web Development',
         description: "From HTML to production-ready web apps — an 8-week programme covering modern frontend, backend APIs, databases, and deployment pipelines." , 
         status: 'Upcoming',
@@ -33,7 +34,7 @@ const TrainingsList = [
     },
         {
         rgb: [5, 150, 105], 
-        icon: '', 
+        icon: GlobeIcon, 
         name: 'Web3 and Blockchain Development ',
         description: "Smart contracts, decentralised apps, and the mechanics of DeFi — an industry-facing programme for developers ready to build on-chain." , 
         status: 'Upcoming',
@@ -47,7 +48,7 @@ const TrainingsList = [
     },
         {
         rgb: [220, 38, 38], 
-        icon: '', 
+        icon: SheildIcon, 
         name: 'Cybersecurity Fundamentals',
         description: "A comprehensive programme built on the CISCO CyberOps curriculum — covering network security, ethical hacking, incident response, and digital forensics." , 
         status: 'Upcoming',
@@ -61,7 +62,7 @@ const TrainingsList = [
     },
         {
         rgb: [194, 65, 12], 
-        icon: '', 
+        icon: BookIcon, 
         name: 'Cloud Computing & DevOps',
         description: "Huawei Cloud and AWS hands-on training covering infrastructure, containerisation, CI/CD, and cloud architecture — leading to industry certifications." , 
         status: 'Upcoming',
@@ -75,7 +76,7 @@ const TrainingsList = [
     },
         {
         rgb: [3, 105, 161], 
-        icon: '', 
+        icon: MedalIcon, 
         name: 'Data Science & Analytics',
         description: "From raw data to boardroom insights — this programme covers the full data pipeline: wrangling, visualisation, statistical analysis, and dashboarding." , 
         status: 'Upcoming',

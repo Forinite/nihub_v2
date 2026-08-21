@@ -33,8 +33,8 @@ const EventCard = ({event} :EventProps) => {
             <div  className="relative h-full flex flex-col  justify-between bg-white z-20 p-6 " >
                
                <div className="flex items-start justify-between pb-4">
-                    <div style={{background: `rgba(${event.rgb}, 0.05)`}} className="w-10 h-10  bg-[#FFFFFF33] rounded-[14px]">
-    
+                    <div style={{background: `rgba(${event.rgb}, 0.05)`}} className="w-10 h-10  bg-[#FFFFFF33] rounded-[14px] flex items-center justify-center">
+                        <event.icon  color={`rgb(${event.rgb})`} width='20' height='20' />
                     </div>
     
                     <div className={` w-fit h-fit flex items-center py-1 px-2.5 rounded-full gap-1.5 ${event.status == 'Upcoming'? 'bg-[#F973161F]' : 'bg-[#2B10431A]'}`}>

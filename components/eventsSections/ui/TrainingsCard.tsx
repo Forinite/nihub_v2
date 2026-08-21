@@ -1,4 +1,5 @@
 import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600 } from "@/components/fontAids/Fonts"
+import { ArrowBentUpIcon } from "@/components/SVGAids/SVG"
 import { LinkTemp1 } from "@/components/ui/LinkTemps"
 import { CalenderIcon, LocationIcon } from "@/static-data/images"
 import Image from "next/image"
@@ -31,7 +32,9 @@ const TrainingsCard = ({training} :TrainingsProps) => {
                
                <div>
                     <div className="flex items-center justify-between pb-4">
-                        <div style={{background: `rgba(${training.rgb}, 0.05)`}} className="w-11 h-11 rounded-[14px]"> </div>
+                        <div style={{background: `rgba(${training.rgb}, 0.05)`}} className="w-11 h-11 rounded-[14px] flex items-center justify-center">
+                            <training.icon color={`rgb(${training.rgb})`} width='20' height='20' />
+                         </div>
                         <div className={` w-fit h-fit flex items-center py-1 px-2.5 rounded-full gap-1.5 ${training.status == 'Upcoming'? 'bg-[#F973161F]' : 'bg-[#22C55E1F]'}`}>
                             <div className={`w-1.5 h-1.5 rounded-full ${training.status == 'Upcoming'? 'bg-[#F97316]' : 'bg-[#22C55E]'}`} />
                                 <Jet_700 className={`text-[10px] tracking-[0.25px] uppercase ${training.status == 'Upcoming'? 'text-[#C2410C]' : 'text-[#16A34A]'}`}  text={training.status} />
@@ -74,6 +77,7 @@ const TrainingsCard = ({training} :TrainingsProps) => {
                     </div>
                     <Link className='flex items-center w-fit gap-2 base-grey-text-100 text-[12px]' href={training.detailLink}> 
                         <Jet_600 text="Topics" />
+                        <ArrowBentUpIcon color="#9E9E9E" width="12" height="12" />
                     </Link>
                     
                 </div>

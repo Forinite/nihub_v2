@@ -36,7 +36,9 @@ const FeaturedCommunityCard = ({community, index} :communityProps) => {
         <div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
             <div className=" absolute block md:hidden top-0 left-0 opacity-10 w-full h-full white-bg-dots" />
             <div className="">
-                <div className="w-12 h-12 mb-3 bg-[#FFFFFF33] rounded-[14px]"></div>
+                <div className="w-12 h-12 mb-3 bg-[#FFFFFF33] rounded-[14px] flex items-center justify-center">
+                    <community.icon color={'white'} width='22' height='22' />
+                </div>
                 <Jet_700 className="text-[10px] text-[#FFFFFFA6] tracking-[1.5px]" text={community.mainConcept} />
                 <Bai_700 className="text-[34px] text-white uppercase pt-1" text={community.abbr} />
             </div>

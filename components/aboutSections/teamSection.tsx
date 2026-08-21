@@ -24,7 +24,7 @@ const TeamSection = () => {
         <div className="pt-14 md:grid grid-cols-2 gap-6">
 
           {teamMembers.map((item, index) => (
-            <TeamCard key={index} name={item.name} role={item.role} statement={item.statement} socials={item.socials} index={index} />
+            <TeamCard key={index} image={item.image} name={item.name} role={item.role} statement={item.statement} socials={item.socials} index={index} />
           ))}
 
         </div>

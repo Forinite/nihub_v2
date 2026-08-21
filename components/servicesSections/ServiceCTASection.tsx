@@ -3,6 +3,7 @@ import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import { LinkTemp1, LinkTemp2 } from "../ui/LinkTemps"
 import { StarIcon } from "@/static-data/images"
 import DotGridBG from "../homeSections/bg/DotGridBG"
+import { RocketIcon } from "../SVGAids/SVG"
 
 const AccessPoints = [
     {
@@ -38,7 +39,7 @@ const ServiceCTASection = () => {
                         <div className="w-full py-1.5">
                             <div className="h-[46.75px]">
                                 <div className="flex items-center gap-1.5 px-3 py-1 rounded-full w-fit border border-[#FFB2344D] bg-[#FFB23426] text-[#FFB234]">
-                                    <Image  src={StarIcon} alt="star icon" width={11} height={11} />
+                                    <RocketIcon color="#FFB234" width="11" height="11" />
                                     <Jet_700 className="text-[11px] uppercase tracking-[0.55px] w-fit"  text="Start Today " />
                                 </div>
                             </div>

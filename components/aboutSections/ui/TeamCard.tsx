@@ -5,6 +5,7 @@ import { TeamCardDarkGradientVector } from "@/static-data/images"
 import Image from "next/image"
 
 interface TeamCardProps {
+    image: any,
     name: string,
     role: string,
     statement: string,
@@ -54,20 +55,21 @@ const bgStyles = [
     },
 ]
 
-const  TeamCard = ({name, role, statement, socials, index} : TeamCardProps) => {
+const  TeamCard = ({name, role, statement, socials, image, index} : TeamCardProps) => {
   return (
     <div className=" rounded-2xl overflow-hidden team-card-shadow border-t border-[#2B10430F]" >
-        <div className={` relative overflow-hidden w-full h-52 bg-linear-[135deg] from-[13.3%] to-[26.7%] ${bgStyles[index].card} flex items-center justify-center `} >
-            <div className={` absolute  -bottom-3.5 w-28 h-28 rounded-full border-4 border-white ${bgStyles[index].profile} flex items-center justify-center`}>
-                <Bai_700 text={getComplexInitials(name)} className="text-[32px] text-white w-fit h-fit" />
+        <div className={` relative overflow-hidden w-full h-52 bg-linear-[135deg] from-[13.3%] to-[26.7%] ${bgStyles[index % (bgStyles.length -1)].card} flex items-center justify-center `} >
+            <div className={` absolute  -bottom-14 w-[230px] h-[230px] rounded-full border-4 border-white ${bgStyles[index % (bgStyles.length -1)].profile} flex items-center justify-center`}>
+                {/* <Bai_700 text={getComplexInitials(name)} className="text-[32px] text-white w-fit h-fit" /> */}
+                <Image className='rounded-full  ' src={image} alt="Image" fill />
             </div>
-            <div  className=" absolute bottom-0 z-10 w-full h-fit bg-linear-0 from-0% from-[#FFFFFFF2] to-100% to-[#00000000] ">
+            <div  className=" absolute  opacity-30 bottom-0 z-10 w-full h-fit bg-linear-0 from-0% from-[#FFFFFFF2] to-100% to-[#00000000] ">
                 <Image className="w-full"  width={466} height={64} alt="gradient" src={TeamCardDarkGradientVector}  />
             </div>
         </div>
         <div className="w-full p-6 pt-5">
             <Bai_700 text={name} className="capitalize base-purple-text " />
-            <Jet_600 text={role} className={`uppercase text-[12px] ${bgStyles[index].role} tracking-[0.3px]`} />
+            <Jet_600 text={role} className={`uppercase text-[12px] ${bgStyles[index % (bgStyles.length -1)].role} tracking-[0.3px]`} />
             <Pop_400 text={statement} className="pt-3 text-[13px] text-[#7A6A94] leading-[21.13px]" />
 
             <div className="pt-5 flex items-center justify-left gap-2">

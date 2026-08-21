@@ -1,13 +1,13 @@
 import Image from "next/image"
 import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
-import { StarIcon } from "@/static-data/images"
 import { LinkTemp1, LinkTemp2 } from "../ui/LinkTemps"
 import DotGridBG from "../homeSections/bg/DotGridBG"
+import { GlobeIcon, PeopleIcon, StarIcon } from "../SVGAids/SVG"
 
 const Benefits = [
-    {icon: '', desc: 'Dedicated space & resources from NIHUB'},
-    {icon: '', desc: 'Mentorship from experienced communtiy leads'},
-    {icon: '', desc: 'Access to our industry partner network'}
+    {icon: PeopleIcon, desc: 'Dedicated space & resources from NIHUB'},
+    {icon: StarIcon, desc: 'Mentorship from experienced communtiy leads'},
+    {icon: GlobeIcon, desc: 'Access to our industry partner network'}
 
 ]
 const NewCommunitySection = () => {
@@ -25,7 +25,7 @@ const NewCommunitySection = () => {
                     <div className="w-full py-1.5">
                         <div className="h-[46.75px]">
                             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full w-fit border border-[#FFB2344D] bg-[#FFB23426] text-[#FFB234]">
-                                <Image  src={StarIcon} alt="star icon" width={11} height={11} />
+                                <StarIcon color="#FFB234" width="11" height="11" />
                                 <Jet_700 className="text-[11px] uppercase tracking-[0.55px] w-fit"  text="New Communtiy" />
                             </div>
                         </div>
@@ -36,7 +36,8 @@ const NewCommunitySection = () => {
                     <div className="md:grid flex flex-col grid-cols-1 grid-rows-4 gap-4">
                         {Benefits.map((item, index) => (
                             <div key={index} className="flex items-center gap-3 p-4 rounded-[14px] bg-[#FFFFFF12] border border-[#FFFFFF1A]">
-                                <div className="w-8 h-8 rounded-[10px] bg-[#FFB23433]">
+                                <div className="w-8 h-8 rounded-[10px] bg-[#FFB23433] flex items-center justify-center">
+                                    <item.icon color="#FFB234" width="16" height="16" />
                                 </div>
 
                                 <Pop_400 className="text-[13px] text-[#FFFFFFCC]" text={item.desc} />

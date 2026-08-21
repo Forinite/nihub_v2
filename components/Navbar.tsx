@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Bai_600 } from './fontAids/Fonts'
 import { LinkTemp1 } from './ui/LinkTemps'
+import { MenuXIcon, MenuIcon } from '@/static-data/images'
 
 const navLinks = [
     { label: 'Home', href: '/' },
@@ -20,8 +21,8 @@ const Navbar = () => {
             <Link href={'/'}>
                 <Image src="/assets/images/nihub-logo-dark.png" alt="Logo" width={200} height={40} />
             </Link>
-            <div className='w-6 h-6 bg-red-200 hidden md:block'>
-
+            <div className='w-6 h-6 bg-red-200 hidden '>
+                <Image src={MenuIcon} alt='Menu icon' width={22} height={22} />
             </div>
 
             <nav className='md:block hidden'>

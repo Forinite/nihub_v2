@@ -1,5 +1,6 @@
 import { Bai_600, Bai_700, Jet_400, Jet_600, Jet_700, Pop_400 } from "@/components/fontAids/Fonts"
-import { CalenderIcon, LocationIcon, PeopleIcon, TicketIcon } from "@/static-data/images"
+import { CalenderIcon, ClockIcon, LocationIcon, PeopleIcon } from "@/components/SVGAids/SVG"
+import {TicketIcon } from "@/static-data/images"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -27,8 +28,8 @@ const HeadlineEventsCard = ({event} : EventProps ) => {
     <div style={{boxShadow: '0px 4px 24px 0px #2B104317'}} className={`rounded-2xl border border-[#2B104312] overflow-hidden`}>
         <div style={{background: `linear-gradient(135deg, rgba(${event.rgb}, 0.94) 0%, rgba(${event.rgb}, 0.667) 100%)`}} className="w-full h-[176px] p-6 flex flex-col justify-between ">
             <div className="flex items-start justify-between">
-                <div className="w-10 h-10  bg-[#FFFFFF33] rounded-[14px]">
-
+                <div className="w-10 h-10  bg-[#FFFFFF33] rounded-[14px] flex items-center justify-center">
+                    <event.icon color='white'  width='20'  height='20 ' />
                 </div>
 
                 <div className={` w-fit h-fit flex items-center py-1 px-2.5 rounded-full gap-1.5 ${event.status == 'Upcoming'? 'bg-[#F973161F]' : 'bg-[#2B10431A]'}`}>
@@ -48,21 +49,21 @@ const HeadlineEventsCard = ({event} : EventProps ) => {
             <div className="pt-4 flex flex-col gap-1.5">
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1.5">
-                        <Image src={CalenderIcon} alt="CalenderIcon" width={12} height={12} />
+                        <CalenderIcon  color={`rgb(${event.rgb})`} width="12" height="12"/>
                         <Jet_400 className="text-[12px] base-purple-text-300" text={event.date}  />
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <Image src={CalenderIcon} alt="ClockIcon" width={12} height={12} />
+                        <ClockIcon  color={`rgb(${event.rgb})`} width="11" height="11"/>
                         <Jet_400 className="text-[12px] base-purple-text-300" text={event.starts} />
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1.5">
-                        <Image src={LocationIcon} alt="VenueIcon" width={12} height={12} />
+                        <LocationIcon   color={`rgb(${event.rgb})`} width="11" height="11"/>
                         <Jet_400 className="text-[12px] base-purple-text-300" text={event.venue}  />
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <Image src={PeopleIcon} alt="PeopleIcon" width={12} height={12} />
+                        <PeopleIcon color={`rgb(${event.rgb})`}  width="11" height="11"/>
                         <Jet_400 className="text-[12px] base-purple-text-300" text={event.seats + ' seats'} />
                     </div>
                 </div>

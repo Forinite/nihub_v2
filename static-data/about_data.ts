@@ -1,5 +1,5 @@
 
-import { BulbIcon, GlobalIcon, PurpleBoltIcon, PurpleMedalIcon, PurpleSheildIcon, PurpleStarIcon, StatUpIcon, BookIcon, ChipIcon } from "./images";
+import { BulbIcon, GlobalIcon, PurpleBoltIcon, PurpleMedalIcon, PurpleSheildIcon, PurpleStarIcon, StatUpIcon, BookIcon, ChipIcon, teamImages } from "./images";
 
 
 // static data for about section
@@ -76,6 +76,7 @@ export const achievements = [
 
 export const teamMembers = [
   { 
+    image: teamImages[0],
     name: 'Dr. Aliyu Musa Bade',
     role: 'Director / Founder',
     statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
@@ -83,6 +84,7 @@ export const teamMembers = [
   },
 
   { 
+    image: teamImages[1],
     name: 'Maryam Abdullahi',
     role: 'Community Managerr',
     statement: "Dedicated to growing and nurturing NIHUB's vibrant ecosystem, ensuring every member finds their voice and their place.",
@@ -90,6 +92,7 @@ export const teamMembers = [
   },
   
     { 
+    image: teamImages[2],
     name: 'Ibrahim Suleiman',
     role: 'Head of Training & Programmes',
     statement: 'Designs and delivers world-class bootcamps in AI, cloud, and web development — turning curriculum into careers.',
@@ -97,6 +100,7 @@ export const teamMembers = [
   },
 
   { 
+    image: teamImages[3],
     name: 'Fatima Umar',
     role: 'Research & Innovation Lead',
     statement: "Spearheads NIHUB's research initiatives and lab projects, connecting students with cutting-edge problems worth solving.",
@@ -104,15 +108,89 @@ export const teamMembers = [
   },
   
   { 
+    image: teamImages[4],
     name: 'David Okonkwo',
     role: 'Partnerships & Sponsorships',
     statement: "Builds and maintains NIHUB's relationships with Huawei, CISCO, Google, and other global and Nigerian partners.",
     socials: ['/linkedin/link','/mailto:email@gmail.com']
   },
   { 
+    image: teamImages[5],
     name: 'Aisha Bello',
     role: 'Events & Outreach Coordinator',
     statement: "Orchestrates NIHUB's packed calendar of hackathons, workshops, and tech talks — making every event one to remember.",
     socials: ['/linkedin/link','/x/link']
   },
+
+  { 
+    image: teamImages[5],
+    name: 'Maryam Abdullahi',
+    role: 'Community Managerr',
+    statement: "Dedicated to growing and nurturing NIHUB's vibrant ecosystem, ensuring every member finds their voice and their place.",
+    socials: ['/linkedin/link','/x/link']
+  },
+  
+    { 
+    image: teamImages[6],
+    name: 'Ibrahim Suleiman',
+    role: 'Head of Training & Programmes',
+    statement: 'Designs and delivers world-class bootcamps in AI, cloud, and web development — turning curriculum into careers.',
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  },
+
+  { 
+    image: teamImages[7],
+    name: 'Fatima Umar',
+    role: 'Research & Innovation Lead',
+    statement: "Spearheads NIHUB's research initiatives and lab projects, connecting students with cutting-edge problems worth solving.",
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  },
+  
+  { 
+    image: teamImages[8],
+    name: 'David Okonkwo',
+    role: 'Partnerships & Sponsorships',
+    statement: "Builds and maintains NIHUB's relationships with Huawei, CISCO, Google, and other global and Nigerian partners.",
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  },
+  { 
+    image: teamImages[9],
+    name: 'Aisha Bello',
+    role: 'Events & Outreach Coordinator',
+    statement: "Orchestrates NIHUB's packed calendar of hackathons, workshops, and tech talks — making every event one to remember.",
+    socials: ['/linkedin/link','/x/link']
+  },
+   { 
+    image: teamImages[10],
+    name: 'Dr. Aliyu Musa Bade',
+    role: 'Director / Founder',
+    statement: 'Visionary leader and academic who established NIHUB to bridge the gap between university education and real-world tech innovation in Nigeria.',
+    socials: ['/linkedin/link','/x/link','/mailto:email@gmail.com']
+  },
+
+  { 
+    image: teamImages[11],
+    name: 'Maryam Abdullahi',
+    role: 'Community Managerr',
+    statement: "Dedicated to growing and nurturing NIHUB's vibrant ecosystem, ensuring every member finds their voice and their place.",
+    socials: ['/linkedin/link','/x/link']
+  },
+  
+    { 
+    image: teamImages[12],
+    name: 'Ibrahim Suleiman',
+    role: 'Head of Training & Programmes',
+    statement: 'Designs and delivers world-class bootcamps in AI, cloud, and web development — turning curriculum into careers.',
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  },
+
+  { 
+    image: teamImages[13],
+    name: 'Fatima Umar',
+    role: 'Research & Innovation Lead',
+    statement: "Spearheads NIHUB's research initiatives and lab projects, connecting students with cutting-edge problems worth solving.",
+    socials: ['/linkedin/link','/mailto:email@gmail.com']
+  }
+  
+  
 ]

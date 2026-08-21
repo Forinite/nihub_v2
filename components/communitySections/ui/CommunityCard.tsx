@@ -1,7 +1,7 @@
 import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600 } from "@/components/fontAids/Fonts"
 import { communityProps } from "./FeaturedCommunityCard"
 import Image from "next/image"
-import { PeopleIcon, PurpleStarIcon } from "@/static-data/images"
+import { CalenderIcon, PeopleIcon } from "@/components/SVGAids/SVG"
 
 const baseRGB = [
     {r: 66, g:133 , b:244},
@@ -21,7 +21,9 @@ const CommunityCard = ({community, index} : communityProps) => {
         </div>
         <div  className="relative h-full bg-white z-20 p-6 " >
             <div className="flex items-center justify-between pb-4">
-                <div style={{background: `rgba(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}, 0.06)`}} className="w-12 h-12 rounded-[14px]"> </div>
+                <div style={{background: `rgba(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}, 0.06)`}} className="w-12 h-12 rounded-[14px] flex items-center justify-center"> 
+                    <community.icon color={`rgb(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}`} width='22' height='22' />
+                </div>
                 <Jet_700 className="text-[10px] tracking-[0.25px] uppercase py-1 px-2.5 w-fit h-fit base-purple-text-300 bg-[#2B10430F] rounded-full" text={community.mainConcept} />
             </div>
             <Bai_700 className="text-[16px] base-purple-text pb-1" text={community.name} />
@@ -54,11 +56,11 @@ const CommunityCard = ({community, index} : communityProps) => {
             <div style={{borderTop: '1px solid #2B104312'}} className="pt-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <div className="w-fit h-fit flex items-center gap-1">
-                        <Image src={PeopleIcon} alt="Members Icon" width={11} height={11} />
+                        <PeopleIcon color={`rgb(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b})`} height="11" width="11" />
                         <Jet_400 className="text-[12px] base-purple-text-300" text={community.stats.members} />
                     </div>
                     <div className="w-fit h-fit  flex items-center gap-1">
-                        <Image src={PurpleStarIcon} alt="Calender Icon" width={11} height={11} />
+                        <CalenderIcon color={`rgb(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b})`} height="11" width="11" />
                         <Jet_400 className="text-[12px] base-purple-text-300 gap-3" text={community.stats.meetings} />
                     </div>
                 </div>

@@ -2,16 +2,17 @@ import PathIndicator from '../PathIndicator'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import { Bai_700, Jet_400, Pop_400, Pop_600 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
+import { BarChartIcon, BookIcon, BuildingsIcon, GlobeIcon, MedalIcon, MessageIcon, RocketIcon, WifiIcon } from '../SVGAids/SVG'
 
 const ServicesList = [
-    {icon: '', label: 'Education', description: 'Tech Training', rgb: [43, 16, 67]},
-    {icon: '', label: 'Startup Support', description: 'Startup Incubation', rgb: [124, 58,237]},
-    {icon: '', label: 'Research', description: 'Research & Innovation', rgb: [5, 150, 105]},
-    {icon: '', label: 'Certification', description: 'Industry Certifications', rgb: [180, 83, 9]},
-    {icon: '', label: 'Infrastructure', description: 'Digital Infrastructure Access', rgb: [3, 105, 161]},
-    {icon: '', label: 'Mentorship', description: 'Mentorship & Career', rgb: [190, 24, 93]},
-    {icon: '', label: 'Events', description: 'Event, Hackathons', rgb: [202, 138, 4]},
-    {icon: '', label: 'Corporate', description: 'Corporate training', rgb: [71, 85, 105]}
+    {icon: BookIcon, label: 'Education', description: 'Tech Training', rgb: [43, 16, 67]},
+    {icon: RocketIcon, label: 'Startup Support', description: 'Startup Incubation', rgb: [124, 58,237]},
+    {icon: BarChartIcon, label: 'Research', description: 'Research & Innovation', rgb: [5, 150, 105]},
+    {icon: MedalIcon, label: 'Certification', description: 'Industry Certifications', rgb: [180, 83, 9]},
+    {icon: WifiIcon, label: 'Infrastructure', description: 'Digital Infrastructure Access', rgb: [3, 105, 161]},
+    {icon: MessageIcon, label: 'Mentorship', description: 'Mentorship & Career', rgb: [190, 24, 93]},
+    {icon: GlobeIcon, label: 'Events', description: 'Event, Hackathons', rgb: [202, 138, 4]},
+    {icon: BuildingsIcon, label: 'Corporate', description: 'Corporate training', rgb: [71, 85, 105]}
 ]
 const ServicesHero = () => {
   return (
@@ -45,8 +46,8 @@ const ServicesHero = () => {
                         <div className='grid grid-cols-2 gap-3 w-full'>
                             {ServicesList.map((service, index) => (
                                 <div key={index} style={{boxShadow: '0px 2px 12px 0px #2B104312'}} className='p-4 flex items-center gap-4 bg-white border border-[#2B10430F] rounded-[14px]'>
-                                    <div style={{background: `rgba(${service.rgb}, 0.05)`}} className='w-9 h-9 flex item-center justif-center rounded-[10px]'>
-
+                                    <div style={{background: `rgba(${service.rgb}, 0.05)`}} className='w-9 h-9 min-w-9 flex items-center justify-center rounded-[10px]'>
+                                        <service.icon color={`rgb(${service.rgb})`} width='22' height='22' />
                                     </div>
                                     <div>
                                         <Bai_700 className='text-[12px] base-purple-text' text={service.label} />

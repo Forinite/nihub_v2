@@ -1,13 +1,14 @@
 import { Bai_700, Jet_700, Jet_800, Pop_400 } from "../fontAids/Fonts"
+import { BoltIcon, ClockIcon, MedalIcon, SheildIcon, StackIcon, StarIcon } from "../SVGAids/SVG"
 import SectionHeaderText from "../ui/SectionHeaderText"
 
 const WhyNIHUBList = [
-    {icon: '', header: 'Industry Backed Curriculum', description: 'Every programme is designed with or endorsed by Huawei, CISCO, Google, or another leader — not just academics.'},
-    {icon: '', header: 'Zero Bureaucracy', description: 'Apply, get accepted, and start within days — not semesters. We move at the speed of the industry.'},
-    {icon: '', header: 'Proven Outcomes', description: 'Our alumni are at top Nigerian fintechs, cloud companies, and startups. Results — not just certificates.'},
-    {icon: '', header: 'Safe, Inclusive Environment', description: 'Every identity, background, and skill level is welcomed. We build psychologically safe spaces by design.'},
-    {icon: '', header: 'Real Tools, Not Simulations', description: 'Students work with the same tools professionals use — live cloud environments, industry software, real datasets.'},
-    {icon: '', header: 'End-to-End Support', description: 'From your first bootcamp to your first job offer — NIHUB walks alongside you every step of the way.'}
+    {icon: MedalIcon, header: 'Industry Backed Curriculum', description: 'Every programme is designed with or endorsed by Huawei, CISCO, Google, or another leader — not just academics.'},
+    {icon: ClockIcon, header: 'Zero Bureaucracy', description: 'Apply, get accepted, and start within days — not semesters. We move at the speed of the industry.'},
+    {icon: StarIcon, header: 'Proven Outcomes', description: 'Our alumni are at top Nigerian fintechs, cloud companies, and startups. Results — not just certificates.'},
+    {icon: SheildIcon, header: 'Safe, Inclusive Environment', description: 'Every identity, background, and skill level is welcomed. We build psychologically safe spaces by design.'},
+    {icon: BoltIcon, header: 'Real Tools, Not Simulations', description: 'Students work with the same tools professionals use — live cloud environments, industry software, real datasets.'},
+    {icon: StackIcon, header: 'End-to-End Support', description: 'From your first bootcamp to your first job offer — NIHUB walks alongside you every step of the way.'}
 ]
 
 const partners = [
@@ -33,7 +34,9 @@ const WhyNihubSection = () => {
                 {WhyNIHUBList.map((reason, index) => (
                     <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={index} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
                         <div className="p-6 flex flex-col ">
-                            <div className="bg-[#2B104312] rounded-[14px] w-10 h-10 "> </div>
+                            <div className="bg-[#2B104312] rounded-[14px] w-10 h-10 flex items-center justify-center  ">
+                                <reason.icon  color="#2B1043" width="20" height="20"/>    
+                            </div>
                             <Bai_700 className="text-[15px] base-purple-text pt-4 "  text={reason.header}/>
                             <Pop_400 className="text-[13px] base-purple-text-200 pt-2" text={reason.description} />
                         </div>

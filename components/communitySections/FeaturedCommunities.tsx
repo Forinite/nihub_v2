@@ -1,5 +1,5 @@
-import { CodeXmlIcon, GlobeIcon } from "lucide-react"
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
+import { CodeIcon, GlobeIcon } from "../SVGAids/SVG"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import FeaturedCommunityCard from "./ui/FeaturedCommunityCard"
 
@@ -21,7 +21,7 @@ const FeaturedCommunities = [
     learnMoreLink: 'https://gdsc.community.dev/nihub/',
   },
     {
-    icon: CodeXmlIcon ,
+    icon: CodeIcon ,
     name: 'HNG Internship Community',
     catchPhrase: "Nigeria's most rigourous internship.",
     abbr: 'HNG',

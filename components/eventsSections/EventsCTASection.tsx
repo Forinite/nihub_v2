@@ -1,11 +1,11 @@
 import Link from "next/link"
 import { Bai_700, Jet_600, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
-import Image from "next/image"
-import { CalenderIcon } from "@/static-data/images"
+
 import { LinkTemp1 } from "../ui/LinkTemps"
 import { AllEventsList } from "./AllEventsSection"
 import DotGridBG from "../homeSections/bg/DotGridBG"
+import { CalenderIcon } from "../SVGAids/SVG"
 
 const EventsCTASection = () => {
   return (
@@ -23,7 +23,7 @@ const EventsCTASection = () => {
             <div className="pt-8 text-[13px] flex md:flex-row flex-col items-center gap-3 justify-center">
                 <Link style={{background: '#2B1043', boxShadow: `0px 4px 14px 0px #2B104359`}} href={'#'} className="py-3.5 px-8 gap-2 rounded-[10px] w-fit h-fit flex items-center ">
                     <Bai_700 className="text-white " text="View Full Calendar"/>
-                    <Image  src={CalenderIcon} alt="Calender Icon" width={14} height={14} />
+                    <CalenderIcon color='white'  width='14' height='14'  />
                 </Link>
                 <LinkTemp1 className="py-3.5 px-8 gap-2 rounded-[10px] w-fit h-fit border  border-[#2B104333] base-purple-text"  text="Apply to a Bootcamp" href="#" />
             </div>    

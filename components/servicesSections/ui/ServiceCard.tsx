@@ -26,7 +26,9 @@ const ServiceCard = ({service} :serviceProps) => {
                
                <div>
                     <div className="flex items-center justify-between pb-5">
-                        <div style={{background: `rgba(${service.rgb}, 0.05)`}} className="w-12 h-12 rounded-[14px]"> </div>
+                        <div style={{background: `rgba(${service.rgb}, 0.05)`}} className="w-12 h-12 rounded-[14px] flex items-center justify-center">
+                            <service.icon color={`rgba(${service.rgb}`} width="22" height="22" />
+                        </div>
                         <Jet_700 className="text-[10px] tracking-[0.25px] uppercase py-1 px-2.5 w-fit h-fit base-purple-text-300 bg-[#2B10430F] rounded-full" text={service.mainConcept} />
                     </div>
                     <Bai_700 className="text-[16px] base-purple-text pb-1.5" text={service.label} />

@@ -1,4 +1,5 @@
 import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
+import { BoltIcon, BrainIcon, CloudIcon, CodeIcon, GlobeIcon, GridIcon, HeartIcon, SheildIcon } from "../SVGAids/SVG"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import CommunityCard from "./ui/CommunityCard"
 
@@ -12,7 +13,7 @@ const filters = ['Development', 'AI/ML', 'Security', 'Networking', 'Blockchain',
 
 const Communities = [
     {
-    icon: ' ',
+    icon: GlobeIcon,
     name: 'Google Developer Student Club',
     catchPhrase: 'Build for everyone, powered by Google',
     abbr: 'GDSC',
@@ -28,7 +29,7 @@ const Communities = [
     learnMoreLink: 'https://gdsc.community.dev/nihub/',
   },
     {
-    icon: '' ,
+    icon: CodeIcon ,
     name: 'HNG Internship Community',
     catchPhrase: "Nigeria's most rigourous internship.",
     abbr: 'HNG',
@@ -44,7 +45,7 @@ const Communities = [
   },
   
     {
-    icon: '' ,
+    icon: BoltIcon ,
     name: 'CISCO Networking Academy',
     catchPhrase: "Gold-status networking & security learning.",
     abbr: 'CISCO',
@@ -61,7 +62,7 @@ const Communities = [
   },
   
     {
-    icon: '' ,
+    icon: BrainIcon ,
     name: 'AI & Machine Learning Club',
     catchPhrase: "Where data meets curiosity.",
     abbr: 'CISCO',
@@ -76,7 +77,7 @@ const Communities = [
     learnMoreLink: 'https://ai.community.dev/nihub/',
   },
   {
-    icon: '' ,
+    icon: SheildIcon ,
     name: 'Cybersecurity Guild',
     catchPhrase: "Hack to protect. Learn to defend.",
     abbr: 'CG',
@@ -91,7 +92,7 @@ const Communities = [
     learnMoreLink: 'https://cg.community.dev/nihub/',
   },
    {
-    icon: '' ,
+    icon: GridIcon,
     name: 'Web3 & Blockchain Hub',
     catchPhrase: "Decentralise everything.",
     abbr: 'W3BH',
@@ -106,7 +107,7 @@ const Communities = [
     learnMoreLink: 'https://web3.community.dev/nihub/',
   },
   {
-    icon: '' ,
+    icon: CloudIcon ,
     name: 'Huawei Cloud & ICT  Club',
     catchPhrase: "Cloud skills, global recognition.",
     abbr: 'Huawei',
@@ -122,7 +123,7 @@ const Communities = [
     learnMoreLink: 'https://huawei.community.dev/nihub/',
   },
   {
-    icon: '' ,
+    icon: HeartIcon ,
     name: 'Women in Tech',
     catchPhrase: "Closing the gendergap, one ulder at a time.",
     abbr: 'Huawei',

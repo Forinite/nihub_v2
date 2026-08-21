@@ -1,11 +1,12 @@
 import { Bai_700 } from "@/components/fontAids/Fonts"
 import SectionHeaderText from "@/components/ui/SectionHeaderText"
 import HeadlineEventsCard from "./ui/HeadlineEventsCard"
+import { BoltIcon, StarIcon } from "../SVGAids/SVG"
 
 const HeadlineEvents = [
     {
         rgb: [43, 16, 67],
-        icon: '',
+        icon: StarIcon,
         status: 'Upcoming',
         type: 'conference',
         name: 'Nihub Tech Week 2026',
@@ -21,7 +22,7 @@ const HeadlineEvents = [
     },
     {
         rgb: [124, 58, 237],
-        icon: '',
+        icon: BoltIcon,
         status: 'Open',
         type: 'Hackathon',
         name: 'Nihub Buildathon',

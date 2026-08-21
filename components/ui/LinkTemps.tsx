@@ -1,8 +1,8 @@
 import Link from "next/link"
 import {Bai_700} from "../fontAids/Fonts"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
-import { ArrowBentRightIcon } from "@/static-data/images"
+import { ArrowBentRightIcon } from "../SVGAids/SVG"
+// import { ArrowBentRightIcon } from "@/static-data/images"
 
 
 export const LinkTemp1= ({href, className, linkIndex, text}: {href: string, className?: string, linkIndex?: number, text: string}) => {
@@ -11,7 +11,7 @@ export const LinkTemp1= ({href, className, linkIndex, text}: {href: string, clas
        <Bai_700 text={text} />
        {linkIndex == 1  && 
        <div>
-          <Image alt="arrowicon" src={ArrowBentRightIcon} className="w-3.5 h-3.5 " width={14} height={14} />
+            <ArrowBentRightIcon  color="#2B1043" width="14" height="14"/>
        </div>
        } 
        {(linkIndex != 1  ) && 
@@ -27,7 +27,7 @@ export const LinkTemp2= ({href, className, linkIndex, text}: {href: string, clas
        <Bai_700 text={text} />
       {linkIndex == 1  && 
           <div>
-              <Image alt="arrowicon" src={ArrowBentRightIcon} className="w-3.5 h-3.5 " width={14} height={14} />
+              <ArrowBentRightIcon  color="white" width="14" height="14"/>
           </div>
        } 
        {  ( linkIndex != 1  ) && 

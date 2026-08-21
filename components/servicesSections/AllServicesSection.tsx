@@ -1,9 +1,10 @@
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
+import { BarChartIcon, BookIcon, BuildingsIcon, GlobeIcon, MedalIcon, MessageIcon, RocketIcon, WifiIcon } from "../SVGAids/SVG"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import ServiceCard from "./ui/ServiceCard"
 const ServicesList = [
     {
-        icon: '', 
+        icon: BookIcon, 
         label: 'Tech Training & Bootcamps',
         mainConcept: 'Education',
         description: "Intensive, curriculum-driven bootcamps in the most in-demand tech skills — designed with industry partners so every graduate leaves job-ready, not just certificate-ready." , 
@@ -14,7 +15,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: RocketIcon, 
         label: 'Startup Incubation', 
         mainConcept: 'Startup Support',
         description: "NIHUB's incubation programme wraps early-stage founders with mentorship, workspace, and resources to build and launch. We've helped seed dozens of student-led ventures from FUTMinna.", 
@@ -25,7 +26,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: BarChartIcon, 
         label: 'Research & Innovation Labs',
         mainConcept: 'Research', 
         description: "Access NIHUB's specialised labs for AI, IoT, embedded systems, and data research — open to undergraduate and postgraduate researchers collaborating on publishable, impactful work.", 
@@ -36,7 +37,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: MedalIcon, 
         label: 'Industry Certifications', 
         mainConcept: 'Certification',
         description: "NIHUB is an authorised testing and training centre for Huawei, CISCO, Google, and MathWorks — preparing students for internationally recognised certifications that open doors globally.", 
@@ -47,7 +48,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: WifiIcon, 
         label: "Digital Infastructure Access", 
         mainConcept: 'Infastructure',
         description: "High-speed internet, cloud compute credits, licensed software, and device loan — NIHUB removes infrastructure barriers so brilliant students can focus entirely on building.", 
@@ -58,7 +59,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: MessageIcon, 
         label: 'Mentorship & Career Support', 
         mainConcept: 'Mentorship',
         description: "From CV reviews to mock interviews and industry introductions — NIHUB's mentorship programme connects members with experienced professionals across Nigeria's tech ecosystem.", 
@@ -69,7 +70,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: GlobeIcon, 
         label: 'Events, Hackathons & Talks', 
         mainConcept: 'Events',
         description: "From intimate tech talks to 200-person hackathons, NIHUB runs one of the most active event calendars in Northern Nigeria — bringing together students, practitioners, and industry leaders.", 
@@ -80,7 +81,7 @@ const ServicesList = [
         detailLink: '#'
     },
         {
-        icon: '', 
+        icon: BuildingsIcon, 
         label: 'Corporate Training & Partnerships', 
         mainConcept: 'Corporate',
         description: "NIHUB delivers bespoke training programmes for organisations and government agencies looking to upskill their workforce in emerging technologies — with measurable outcomes.", 
