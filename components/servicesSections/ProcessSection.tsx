@@ -11,19 +11,19 @@ const ProcessList = [
 const ProcessSection = () => {
   return (
     <section className="pink-bg w-full">
-        <div className="w-[1022px] mx-auto  py-28 px-8">
+        <div className="max-w-[1022px] mx-auto  py-20 md:py-28 px-6 md:px-8">
             <div className="flex flex-col items-center justify-center gap-4 max-w-121 mx-auto">
                 <SectionHeaderText text="The Process"  />
-                <Bai_700 className="text-[56px]  base-purple-text text-center    tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="Simple to Start, Built to Scale" />
+                <Bai_700 className="text-[40px] md:text-[56px] leading-[50px] md:leading-[70px] base-purple-text text-center    tracking-[-0.5px]  uppercase pt-4"  text="Simple to Start, Built to Scale" />
                 <Pop_400 className="pt-4 text-[16px] leading-[24px] base-purple-text-100 text-center"  text="Four steps from discovery to launch — no red tape, no waitlists."/>
             </div>
 
             
-            <div className="pt-14 grid grid-cols-2 gap-6">
+            <div className="pt-14 grid md:grid-cols-2 gap-6">
 
                 {ProcessList.map((process, index) => (
                     <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={index} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
-                        <Jet_800 className=" absolute -top-[9.5px] text-[10px] text-white base-purple-bg px-2.5 py-0.5 rounded-full w-fit h-fit " text={padNum(index+1)} />
+                        <Jet_800 className=" absolute -top-[9.5px] md:block hidden text-[10px] text-white base-purple-bg px-2.5 py-0.5 rounded-full w-fit h-fit " text={padNum(index+1)} />
                         <div className="p-6 flex flex-col items-center justify-center ">
                             <div className="pt-2">
                                 <div className="bg-[#2B104312] rounded-[14px] w-12 h-12 mx-auto"> </div>

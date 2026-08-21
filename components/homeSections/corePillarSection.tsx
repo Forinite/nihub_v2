@@ -14,10 +14,10 @@ const CorePillarSection = () => {
             <SectionHeaderText text='Core Pillars' />
             <div className='pt-4'/>
             <SectionSubHeaderText text='What We Offer' />
-            <Pop_400 className='base-grey-text-200 text-[16px] pt-4 leading-6  w-128'  text='Four pillars that power every innovator who walks through our doors.' /> 
+            <Pop_400 className='base-grey-text-200 text-[16px] pt-4 leading-6  md:w-128'  text='Four pillars that power every innovator who walks through our doors.' /> 
                 
         </div>
-        <div className='grid grid-cols-2 gap-10 mt-14  common-max-width mx-auto'>
+        <div className='grid md:grid-cols-2 grid-cols-1 gap-10 mt-14  common-max-width mx-auto'>
             {CorePillarInfo.map((pillar, index) => (
                 <CorePillarCard 
                     key={index} 

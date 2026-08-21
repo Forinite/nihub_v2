@@ -27,8 +27,8 @@ const navHeaders = `${jetbrainsmono.className} uppercase text-[10px] font-bold t
 const linksLabels = `${baiJamjuree_300.className} text-[14px] py-[6px]`
 const Footer = () => {
   return (
-    <footer  className='text-white base-purple-bg-2 pt-14 pb-8 lg:px-32 '>
-      <div className='flex items-start justify-between  '>
+    <footer  className='text-white base-purple-bg-2 pt-14 pb-8 lg:px-32 px-6 '>
+      <div className='flex md:flex-row flex-col items-start  md:justify-between md:gap-auto gap-10  '>
         <div className='min-w-[320px] w-[60%]'>
           <Image  src='/assets/images/nihub-logo-light.png' alt='NIHUB logo' width={186} height={40} />
           <p className={` ${baiJamjuree_400.className} text-[14px] font-normal leading-[24.5px] pt-4  max-w-[320px] `} >NIHUB — a community of innovators shaping the future through technology, collaboration, and growth.</p>
@@ -55,10 +55,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='mt-12 h-[42px] border-t-[1px]  border-[#FFFFFF0D] text-[#FFFFFF33]  text-[11px] flex items-end '>
+      <div className='mt-12 md:pt-0 pt-4 md:h-[42px] border-t-[1px]  border-[#FFFFFF0D] text-[#FFFFFF33]  text-[11px] flex items-end '>
 
             
-            <div style={jetbrainsmono.style} className='flex items-center justify-between h-fit w-full'>
+            <div style={jetbrainsmono.style} className='flex md:flex-row flex-col md:text-left text-center items-center justify-between h-fit w-full'>
               <p>© 2026 NIHUB. All Rights Reserved. Built by Maestro</p>
               <p >IT & Innovation Hub — Federal University of Technology, Minna</p>
             </div>

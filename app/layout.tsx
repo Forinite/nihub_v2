@@ -32,16 +32,14 @@ export default function RootLayout({
     >
       
       <body className="min-h-full flex flex-col ">
-        <div className="hidden md:block">
+        <div >
+          
           <Navbar />
           {children}
           <Footer />
 
         </div>
 
-        <div className="flex-col md:hidden flex  items-center justify-center min-h-screen">
-         <Bai_600 className={'text-center text-2xl base-grey-text-200'} text={'Mobile View Under Construction, Please View On Desktop'} />
-        </div>
       </body>
 
 

@@ -13,15 +13,15 @@ const TeamSection = () => {
         <div>
           <SectionHeaderText text="The Team"  />
 
-          <div className="flex justify-between items-baseline pt-4">
+          <div className="md:flex justify-between items-baseline pt-4">
             <Bai_700  className="text-[46px] base-purple-text text-left w-102.75 tracking-[-0.5px] leading-[57.5px] uppercase"  text="Meet the People Behind Nihub" />
 
-            <Pop_400 className="text-[15px] text-right w-80 base-purple-text-100 leading-[26.25px]" text="A dedicated crew of educators, builders, and connectors — committed to every member's growth." />
+            <Pop_400 className="text-[15px] md:text-right w-80 base-purple-text-100 leading-[26.25px] md:pt-0 pt-6" text="A dedicated crew of educators, builders, and connectors — committed to every member's growth." />
 
           </div>
 
         </div>
-        <div className="pt-14 grid grid-cols-2 gap-6">
+        <div className="pt-14 md:grid grid-cols-2 gap-6">
 
           {teamMembers.map((item, index) => (
             <TeamCard key={index} name={item.name} role={item.role} statement={item.statement} socials={item.socials} index={index} />

@@ -1,6 +1,5 @@
 import SectionHeaderText from '../ui/SectionHeaderText'
 import Image from 'next/image'
-import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import { Bai_700, Pop_400 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
 import { BulbIcon } from '@/static-data/images'
@@ -8,14 +7,18 @@ import { BulbIcon } from '@/static-data/images'
 const AboutSection = () => {
   return (
     <section className=" common-section-padding ">
-      <div className='flex items-center justify-between common-max-width mx-auto w-full'>
-          <aside className='w-1/2 h-full  space-y-3 '>
+      <div className='flex md:flex-row flex-col items-center md:justify-between md:gap-auto gap-12 md:max-w-[1008px] px-6 mx-auto w-full'>
+        <aside className='md:w-1/2 h-full  space-y-3  '>
           <div className='w-full'>
             <SectionHeaderText text='About Us' />
           </div>
 
           <div className='w-fit'>
-            <SectionSubHeaderText text='Welcome to' text2='NIHUB' />
+            {/* <SectionSubHeaderText text='Welcome to' text2='NIHUB' /> */}
+                <div className="md:flex items-center md:gap-2 md:text-[44px] text-[36px]">
+                  <Bai_700 text={'Welcome to'}  className=" leading-[55px] tracking-[-0.5px] base-black-text uppercase md:block inline" /> 
+                  <Bai_700 text={'Nihub'}  className=" leading-[55px] tracking-[-0.5px] base-purple-text uppercase md:block inline" />
+              </div>
           </div>
 
 
@@ -33,11 +36,11 @@ const AboutSection = () => {
           
         </aside>
 
-        <aside className='w-1/2'>
-          <div className='relative px-4 w-[432px] h-[225px]'>
-            <Image src="/assets/images/external/black-tech-week.jpg" alt="About Us" fill className=' border rounded-lg max-w-[400px] aspect-ratio-[400/225] w-full' />
+        <aside className='md:w-1/2'>
+          <div className='relative md:px-4 md:w-[432px] md:h-[225px]'>
+            <Image src="/assets/images/external/black-tech-week.jpg" alt="About Us" width={432} height={225} className=' border rounded-lg md:max-w-[400px] aspect-ratio-[400/225] w-full' />
               
-            <div className='absolute right-0 -bottom-8 flex items-center gap-3 p-4 bg-white rounded-[14px] about-card-shadow'>
+            <div className='absolute md:right-0 -right-4 -bottom-8 flex items-center gap-3 p-4 bg-white rounded-[14px] about-card-shadow'>
               <div className='w-10 h-10 icon-box-bg rounded-[10px] flex  items-center justify-center'>
                   <Image  alt={'Bulb Icon'} src={BulbIcon} width={20} height={20}  /> 
               </div>

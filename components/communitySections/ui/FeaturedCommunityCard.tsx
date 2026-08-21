@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const linkShadow =[ {boxShadow: '0px 4px 14px 0px #4285F444' , background: '#4285F4'}, {boxShadow: '0px 4px 14px 0px #F9731644', background: '#F97316'}, ]
 const baseTextColor = [{color: '#4285F4'}, {color: '#F97316'}]
-const baseBorderColor = [{borderTop: '1px solid #4285F430', background:' #4285F412'}, {borderTop: '1px solid #F9731630', background: '#F9731612'}]
+const baseBorderColor = [{border: '1px solid #4285F430', background:' #4285F412'}, {border: '1px solid #F9731630', background: '#F9731612'}]
 const gradientBG = [
     {background: 'linear-gradient(135deg, rgba(66, 133, 244, 0.933) 0%, rgba(66, 133, 244, 0.6) 100%)'}, 
     {background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.933) 0%, rgba(249, 115, 22, 0.6) 100%)'}
@@ -32,8 +32,9 @@ export interface communityProps{
 }
 const FeaturedCommunityCard = ({community, index} :communityProps) => {
   return (
-    <div className="grid grid-cols-2 grid  rounded-2xl overflow-hidden">
-        <div style={gradientBG[index]} className="w-full px-8 py-[25.5px]  flex flex-col justify-between">
+    <div className="grid md:grid-cols-2   rounded-2xl overflow-hidden">
+        <div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
+            <div className=" absolute block md:hidden top-0 left-0 opacity-10 w-full h-full white-bg-dots" />
             <div className="">
                 <div className="w-12 h-12 mb-3 bg-[#FFFFFF33] rounded-[14px]"></div>
                 <Jet_700 className="text-[10px] text-[#FFFFFFA6] tracking-[1.5px]" text={community.mainConcept} />

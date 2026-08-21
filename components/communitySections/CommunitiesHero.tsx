@@ -18,12 +18,12 @@ const CommunitiesHero = () => {
             
             <div className='pt-10'>
                 <SectionHeaderText  text='Our Communities'/>
-                <div className='pt-5 text-[72px] -tracking-[1px] flex items-center gap-4'>
+                <div className='pt-5 text-[40px] md:text-[72px] -tracking-[1px] md:leading-[73.44px] leading-[48.96px] flex md:flex-row flex-col md:items-center md:gap-4'>
                     <Bai_700  text='FIND YOUR' className='w-fit base-purple-text'/>
                     <Bai_700  text='TRIBE' className='w-fit clarity-text-gradient' />
                 </div>
 
-                <div className='pt-6 w-140 text-[17px] leading-[30.6px] base-purple-text-100  '>
+                <div className='pt-6 md:max-w-140 text-[17px] leading-[30.6px] base-purple-text-100  '>
                     <Pop_400 text='NIHUB is home to ' className='inline' />
                     <Pop_600 text='8 active communities ' className='base-purple-text inline' />
                     <Pop_400  className='inline' text='spanning AI, blockchain, cybersecurity, cloud, and more. Find yours, join the conversation, and start building.' />
@@ -36,10 +36,10 @@ const CommunitiesHero = () => {
                 </div>
 
                 <div className='pt-16'>
-                    <div className='flex items-center gap-4'>
+                    <div className='flex md:flex-row flex-col  md:items-center gap-4'>
                     {CommunityStats.map((stat, index) => (
-                            <div key={index} className=' py-4 px-5 rounded-[14px]  bg-white communities-stats-shadow  '> 
-                                <div className='flex items-center h-fit   gap-3'> 
+                            <div key={index} className=' py-4 px-5 rounded-[14px] w-fit  bg-white communities-stats-shadow  '> 
+                                <div className='flex items-center h-fit  w gap-3'> 
                                     <Bai_700 text={stat.value} className='text-[20px]  base-purple-text h-fit' />
                                     <Jet_600 text={stat.label} className='text-[11px] base-purple-text-300 uppercase h-fit pb-1' />
                                 </div>

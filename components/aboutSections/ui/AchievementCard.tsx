@@ -9,7 +9,7 @@ interface AchievementCardsProps {
 }
 const AchievementCard = ({ title, description , img, year}: AchievementCardsProps ) => {
   return (
-    <div className="relative achievement-card-shadow rounded-2xl bg-white p-6 h-50.5 w-[470px]">
+    <div className="relative achievement-card-shadow rounded-2xl bg-white p-6 ">
         <div className="relative">
             <Jet_700 text={year} className="absolute -top-1 right-0 rounded-full text-center w-10 h-4.75 items-center justify-center bg-[#2B104312] text-[10px] base-purple-text" />
         </div>

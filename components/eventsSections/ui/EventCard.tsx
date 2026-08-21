@@ -25,12 +25,12 @@ interface EventProps {
 
 const EventCard = ({event} :EventProps) => {
   return (
-    <div  className="relative pt-1.5 w-fit">
+    <div  style={{borderTop: '1px solid rgba(43, 16, 67, 0.06)', boxShadow: '0px 2px 14px 0px rgba(43, 16, 67, 0.06)'}} className="relative pt-1.5 w-fit rounded-[14px] overflow-hidden">
         
             <div style={{background: `linear-gradient(90deg,  rgb(${event.rgb}) 0%, rgba(${event.rgb}, 0.4) 100%)`}} className="absolute top-0 left-0 opacity-50 rounded-2xl z-10 w-full h-full ">
     
             </div>
-            <div style={{borderTop: '1px solid rgba(43, 16, 67, 0.06)', boxShadow: '0px 2px 14px 0px rgba(43, 16, 67, 0.06)'}} className="relative h-full flex flex-col  justify-between bg-white z-20 p-6 " >
+            <div  className="relative h-full flex flex-col  justify-between bg-white z-20 p-6 " >
                
                <div className="flex items-start justify-between pb-4">
                     <div style={{background: `rgba(${event.rgb}, 0.05)`}} className="w-10 h-10  bg-[#FFFFFF33] rounded-[14px]">

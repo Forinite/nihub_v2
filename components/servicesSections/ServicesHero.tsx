@@ -16,20 +16,20 @@ const ServicesList = [
 const ServicesHero = () => {
   return (
     <section className=' '>
-        <div className='absolute z-10' style={{background: 'radial-gradient(50% 60% at 5% 85%, rgba(255, 178, 52, 0.07) 0%, rgba(255, 178, 52, 0) 100%)'}}/>
-        <div className='relative z-20 py-40 max-w-[1022px]   mx-auto'>
+        <div className='absolute z-10 ' style={{background: 'radial-gradient(50% 60% at 5% 85%, rgba(255, 178, 52, 0.07) 0%, rgba(255, 178, 52, 0) 100%)'}}/>
+        <div className='relative z-20 md:py-40 py-24 max-w-[1022px]   mx-auto'>
             <PathIndicator basePath='Home' nextPaths={['Services']} />
 
-            <div className='px-8'>
+            <div className='px-6 md:px-8'>
                 
                 <div className='pt-10'>
                     <SectionHeaderText  text='What We Offer'/>
-                    <Bai_700  text='Services Built ' className='w-fit pt-5 base-purple-text text-[72px] -tracking-[1px] leading-[73.44px] uppercase'/>
+                    <Bai_700  text='Services Built ' className='w-fit pt-5 base-purple-text text-[48px] md:text-[72px] leading-[48.96px] md:leading-[73.44px] -tracking-[1px] uppercase'/>
 
-                    <div className='grid grid-cols-2 gap-20'>
+                    <div className='grid md:grid-cols-2 md:gap-20 gap-14'>
                         <div>
-                            <div className=' text-[72px] -tracking-[1px] leading-[73.44px]'>
-                                <Bai_700  text='To Launch You' className='w-fit clarity-text-gradient uppercase' />
+                            <div className='  -tracking-[1px] text-[48px] md:text-[72px] leading-[48.96px] md:leading-[73.44px]'>
+                                <Bai_700  text='To Launch You' className='md:w-fit w-min clarity-text-gradient uppercase' />
                             </div>
 
                             <div className='pt-6 text-[17px] leading-[30.6px] base-purple-text-100  '>
@@ -63,7 +63,7 @@ const ServicesHero = () => {
                 </div>
             </div>
         </div>
-        <div style={{background: 'linear-gradient(180deg, rgba(245, 240, 255, 0) 0%, #F5F0FF 100%)'}} className='w-full h-28 mt-4'></div>
+        <div style={{background: 'linear-gradient(180deg, rgba(245, 240, 255, 0) 0%, #F5F0FF 100%)'}} className='w-full h-28 md:block hidden   mt-4 '></div>
         
         
     </section>

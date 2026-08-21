@@ -39,11 +39,11 @@ const FeaturedCommunities = [
 
 const FeaturedCommunitiesSection = () => {
   return (
-    <section className="py-56 pink-bg">
+    <section className="md:py-56 py-20 pink-bg">
       <div className="max-w-[1022px] mx-auto px-8">
           <div>
             <SectionHeaderText text="Featured"  />
-            <Bai_700  className="text-[56px]  base-purple-text text-left w-96.25   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="Most Active Communities" />
+            <Bai_700  className="text-[40px] md:text-[56px]  base-purple-text text-left md:max-w-96.25   tracking-[-0.5px] leading-[50px] md:leading-[70px] uppercase pt-4"  text="Most Active Communities" />
           </div>
 
           <div className='pt-12 flex flex-col gap-8'>

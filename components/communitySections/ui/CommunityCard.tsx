@@ -15,11 +15,11 @@ const baseRGB = [
 ]
 const CommunityCard = ({community, index} : communityProps) => {
   return (
-    <div  className="relative pt-1.5 w-full h-fit">
+    <div style={{borderTop: '1px solid rgba(43, 16, 67, 0.06)', boxShadow: '0px 2px 14px 0px rgba(43, 16, 67, 0.06)'}}  className="relative pt-1.5 w-full h-fit rounded-2xl overflow-hidden">
         <div style={{background: `linear-gradient(90deg,  rgb(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}) 0%, rgba(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}, 0.533) 100%)`}} className="absolute top-0 left-0 opacity-50 rounded-2xl z-10 w-full h-full ">
 
         </div>
-        <div style={{borderTop: '1px solid rgba(43, 16, 67, 0.06)', boxShadow: '0px 2px 14px 0px rgba(43, 16, 67, 0.06)'}} className="relative h-full bg-white z-20 p-6" >
+        <div  className="relative h-full bg-white z-20 p-6 " >
             <div className="flex items-center justify-between pb-4">
                 <div style={{background: `rgba(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b}, 0.06)`}} className="w-12 h-12 rounded-[14px]"> </div>
                 <Jet_700 className="text-[10px] tracking-[0.25px] uppercase py-1 px-2.5 w-fit h-fit base-purple-text-300 bg-[#2B10430F] rounded-full" text={community.mainConcept} />

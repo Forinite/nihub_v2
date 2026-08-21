@@ -94,18 +94,18 @@ const ServicesList = [
 
 const AllServicesSection = () => {
   return (
-    <section className="w-[1022px] px-8 py-28 mx-auto">
-        <div className="flex items-end justify-between">
+    <section className="max-w-[1022px] px-8 py-28 py-20 mx-auto">
+        <div className="flex md:flex-row flex-col md:gap-6 gap-6 items-end justify-between">
             <div>
                 <SectionHeaderText text="All Services"  />
-                <Bai_700  className="text-[56px]  base-purple-text text-left w-[477px]   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="Everything You Need to Grow" />
+                <Bai_700  className="md:text-[56px] text-[40px]  base-purple-text text-left max-w-[477px]   tracking-[-0.5px] md:leading-[70px] leading-[50px] uppercase pt-4"  text="Everything You Need to Grow" />
             </div>
-            <div className="flex items-end justify-end w-full h-full ">
-                <Pop_400 text="Eight services. One hub. Your entire tech journey — covered."  className="text-[15px] w-70 h-fit leading-[26.25px] text-end base-purple-text-100"/>
+            <div className="md:flex items-end justify-end w-full h-full ">
+                <Pop_400 text="Eight services. One hub. Your entire tech journey — covered."  className="text-[15px] w-70 h-fit leading-[26.25px] md:text-end base-purple-text-100"/>
             </div>
         </div>
         
-        <div className="grid grid-cols-2 gap-6 pt-10">
+        <div className="grid md:grid-cols-2 gap-6 pt-10">
             {ServicesList.map((service, index) => (
                 <ServiceCard key={index} service={service} />
             ))}

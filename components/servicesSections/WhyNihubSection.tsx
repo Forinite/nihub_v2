@@ -17,18 +17,18 @@ const partners = [
 const WhyNihubSection = () => {
   return (
      <section className="pink-bg w-full">
-        <div className="w-[1022px] mx-auto  py-28 px-8">
+        <div className="max-w-[1022px] mx-auto  md:py-28 py-20 md:px-8 px-6">
             <div className="flex flex-col items-center justify-center gap-4  mx-auto">
                 <SectionHeaderText text="Why NIHUB"  />
-                <div>
-                    <Bai_700 className="text-[54px]   base-purple-text text-center  tracking-[-0.5px] leading-[67.5px] uppercase pt-4"  text="The Standard " />
-                    <Bai_700 className="text-[54px]   base-purple-text text-center  tracking-[-0.5px] leading-[67.5px] uppercase"  text="Others Measure Against" />
+                <div className="text-[40px] md:text-[54px]   base-purple-text text-center  tracking-[-0.5px] leading-[50px] md:leading-[67.5px] uppercase">
+                    <Bai_700 className=" pt-4"  text="The Standard " />
+                    <Bai_700 className="md:w-auto w-min mx-auto"  text="Others Measure Against" />
 
                 </div>
             </div>
 
             
-            <div className="pt-14 grid grid-cols-2 gap-6">
+            <div className="pt-14 grid md:grid-cols-2 gap-6">
 
                 {WhyNIHUBList.map((reason, index) => (
                     <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={index} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
@@ -43,7 +43,7 @@ const WhyNihubSection = () => {
 
             <div className="py-9 px-8 bg-white rounded-2xl mt-12">
                 <Jet_700 className="tracking-[1.98px] uppercase text-[11px] base-purple-text text-center"  text="Service Partners & Accreditors"/>
-                <div className="pt-7 flex items-center justify-center gap-5">
+                <div className="pt-7 flex flex-wrap items-center justify-center gap-5">
 
                     {partners.map((partner, index) => (
                         <div  key={index} style={{boxShadow: "0px 2px 10px 0px #2B104314"}} className="w-fit h-fit rounded-[14px]  "> 

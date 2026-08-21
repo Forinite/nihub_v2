@@ -140,14 +140,14 @@ const Communities = [
 ]
 const AllCommuntiesSection = () => {
   return (
-    <section className="w-[1022px] mx-auto py-28 px-8">
-        <div className="flex items-end justify-between">
+    <section className="md:max-w-[1022px] mx-auto py-28 px-8">
+        <div className="md:flex items-end justify-between">
             <div>
                 <SectionHeaderText text="All Communities"  />
-                <Bai_700  className="text-[56px]  base-purple-text text-left w-96.25   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="Most Active Communities" />
+                <Bai_700  className="text-[56px]  base-purple-text text-left w-96.25   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="Find Where You Belong" />
             </div>
-            <div className="flex items-end justify-end w-full h-full ">
-                <Pop_400 text="Every path into tech has a home at NIHUB."  className="text-[15px] w-70 h-fit leading-[26.25px] text-end base-purple-text-100"/>
+            <div className="md:flex items-end justify-end w-full h-full ">
+                <Pop_400 text="Every path into tech has a home at NIHUB."  className="text-[15px] max-w-70 h-fit md:pt-0 pt-6 leading-[26.25px] md:text-end base-purple-text-100"/>
             </div>
         </div>
 
@@ -168,7 +168,7 @@ const AllCommuntiesSection = () => {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-6 pt-10">
+        <div className="grid md:grid-cols-2 gap-6 pt-10">
             {Communities.map((community, index) => (
                 <CommunityCard key={index} community={community} index={index} />
             ))}

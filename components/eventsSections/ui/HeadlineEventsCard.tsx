@@ -68,7 +68,7 @@ const HeadlineEventsCard = ({event} : EventProps ) => {
                 </div>
 
             </div>
-            <div className="pt-4 gap-1.5 flex items-center gap-1.5">
+            <div className="pt-4 gap-1.5 flex flex-wrap items-center gap-1.5">
                 {event.keywords.map((keyword, index) => (
                     <div style={{background: `rgba(${event.rgb}, 0.06)`, border: `1px solid rgba(${event.rgb}, 0.16)`, color: `rgb(${event.rgb})`}} key={index} className="w-fit h-fit py-1 px-2.5 rounded-full">
                         <Jet_600  className="text-[10px]" text={keyword} />

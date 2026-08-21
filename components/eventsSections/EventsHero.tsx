@@ -11,20 +11,20 @@ const eventsStats = [
 ]
 const EventsHero = () => {
   return (
-    <section className=" relative h-fit pt-40  overflow-hidden  ">
+    <section className=" relative h-fit md:pt-40 pt-32 overflow-hidden  ">
 
         
-        <div className=' max-w-[1022px] mx-auto  pb-32'>
+        <div className=' max-w-[1022px] mx-auto  md:pb-32 pb-24'>
             <PathIndicator basePath='Home' nextPaths={['Events & Training']} />
 
-            <div className="w-full flex items-center gap-16 justify-between px-8 pt-10  h-full">
-                <aside className='w-[447px] h-full flex flex-col items-center justify-center '>
+            <div className="w-full md:flex items-center gap-16 justify-between px-8 pt-10  h-full">
+                <aside className='md:max-w-[447px] h-full flex flex-col items-center justify-center '>
                     <div>
                         <SectionHeaderText text="IT & Innovation Hub - Futminna" />
-                        <div className='text-[58px] base-purple-text leading-[60.9px] tracking[-0.5px] uppercase pt-5 '>
-                            <Bai_700 text='Learn.' />
-                            <Bai_700 text='Build.'  className='clarity-text-gradient w-fit '/> 
-                            <Bai_700 text='Compete.' />
+                        <div className='md:text-[58px] text-[48px] base-purple-text md:leading-[60.9px] leading-[48.96px] tracking[-0.5px] uppercase pt-5 '>
+                            <Bai_700 className="md:block inline" text='Learn.' />
+                            <Bai_700 text='Build.'  className='clarity-text-gradient md:block inline w-fit '/> 
+                            <Bai_700 className="md:block inline" text='Compete.' />
                         </div>
                         <Pop_400 
                             text=' From intensive bootcamps to 72-hour hackathons and industry fireside chats — NIHUB runs the most active tech calendar in Northern Nigeria. All free for students. '
@@ -33,7 +33,7 @@ const EventsHero = () => {
         
                     
 
-                        <div className='flex items-center space-x-3 pt-10 w-fit'>
+                        <div className='flex md:flex-row flex-col md:items-center gap-3 pt-10 w-fit'>
 
                             <LinkTemp1 href="#" className='px-6 py-3 text-[13px] w-fit h-fit base-purple-bg text-white rounded-[10px] link-shadow' text='Register for an Event' linkIndex={0} />
                             <LinkTemp1 href="#" className='px-6 py-3 text-[13px] w-fit h-fit border border-[#2B104340] base-purple-text rounded-[10px]'     text='Browse Events'  linkIndex={1}/>
@@ -41,7 +41,7 @@ const EventsHero = () => {
                         </div>
                     </div>
                     <div className='border-t border-gray-300 mt-10 pt-8 w-full'>
-                        <ul className='flex items-center space-x-3  w-full'>
+                        <ul className='flex flex-wrap items-center md:gap-3 gap-5  w-full'>
                             {eventsStats.map((stat) => (
                                 <li key={stat.label}>
                                     <Bai_700 className='text-[22px] leading-8.25 base-purple-text' text={stat.value} />
@@ -53,7 +53,7 @@ const EventsHero = () => {
 
                 </aside>
 
-                <aside className='w-[44.8%] h-full flex items-center justify-end '>
+                <aside className='w-[44.8%] h-full md:flex hidden items-center justify-end '>
                     <FeaturedEventCard />
                 </aside>
             </div>

@@ -130,8 +130,11 @@ section {
 }
 
 .core-pillar-section-shadow{
-  box-shadow: 0px 4px 15px 0px #00000040 inset;
-  box-shadow: 0px -4px 15px 0px #00000040 inset;
+  @media (width >= 48rem /* 768px */) {
+    box-shadow: 0px 4px 15px 0px #00000040 inset;
+    box-shadow: 0px -4px 15px 0px #00000040 inset;
+  }
+ 
 }
 
 .about-card-shadow {
@@ -163,6 +166,13 @@ section {
 .about-page-common-card-shadow {
   border-top: 1px solid #2B10430F;
   box-shadow: 0px 2px 12px 0px #2B104312;
+}
+
+.navbar-shadow {
+    @media (width < 48rem /* 768px */) {
+    box-shadow: 0px 2px 20px 0px rgba(43, 16, 67, 0.08);
+
+  }
 }
 
 .achievement-card-shadow {
@@ -197,8 +207,14 @@ section {
 }
 
 .common-section-padding{
-  padding-top: 112px;
-  padding-bottom: 112px;
+  @media (width >= 48rem /* 768px */) {
+      padding-top: 112px;
+      padding-bottom: 112px;
+  }
+  @media (width < 48rem /* 768px */) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+  }
 }
 .event-ongoing-bg {
   background-color: #22C55E;
@@ -217,9 +233,16 @@ section {
 }
 
 .about-page-common-max-width {
-  max-width: 1023px;
-  padding-left: 32px;
-  padding-right: 32px;
+   @media (width >= 48rem /* 768px */) {
+        max-width: 1023px;
+        padding-left: 32px;
+        padding-right: 32px;
+  }
+     @media (width < 48rem /* 768px */) {
+        padding-left: 24px;
+        padding-right: 24px;
+  }
+
 }
 
 .icon-box-bg {
@@ -243,6 +266,14 @@ section {
   background-image: radial-gradient(#FFB23426 1.5px, transparent 0px);
   background-size: 12px 12px;
 }
+
+.white-bg-dots {
+  inset: 0;
+  background-image: radial-gradient(#FFffff 3px, transparent 0px);
+  background-size: 12px 12px;
+}
+
+
 
 
 .about-page-linear-gradient-dot-grid-overlay {

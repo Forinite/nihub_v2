@@ -111,11 +111,11 @@ export const AllEventsList = [
 
 const AllEventsSection = () => {
   return (
-    <section className="py-28 px-8 w-[1022px] bg-white mx-auto">
-        <div className="flex items-end justify-between">
+    <section className="py-20 md:py-28 md:px-8 px-6 max-w-[1022px] bg-white mx-auto">
+        <div className="md:flex items-end justify-between">
             <div>
                 <SectionHeaderText text="All Events"  />
-                <Bai_700  className="text-[56px]  base-purple-text text-left   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="What's On" />
+                <Bai_700  className="text-[40px] md:text-[56px]  base-purple-text text-left   tracking-[-0.5px] leading-[70px] uppercase pt-4"  text="What's On" />
             </div>
             <div className="flex items-center  w-fit h-full gap-2">
                 <Filter className="w-[13px] h-[13px]  base-purple-text-100" />
@@ -139,7 +139,7 @@ const AllEventsSection = () => {
 
         </div>
 
-        <div className="pt-40 grid grid-cols-2 gap-6 ">
+        <div className="pt-10 grid md:grid-cols-2 gap-6 ">
                 {AllEventsList.map((event, index) => (
                     <EventCard key={index} event={event} />
                 ))}

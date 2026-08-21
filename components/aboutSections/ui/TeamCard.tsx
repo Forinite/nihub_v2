@@ -54,14 +54,14 @@ const bgStyles = [
     },
 ]
 
-const TeamCard = ({name, role, statement, socials, index} : TeamCardProps) => {
+const  TeamCard = ({name, role, statement, socials, index} : TeamCardProps) => {
   return (
     <div className=" rounded-2xl overflow-hidden team-card-shadow border-t border-[#2B10430F]" >
         <div className={` relative overflow-hidden w-full h-52 bg-linear-[135deg] from-[13.3%] to-[26.7%] ${bgStyles[index].card} flex items-center justify-center `} >
             <div className={` absolute  -bottom-3.5 w-28 h-28 rounded-full border-4 border-white ${bgStyles[index].profile} flex items-center justify-center`}>
                 <Bai_700 text={getComplexInitials(name)} className="text-[32px] text-white w-fit h-fit" />
             </div>
-            <div className=" absolute bottom-0 z-10 w-full h-fit bg-linear-0 from-0% from-[#FFFFFFF2] to-100% to-[#00000000] ">
+            <div  className=" absolute bottom-0 z-10 w-full h-fit bg-linear-0 from-0% from-[#FFFFFFF2] to-100% to-[#00000000] ">
                 <Image className="w-full"  width={466} height={64} alt="gradient" src={TeamCardDarkGradientVector}  />
             </div>
         </div>
