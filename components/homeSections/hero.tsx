@@ -22,7 +22,7 @@ const HeroSection = () => {
                 <aside className='md:max-w-1/2 w-full h-full flex flex-col items-center justify-center '>
                     <div>
                         <SectionHeaderText text="IT & Innovation Hub - Futminna" />
-                        <div className='md:text-[58px] text-[26px] base-purple-text md:leading-[60.9px] leading-[26px] tracking[-0.5px] uppercase pt-5 '>
+                        <div className='md:text-[58px] text-[40px] base-purple-text md:leading-[60.9px] leading-[43px] tracking[-0.5px] uppercase pt-5 '>
                             <div className='md:block flex items-center gap-3'>
                                 <Bai_700 text='we give' />
                                 <Bai_700 text='clarity'  className='clarity-text-gradient w-fit '/> 

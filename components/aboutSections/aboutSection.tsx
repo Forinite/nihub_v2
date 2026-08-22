@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Bai_700, Jet_400, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
-import { BuildingIcon, GradientBarVector, PeopleIcon } from "@/static-data/images"
+import { aboutImg, BuildingIcon, GradientBarVector, PeopleIcon } from "@/static-data/images"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import CorePillarCard from "../homeSections/ui/CorePillarCard"
 import { Statements } from "@/static-data/about_data"
@@ -20,7 +20,7 @@ const AboutSection = () => {
             <aside className="w-fit">
                 <SectionHeaderText text="About NIHUB"  />
                 <div className="md:text-[60px] text-[43px] tracking-[-0.5px] leading-[42.68px] md:leading-[62.4px] ">
-                    <div className="pt-5 uppercase w-110 md:mb-8">
+                    <div className="pt-5 uppercase max-w-110 md:mb-8">
                         <Bai_700 text="The hub where" className="inline base-purple-text"/>
                         <Bai_700 text="Ideas" className="clarity-text-gradient w-fit inline"/>
                     </div>
@@ -48,21 +48,23 @@ const AboutSection = () => {
 
                 </div>
             </aside>
-            <aside className="flex items-center  justify-end w-fit">
+            <aside className=" md:flex hidden  items-center  justify-end w-fit">
 
-                <div className=" relative md:w-110 h-[247px] about-page-card-shadow rounded-2xl">
+                <div className=" relative md:w-110 h-[247px] about-page-card-shadow rounded-2xl ">
 
-                    <div className='absolute  -left-4 -top-3 flex items-center gap-2.5 py-3 px-4 bg-white rounded-[14px]  aboutpage-about-minicard-shadow'>
+                    <div className='absolute z-20  -left-4 -top-3 flex items-center gap-2.5 py-3 px-4 bg-white rounded-[14px]  aboutpage-about-minicard-shadow'>
                         <div className='w-fit h-7.5 icon-box-bg rounded-[10px] flex  items-center justify-center'>
                             <Image  alt={'Building Icon'} src={BuildingIcon} width={20} height={30}  /> 
                         </div>
+                        
                         <div className=''>
                             <Bai_700 text='Est. 2018' className='text-[11px] base-purple-text ' />
                             <Jet_400 text='FUTMinna Campus' className='text-[10px]  base-grey-text-100' />
                         </div>
                     </div>
+                    <Image className="rounded-2xl " src={aboutImg} alt="image" fill/>
 
-                    <div className='absolute -right-4.25 -bottom-3.25  md:flex hidden items-center gap-2.5 py-3 px-4 bg-white rounded-[14px] aboutpage-about-minicard-shadow'>
+                    <div className='absolute -right-4.25 -bottom-3.25  items-center gap-2.5 py-3 px-4 bg-white rounded-[14px] aboutpage-about-minicard-shadow'>
                         <div className='w-8 h-8 icon-box-bg rounded-[10px] flex  items-center justify-center'>
                             <Image  alt={'People Icon'} src={PeopleIcon} width={16} height={16}  /> 
                         </div>

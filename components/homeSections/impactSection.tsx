@@ -7,7 +7,7 @@ import DotGridBG from "./bg/DotGridBG"
 
 const ImpactSection = () => {
   return (
-    <section className="pink-bg common-section-padding relative  ">
+    <section className="pink-bg common-section-padding relative  overflow-hidden">
 
         
         <div className="absolute  md:w-full w-[1008px] h-full top-0 ">

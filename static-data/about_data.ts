@@ -121,16 +121,7 @@ export const teamMembers = [
     statement: "Orchestrates NIHUB's packed calendar of hackathons, workshops, and tech talks — making every event one to remember.",
     socials: ['/linkedin/link','/x/link']
   },
-
-  { 
-    image: teamImages[5],
-    name: 'Maryam Abdullahi',
-    role: 'Community Managerr',
-    statement: "Dedicated to growing and nurturing NIHUB's vibrant ecosystem, ensuring every member finds their voice and their place.",
-    socials: ['/linkedin/link','/x/link']
-  },
-  
-    { 
+      { 
     image: teamImages[6],
     name: 'Ibrahim Suleiman',
     role: 'Head of Training & Programmes',

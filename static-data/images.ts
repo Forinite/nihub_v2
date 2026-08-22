@@ -86,6 +86,10 @@ import t12 from '@/public/assets/images/external/team/t12.jpg'
 import t13 from '@/public/assets/images/external/team/t13.jpg'
 import t14 from '@/public/assets/images/external/team/t14.jpg'
 
+import heroImage from '@/public/assets/images/external/heroImage.png'
+import aboutImage from '@/public/assets/images/external/aboutImage.jpg'
+
+
 
 export const dotGridImage = dot_grid
 export const dotGridImage2 = dot_grid_2
@@ -155,6 +159,9 @@ export const  PeopleIcon_Yellow = People_Yellow
 export const  RightArrowBentIcon_White = RightArrowBent_White
 export const  SheildIcon_Orange = Sheild_Orange
 export const  StarIcon_Yellow = Star_Yellow
+
+export const heroImg = heroImage
+export const aboutImg = aboutImage
 
 
 

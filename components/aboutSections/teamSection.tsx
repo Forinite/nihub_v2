@@ -14,9 +14,9 @@ const TeamSection = () => {
           <SectionHeaderText text="The Team"  />
 
           <div className="md:flex justify-between items-baseline pt-4">
-            <Bai_700  className="text-[46px] base-purple-text text-left w-102.75 tracking-[-0.5px] leading-[57.5px] uppercase"  text="Meet the People Behind Nihub" />
+            <Bai_700  className="md:text-[46px] text-[36px] base-purple-text text-left max-w-102.75 tracking-[-0.5px] md:leading-[57.5px] leading-[45px] uppercase"  text="Meet the People Behind Nihub" />
 
-            <Pop_400 className="text-[15px] md:text-right w-80 base-purple-text-100 leading-[26.25px] md:pt-0 pt-6" text="A dedicated crew of educators, builders, and connectors — committed to every member's growth." />
+            <Pop_400 className="text-[15px] md:text-right max-w-80 base-purple-text-100 leading-[26.25px] md:pt-0 pt-6" text="A dedicated crew of educators, builders, and connectors — committed to every member's growth." />
 
           </div>
 

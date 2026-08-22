@@ -2,7 +2,7 @@ import SectionHeaderText from '../ui/SectionHeaderText'
 import Image from 'next/image'
 import { Bai_700, Pop_400 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
-import { BulbIcon } from '@/static-data/images'
+import { BulbIcon, heroImg } from '@/static-data/images'
 
 const AboutSection = () => {
   return (
@@ -37,8 +37,13 @@ const AboutSection = () => {
         </aside>
 
         <aside className='md:w-1/2'>
-          <div className='relative md:px-4 md:w-[432px] md:h-[225px]'>
-            <Image src="/assets/images/external/black-tech-week.jpg" alt="About Us" width={432} height={225} className=' border rounded-lg md:max-w-[400px] aspect-ratio-[400/225] w-full' />
+          <div className='relative md:px-4 md:w-[432px] md:h-[225px] h-50 rounded-lg'>
+            <div className='w-full h-full overflow-hidden rounded-lg'>
+              <div className='w-fit h-fit'>
+                <Image src={heroImg} alt="About Us"  className=' border rounded-lg md:max-w-[400px]  h-full' />
+              </div>
+
+            </div>
               
             <div className='absolute md:right-0 -right-4 -bottom-8 flex items-center gap-3 p-4 bg-white rounded-[14px] about-card-shadow'>
               <div className='w-10 h-10 icon-box-bg rounded-[10px] flex  items-center justify-center'>
