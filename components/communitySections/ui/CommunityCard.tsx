@@ -1,4 +1,4 @@
-import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600 } from "@/components/fontAids/Fonts"
+import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600, Pop_600_Italic } from "@/components/fontAids/Fonts"
 import { communityProps } from "./FeaturedCommunityCard"
 import Image from "next/image"
 import { CalenderIcon, PeopleIcon } from "@/components/SVGAids/SVG"
@@ -29,7 +29,7 @@ const CommunityCard = ({community, index} : communityProps) => {
             <Bai_700 className="text-[16px] base-purple-text pb-1" text={community.name} />
             
             <span style={{color: `rgb(${baseRGB[index].r}, ${baseRGB[index].g}, ${baseRGB[index].b})`}}>
-                <Pop_600  className="pb-3 text-[12px]" text={community.catchPhrase} />
+                <Pop_600_Italic  className="pb-3 text-[12px]" text={'"' + community.catchPhrase + '"'} />
             </span>
 
             <Pop_400 className="base-purple-text-200 text-[13px] leading-[21.13px] mb-4 line-clamp-2 " text={community.description} />

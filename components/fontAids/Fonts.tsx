@@ -9,6 +9,9 @@ const pop_400 = Poppins({weight: '400'})
 const pop_600 = Poppins({weight: '600'})
 const pop_700 = Poppins({weight: '700'})
 
+const pop_600_italic = Poppins({weight: '600', style: 'italic'})
+const pop_700_italic = Poppins({weight: '700', style: 'italic'})
+
 
 const jet_800 = JetBrains_Mono({weight: '800'})
 const jet_700 = JetBrains_Mono({weight: '700'})
@@ -48,11 +51,26 @@ export const Pop_600 = ({className, text} : {className?: string, text: string}) 
   )
 }
 
-export const Pop_700 = ({className, text} : {className?: string, text: string}) => {
+export const Pop_700 = ({className, text} : {className?: string, text: string, italic?: boolean}) => {
   return (
-    <p className={`${pop_700.className} ${className}`}> {text}  </p>
+    <p className={`${pop_700.className} ${className} `}> {text}  </p>
   )
 }
+
+export const Pop_600_Italic = ({className, text} : {className?: string, text: string, italic?: boolean}) => {
+  return (
+    <p className={`${pop_600_italic.className} ${className} italic`}> {text}  </p>
+  )
+}
+
+
+export const Pop_700_Italic = ({className, text} : {className?: string, text: string, italic?: boolean}) => {
+  return (
+    <p className={`${pop_700_italic.className} ${className} italic`}> {text}  </p>
+  )
+}
+
+
 
 
 

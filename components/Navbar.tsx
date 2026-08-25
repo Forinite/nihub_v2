@@ -25,7 +25,7 @@ const Navbar = () => {
     }
   return (
     <div  className="fixed top-0 left-0 w-screen h-20 z-50  navbar-shadow ">
-        <div className="flex items-center justify-between p-4 bg-white text-[#2B1043A6] w-full h-full ">
+        <div className="flex items-center justify-between p-4 md:px-8 px-6 bg-white text-[#2B1043A6] w-full h-full ">
             <Link href={'/'}>
                 <Image src="/assets/images/nihub-logo-dark.png" alt="Logo" width={200} height={40} />
             </Link>

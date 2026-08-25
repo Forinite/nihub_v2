@@ -1,6 +1,7 @@
-import { Bai_600, Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_700 } from "@/components/fontAids/Fonts"
+import { Bai_600, Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_700, Pop_700_Italic } from "@/components/fontAids/Fonts"
+import { LinkIcon } from "@/components/SVGAids/SVG"
 
-import { ArrowRight,   LinkIcon } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const linkShadow =[ {boxShadow: '0px 4px 14px 0px #4285F444' , background: '#4285F4'}, {boxShadow: '0px 4px 14px 0px #F9731644', background: '#F97316'}, ]
@@ -32,8 +33,8 @@ export interface communityProps{
 }
 const FeaturedCommunityCard = ({community, index} :communityProps) => {
   return (
-    <div className="grid md:grid-cols-2   rounded-2xl overflow-hidden">
-        <div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
+    <div className="grid md:grid-cols-2    rounded-2xl overflow-hidden">
+        {<div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
             <div className=" absolute block md:hidden top-0 left-0 opacity-10 w-full h-full white-bg-dots" />
             <div className="">
                 <div className="w-12 h-12 mb-3 bg-[#FFFFFF33] rounded-[14px] flex items-center justify-center">
@@ -64,9 +65,11 @@ const FeaturedCommunityCard = ({community, index} :communityProps) => {
                 }
             </div>
         </div>
+        }
+
         <div className="w-full px-8 py-[25.5px] bg-white ">
             <span style={baseTextColor[index]} >
-                <Pop_700  className=" text-[13px] italic" text={community.catchPhrase}/>
+                <Pop_700_Italic  className=" text-[13px] italic" text={'"' + community.catchPhrase + '"'}/>
             </span>
 
             <Bai_700 className='pt-3 text-[20px] base-purple-text'  text={community.name}/>
@@ -91,7 +94,7 @@ const FeaturedCommunityCard = ({community, index} :communityProps) => {
 
                         <Link className="flex items-center gap-1.5" href={community.learnMoreLink} > 
                             <Bai_600 text={'Learn more'} className="text-[13px] base-grey-text-200" />
-                            <LinkIcon className="w-3 h-3 base-grey-text-200" />
+                            <LinkIcon color="#9E9E9E" width="12" height="12" />
                         </Link>
                 </div>
 
