@@ -62,8 +62,9 @@ const Navbar = () => {
 
         { mobileMenuOpen && 
             <div  className='relative   md:hidden  bg-white ' >
-            <div style={{boxShadow: '0px 2px 20px 0px rgba(43, 16, 67, 0.08)', borderTop: '1.64px solid rgba(0, 0, 0, 0.05)'}} className='relative z-10 w-full h-2' />
-            
+            <div className='w-full h-4 overflow-hidden'>
+                <div style={{boxShadow: '0px 2px 20px 0px rgba(43, 16, 67, 0.08)', borderTop: '1.64px solid rgba(0, 0, 0, 0.05)'}} className='relative z-10 w-[110%] h-4 -mt-2 -ml-1' />
+            </div>
             <div className='p-6 pt-2'>
                 <nav className='relative z-0'>
                     <ul className='flex flex-col gap-4 '>
