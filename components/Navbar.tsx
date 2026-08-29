@@ -23,6 +23,10 @@ const Navbar = () => {
     function toggleMenu() {
         setMobileMenuOpen(!mobileMenuOpen)
     }
+    
+    function closeMenu() {
+        setMobileMenuOpen(false)
+    }
   return (
     <div  className="fixed top-0 left-0 w-screen h-20 z-50  navbar-shadow ">
         <div className="flex items-center justify-between p-4 md:px-8 px-6 bg-white text-[#2B1043A6] w-full h-full ">
@@ -70,7 +74,7 @@ const Navbar = () => {
                     <ul className='flex flex-col gap-4 '>
                         {navLinks.map((link) => (
                             <li key={link.href} className="block  bg-white">
-                                <Link href={link.href} className="transition-colors hover:text-[#2B1043]  text-[#2B1043A6]">
+                                <Link onClick={closeMenu} href={link.href} className="transition-colors hover:text-[#2B1043]  text-[#2B1043A6]">
                                     <Bai_600 className='text-[13px]  capitalize' text={link.label}/>
                                 </Link>
                             </li>

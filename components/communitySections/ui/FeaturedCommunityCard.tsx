@@ -33,8 +33,29 @@ export interface communityProps{
 }
 const FeaturedCommunityCard = ({community, index} :communityProps) => {
   return (
-    <div className="grid md:grid-cols-2    rounded-2xl overflow-hidden">
-        {<div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
+    <div className="  rounded-2xl overflow-hidden">
+        <div className={`${index%2 ===0? 'grid md:grid-cols-2  ' : index%2 ===1? 'md:hidden grid md:grid-cols-2  ' : '' }`} >
+            <FeaturedCommunityCardSection1 community={community} index={index}/>
+            <FeaturedCommunityCardSection2 community={community} index={index}/>
+        </div>
+        
+        
+
+        <div className={`${index%2 ===1 ? 'md:grid md:grid-cols-2   hidden ' : 'hidden'}`} >
+            <FeaturedCommunityCardSection2 community={community} index={index}/>
+            <FeaturedCommunityCardSection1 community={community} index={index}/>
+        </div>
+    </div>
+  )
+}
+
+export default FeaturedCommunityCard
+
+
+
+const FeaturedCommunityCardSection1 = ({community, index}: communityProps) => {
+    return (
+         <div style={gradientBG[index]} className="relative w-full min-h-[260px] bg-dots px-8 py-[25.5px]    flex flex-col justify-between">
             <div className=" absolute block md:hidden top-0 left-0 opacity-10 w-full h-full white-bg-dots" />
             <div className="">
                 <div className="w-12 h-12 mb-3 bg-[#FFFFFF33] rounded-[14px] flex items-center justify-center">
@@ -65,9 +86,13 @@ const FeaturedCommunityCard = ({community, index} :communityProps) => {
                 }
             </div>
         </div>
-        }
+        
+    )
+}
 
-        <div className="w-full px-8 py-[25.5px] bg-white ">
+const FeaturedCommunityCardSection2 = ({community, index}: communityProps) => {
+    return (
+         <div className="w-full px-8 py-[25.5px] bg-white ">
             <span style={baseTextColor[index]} >
                 <Pop_700_Italic  className=" text-[13px] italic" text={'"' + community.catchPhrase + '"'}/>
             </span>
@@ -99,9 +124,6 @@ const FeaturedCommunityCard = ({community, index} :communityProps) => {
                 </div>
 
         </div>
-
-    </div>
-  )
+        
+    )
 }
-
-export default FeaturedCommunityCard
