@@ -9,7 +9,7 @@ import { CorePillarInfo } from '@/static-data/home_data'
 
 const CorePillarSection = () => {
   return (
-    <section className='core-pillar-section-shadow core-pillar-section-bg common-section-padding'>
+    <section className='core-pillar-section-shadow core-pillar-section-bg common-section-padding px-6'>
         <div className='text-center flex flex-col items-center justifty-center'>
             <SectionHeaderText text='Core Pillars' />
             <div className='pt-4'/>

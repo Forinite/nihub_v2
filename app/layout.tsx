@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: "The intersection of academia, entrepreneurship, and cutting-edge technology at FUTMinna.",
     // site: "@your_twitter_handle", 
     // creator: "@your_twitter_handle",
-    images: ["/opengraph-image.png"], 
+    images: ["/opengraph-image.PNG"], 
   },
 
   // 5. Robots
