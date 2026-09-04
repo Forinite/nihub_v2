@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata :Metadata ={
-  title: 'NIHUB',
-  description: 'NIHUB — the Nigeria Innovation Hub — is the technology incubator of the Federal University of Technology, Minna. Since our founding, we have served as the intersection of academia, entrepreneurship, and cutting-edge technology.',
+  title: 'NIHUB | FUTMinna - Nigeria Innovation Hub | FUTMinna',
+  description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
 
   openGraph: {
-    title: 'NIHUB',
-    description: 'NIHUB — the Nigeria Innovation Hub — is the technology incubator of the Federal University of Technology, Minna. Since our founding, we have served as the intersection of academia, entrepreneurship, and cutting-edge technology.',
+    title: 'NIHUB | FUTMinna - Nigeria Innovation Hub | FUTMinna',
+    description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
     url: 'https://www.nihub.org.ng',
     type: 'website',
     images: [ 
