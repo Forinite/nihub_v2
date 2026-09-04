@@ -23,6 +23,7 @@ export const metadata :Metadata ={
     description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
     url: 'https://nihub.futminna.edu.ng/',
     type: 'website',
+    siteName: 'NIHUB FUTMinna',
     images: [ 
       {
         url: 'og-image.png',
@@ -33,9 +34,16 @@ export const metadata :Metadata ={
     ]
   },
 
+
+
   alternates: {
     canonical: 'https://nihub.futminna.edu.ng/'
-  }
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
