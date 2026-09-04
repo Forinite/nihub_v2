@@ -14,77 +14,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Separate viewport export for Next.js 14+
-export const viewport: Viewport = {
-  themeColor: "#2B1043", // Your brand purple
-  width: "device-width",
-  initialScale: 1,
-};
+export const metadata :Metadata ={
+  title: 'NIHUB',
+  description: 'NIHUB — the Nigeria Innovation Hub — is the technology incubator of the Federal University of Technology, Minna. Since our founding, we have served as the intersection of academia, entrepreneurship, and cutting-edge technology.',
 
-export const metadata: Metadata = {
-  // 1. Metadata Base: Change this to your actual production domain
-  metadataBase: new URL("https://nihub.org"), 
-
-  // 2. Title Template: Sub-pages will look like "About Us | NIHUB"
-  title: {
-    default: "NIHUB | Nigeria Innovation Hub",
-    template: "%s | NIHUB",
-  },
-  
-  description: "NIHUB — the Nigeria Innovation Hub — is the technology incubator of FUTMinna, empowering students and entrepreneurs to turn bold ideas into scalable solutions.",
-  
-  keywords: ["NIHUB", "Nigeria Innovation Hub", "FUTMinna", "Tech Incubator Nigeria", "Entrepreneurship", "Innovation Hub Minna", "Student Startups"],
-  authors: [{ name: "NIHUB Team" }],
-  creator: "NIHUB",
-  publisher: "Federal University of Technology, Minna",
-
-  // 3. Open Graph (Facebook, LinkedIn, Discord)
   openGraph: {
-    type: "website",
-    locale: "en_NG",
-    url: "https://nihub.org",
-    siteName: "NIHUB",
-    title: "NIHUB | The hub where ideas become impact",
-    description: "Technology incubator of the Federal University of Technology, Minna. Bridging academia and entrepreneurship.",
+    title: 'NIHUB',
+    description: 'NIHUB — the Nigeria Innovation Hub — is the technology incubator of the Federal University of Technology, Minna. Since our founding, we have served as the intersection of academia, entrepreneurship, and cutting-edge technology.',
+    url: 'https://www.nihub.org.ng',
+    type: 'website',
     images: [
       {
-        url: "/opengraph-image.png", // Point to your static image in /app or /public
+        url: 'og-image.png',
+        alt: 'NIHUB - Nigeria Innovation Hub',
         width: 1200,
         height: 630,
-        alt: "NIHUB - Nigeria Innovation Hub",
-      },
-    ],
-  },
+      }
+    ]
+    
 
-  // 4. Twitter (X)
-  twitter: {
-    card: "summary_large_image",
-    title: "NIHUB | Nigeria Innovation Hub",
-    description: "The intersection of academia, entrepreneurship, and cutting-edge technology at FUTMinna.",
-    // site: "@your_twitter_handle", 
-    // creator: "@your_twitter_handle",
-    images: ["/opengraph-image.PNG"], 
-  },
-
-  // 5. Robots
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-
-  // 6. Icons (Favicon)
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-};
+  }
+}
 
 export default function RootLayout({
   children,
