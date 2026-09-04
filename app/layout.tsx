@@ -21,7 +21,7 @@ export const metadata :Metadata ={
   openGraph: {
     title: 'NIHUB | FUTMinna - Nigeria Innovation Hub | FUTMinna',
     description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
-    url: 'https://www.nihub.org.ng',
+    url: 'https://nihub.futminna.edu.ng/',
     type: 'website',
     images: [ 
       {
@@ -31,8 +31,10 @@ export const metadata :Metadata ={
         height: 630,
       }
     ]
-    
+  },
 
+  alternates: {
+    canonical: 'https://nihub.futminna.edu.ng/'
   }
 }
 
