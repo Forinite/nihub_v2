@@ -1,3 +1,4 @@
+import HiddenH1 from "@/components/HiddenH1"
 import AllServicesSection from "@/components/servicesSections/AllServicesSection"
 import ProcessSection from "@/components/servicesSections/ProcessSection"
 import ServiceCTASection from "@/components/servicesSections/ServiceCTASection"
@@ -9,6 +10,7 @@ const ServicesPage = () => {
   return (
 
     <main>
+        <HiddenH1 text="NIHUB FUTMinna Services  - Services Built to Launch You" />
         <ServicesHero />
         <ProcessSection />
         <AllServicesSection />

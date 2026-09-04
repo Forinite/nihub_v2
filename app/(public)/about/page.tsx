@@ -1,6 +1,7 @@
 import AboutSection from '@/components/aboutSections/aboutSection'
 import AchievementsSection from '@/components/aboutSections/achievementsSection'
 import TeamSection from '@/components/aboutSections/teamSection'
+import HiddenH1 from '@/components/HiddenH1'
 import DotGridBG from '@/components/homeSections/bg/DotGridBG'
 import PathIndicator from '@/components/PathIndicator'
 
@@ -22,7 +23,8 @@ const AboutSectionOrganised = () => {
 
 const AboutPage = () => {
   return (
-    <main className=''>
+    <main>
+      <HiddenH1 text="NIHUB FUTMinna About Us  - The Hub Where Ideas Become Impact " />
 
       <AboutSectionOrganised />
       <AchievementsSection />
