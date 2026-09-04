@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+export const viewport: Viewport = {
+  themeColor: "#2B1043",
+}
 export const metadata :Metadata ={
   title: 'NIHUB | FUTMinna - Nigeria Innovation Hub | FUTMinna',
   description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
@@ -53,8 +57,12 @@ export const metadata :Metadata ={
   },
 
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png"} ],
   },
 }
 
