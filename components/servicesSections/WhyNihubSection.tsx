@@ -1,19 +1,7 @@
-import { Bai_700, Jet_700, Jet_800, Pop_400 } from "../fontAids/Fonts"
-import { BoltIcon, ClockIcon, MedalIcon, SheildIcon, StackIcon, StarIcon } from "../SVGAids/SVG"
+import { partners, WhyNIHUBList } from "@/static-data/services_data"
+import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 
-const WhyNIHUBList = [
-    {icon: MedalIcon, header: 'Industry Backed Curriculum', description: 'Every programme is designed with or endorsed by Huawei, CISCO, Google, or another leader — not just academics.'},
-    {icon: ClockIcon, header: 'Zero Bureaucracy', description: 'Apply, get accepted, and start within days — not semesters. We move at the speed of the industry.'},
-    {icon: StarIcon, header: 'Proven Outcomes', description: 'Our alumni are at top Nigerian fintechs, cloud companies, and startups. Results — not just certificates.'},
-    {icon: SheildIcon, header: 'Safe, Inclusive Environment', description: 'Every identity, background, and skill level is welcomed. We build psychologically safe spaces by design.'},
-    {icon: BoltIcon, header: 'Real Tools, Not Simulations', description: 'Students work with the same tools professionals use — live cloud environments, industry software, real datasets.'},
-    {icon: StackIcon, header: 'End-to-End Support', description: 'From your first bootcamp to your first job offer — NIHUB walks alongside you every step of the way.'}
-]
-
-const partners = [
-    'Huawei', 'CISCO', 'Google', 'Microsoft', 'MathWorks', 'MTN Foundation'
-]
 
 const WhyNihubSection = () => {
   return (

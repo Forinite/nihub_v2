@@ -1,41 +1,9 @@
-import { Bai_700, Pop_400 } from "../fontAids/Fonts"
-import { CodeIcon, GlobeIcon } from "../SVGAids/SVG"
+import { FeaturedCommunities } from "@/static-data/communties_data"
+import { Bai_700} from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import FeaturedCommunityCard from "./ui/FeaturedCommunityCard"
 
-const FeaturedCommunities = [
-  {
-    icon: GlobeIcon,
-    name: 'Google Developer Student Club',
-    catchPhrase: 'Build for everyone, powered by Google',
-    abbr: 'GDSC',
-    mainConcept: 'Development',
-    description: "NIHUB's GDSC chapter connects students to Google technologies, developer events, and a global network of builders. We run workshops on Flutter, Firebase, Android, and cloud — and compete in the annual Google Solution Challenge.",
-    keywords: ['Flutter', 'Firebase', 'Cloud', 'Android', 'Solution Challenge'],
-    stats: {
-      members: '320+',
-      meetings: 'Weekly',
-      partner: 'Google Partner'
-    },
-    joinLink: 'https://gdsc.community.dev/nihub/',
-    learnMoreLink: 'https://gdsc.community.dev/nihub/',
-  },
-    {
-    icon: CodeIcon ,
-    name: 'HNG Internship Community',
-    catchPhrase: "Nigeria's most rigourous internship.",
-    abbr: 'HNG',
-    mainConcept: 'Internship',
-    description: "NIHUB's HNG chapter prepares students for Africa's most competitive remote internship programme. We run mock tasks, code reviews, and mentorship sessions to help members survive and thrive in each cohort.",
-    keywords: ['Frontend', 'Backend', 'DevOps', 'Project Design', 'Technical Writing'],
-    stats: {
-      members: '210+',
-      meetings: 'Bi-weekly',
-    },
-    joinLink: 'https://hng.community.dev/nihub/',
-    learnMoreLink: 'https://hng.community.dev/nihub/',
-  },
-]
+
 
 const FeaturedCommunitiesSection = () => {
   return (

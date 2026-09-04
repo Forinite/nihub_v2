@@ -1,42 +1,8 @@
 import { Bai_700 } from "@/components/fontAids/Fonts"
 import SectionHeaderText from "@/components/ui/SectionHeaderText"
 import HeadlineEventsCard from "./ui/HeadlineEventsCard"
-import { BoltIcon, StarIcon } from "../SVGAids/SVG"
+import { HeadlineEvents } from "@/static-data/events_data"
 
-const HeadlineEvents = [
-    {
-        rgb: [43, 16, 67],
-        icon: StarIcon,
-        status: 'Upcoming',
-        type: 'conference',
-        name: 'Nihub Tech Week 2026',
-        description: "Our flagship annual event — five days of innovation, buildathons, keynote talks, startup showcases, and networking with industry leaders from across Nigeria and beyond.",
-        date: "Aug 11 – 15, 2026",
-        starts: '9:00 AM daily',
-        venue: 'FUTMinna Main Campus',
-        seats: '500',
-        keywords: ['Keynotes', 'Hackathon', 'Networking', 'Showcase', 'Workshops'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-    {
-        rgb: [124, 58, 237],
-        icon: BoltIcon,
-        status: 'Open',
-        type: 'Hackathon',
-        name: 'Nihub Buildathon',
-        description: "72 hours. One problem statement. Hundreds of builders competing to ship the best working product. The Buildathon is where ideas become reality under pressure.",
-        date: 'Sep 5 – 7, 2026',
-        starts: 'Starts 6:00 PM Fri',
-        venue: 'NIHUB Lab, FUTMinna',
-        seats: '200',
-        keywords: ['72 hrs', 'Team Events', 'Prize Pool', 'All tracks'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-]
 const HeadlineEventsSection = () => {
   return (
     <section className=" py-20 md:py-28 pink-bg">

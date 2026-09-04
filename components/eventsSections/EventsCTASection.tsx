@@ -3,7 +3,7 @@ import { Bai_700, Jet_600, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 
 import { LinkTemp1 } from "../ui/LinkTemps"
-import { AllEventsList } from "./AllEventsSection"
+import { AllEventsList } from "@/static-data/events_data"
 import DotGridBG from "../homeSections/bg/DotGridBG"
 import { CalenderIcon } from "../SVGAids/SVG"
 

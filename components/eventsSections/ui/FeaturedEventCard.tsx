@@ -4,17 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CalenderIcon, LocationIcon, TicketIcon } from '@/static-data/images'
 import CountdownSection from '@/components/homeSections/ui/countdownSection'
+import { FeaturedEvent } from '@/static-data/events_data'
 
-const FeaturedEvent = {
-    title: "Tech Week",
-    host: "Nihub",
-    keywords: ["Innovation", "Buildathon", "Talks", "Networking"],
-    status: "upcoming", // or "past",
-    dateString: "Aug 11-15, 2026",
-    Location: "Futminna Campus",
-    link: "/events/tech-week",
 
-}
 
 
 

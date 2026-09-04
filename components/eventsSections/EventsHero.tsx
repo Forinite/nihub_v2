@@ -3,12 +3,9 @@ import { LinkTemp1 } from "../ui/LinkTemps"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import PathIndicator from "../PathIndicator"
 import FeaturedEventCard from "./ui/FeaturedEventCard"
+import { eventsStats } from "@/static-data/events_data"
 
-const eventsStats = [
-    { label: "Events Hosted", value: "50+" },
-    { label: "Bootcamp / Year", value: "6" },
-    { label: "Free For Student", value: "100%" }
-]
+
 const EventsHero = () => {
   return (
     <section className=" relative h-fit md:pt-40 pt-32 overflow-hidden  ">

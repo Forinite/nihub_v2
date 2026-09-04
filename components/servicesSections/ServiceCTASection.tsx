@@ -1,9 +1,8 @@
 import Image from "next/image"
 import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import { LinkTemp1, LinkTemp2 } from "../ui/LinkTemps"
-import { StarIcon } from "@/static-data/images"
-import DotGridBG from "../homeSections/bg/DotGridBG"
 import { RocketIcon } from "../SVGAids/SVG"
+import DotGridBG from "../homeSections/bg/DotGridBG"
 
 const AccessPoints = [
     {
@@ -16,8 +15,6 @@ const AccessPoints = [
         desc: 'Bespoke training, recruitment pipelines, and research partnerships.', 
         apply: {label:'Partner With Us' , link: '#'}
     }
-
-
 ]
 
 const ServiceCTASection = () => {

@@ -2,13 +2,9 @@ import PathIndicator from '../PathIndicator'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import { Bai_700, Jet_600, Pop_400, Pop_600 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
+import { communityStats } from '@/static-data/communties_data'
 
-const CommunityStats = [
-  { label: 'Active Communities', value: '8' },
-  { label: 'Total Members', value: '1,450+' },
-  { label: 'Average Meet frequency', value: 'Weekly' },
-  { label: 'Industry Partners', value: '6+' }
-]
+
 const CommunitiesHero = () => {
   return (
     <section className='py-36  max-w-[1022px] mx-auto'>
@@ -37,7 +33,7 @@ const CommunitiesHero = () => {
 
                 <div className='pt-16'>
                     <div className='flex md:flex-row flex-col  md:items-center gap-4'>
-                    {CommunityStats.map((stat, index) => (
+                    {communityStats.map((stat, index) => (
                             <div key={index} className=' py-4 px-5 rounded-[14px] w-fit  bg-white communities-stats-shadow  '> 
                                 <div className='flex items-center h-fit  w gap-3'> 
                                     <Bai_700 text={stat.value} className='text-[20px]  base-purple-text h-fit' />

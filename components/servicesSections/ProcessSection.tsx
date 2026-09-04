@@ -2,13 +2,8 @@ import { padNum } from "@/lib/utils"
 import { Bai_700, Jet_800, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import { BulbIcon, CodeIcon, PeopleIcon, RocketIcon } from "../SVGAids/SVG"
+import { processList } from "@/static-data/services_data"
 
-const ProcessList = [
-    {icon: BulbIcon, header: 'Choose a Service', description: 'Browse our catalogue and identify the programme or resource that fits your goals.'},
-    {icon: PeopleIcon, header: 'Apply or Register', description: 'Fill out a short form — most programmes are free for FUTMinna students.'},
-    {icon: CodeIcon, header: 'Learn & Build', description: 'Participate fully and put your skills to work on real projects and challenges.'},
-    {icon: RocketIcon, header: 'Launch & Grow', description: 'Graduate with a portfolio, a network, and the confidence to take on the industry.'}
-]
 const ProcessSection = () => {
   return (
     <section className="pink-bg w-full">
@@ -22,7 +17,7 @@ const ProcessSection = () => {
             
             <div className="pt-14 grid md:grid-cols-2 gap-6">
 
-                {ProcessList.map((process, index) => (
+                {processList.map((process, index) => (
                     <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={index} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
                         <Jet_800 className=" absolute -top-[9.5px] md:block hidden text-[10px] text-white base-purple-bg px-2.5 py-0.5 rounded-full w-fit h-fit " text={padNum(index+1)} />
                         <div className="p-6 flex flex-col items-center justify-center ">

@@ -2,113 +2,13 @@ import { Filter } from "lucide-react"
 import { Bai_700, Jet_400, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import EventCard from "./ui/EventCard"
-import { BoltIcon, BrainIcon, GlobeIcon, RocketIcon, SheildIcon, StarIcon } from "../SVGAids/SVG"
+import { AllEventsList } from "@/static-data/events_data"
 
 
 const activeBG = {background: '#2B1043', borderTop: '1px solid #000000', boxShadow: '0px 4px 12px 0px #2B10434D'}
 const inActiveBG = {background: '#2B10430F', border: '1px solid #2B10431F'}
 
 const filters = ['Hackathon', 'Workshop', 'Talk', 'Conference', 'Competition', 'Training']
-
-export const AllEventsList = [
-    {
-        rgb: [43, 16, 67],
-        icon: StarIcon,
-        status: 'Upcoming',
-        type: 'conference',
-        name: 'NIHUB Tech Week 2026',
-        description: "Our flagship annual event — five days of innovation, buildathons, keynote talks, startup showcases, and networking with industry leaders from across Nigeria and beyond.",
-        date: "Aug 11 – 15, 2026",
-        starts: '9:00 AM daily',
-        venue: 'FUTMinna Main Campus',
-        seats: '500',
-        keywords: ['Keynotes', 'Hackathon', 'Networking', 'Showcase', 'Workshops'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-    {
-        rgb: [124, 58, 237],
-        icon: BoltIcon,
-        status: 'Open',
-        type: 'Hackathon',
-        name: 'NIHUB Buildathon',
-        description: "72 hours. One problem statement. Hundreds of builders competing to ship the best working product. The Buildathon is where ideas become reality under pressure.",
-        date: 'Sep 5 – 7, 2026',
-        starts: 'Starts 6:00 PM Fri',
-        venue: 'NIHUB Lab, FUTMinna',
-        seats: '200',
-        keywords: ['72 hrs', 'Team Events', 'Prize Pool', 'All tracks'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-        {
-        rgb: [5, 150, 105],
-        icon: BrainIcon,
-        status: 'Upcoming',
-        type: 'Talk',
-        name: 'AI in African - Fireside Series',
-        description: "A monthly speaker series bringing in AI practitioners, researchers, and founders to discuss the realities and excesses of AI in Africa",
-        date: 'Every Last Thursday',
-        starts: '5:00 PM - 7:00 PM',
-        venue: 'NIHUB Auditorium + Livestream',
-        seats: '200',
-        keywords: ['AI', 'Monthly', 'Free Entry'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-        {
-        rgb: [66, 133, 244],
-        icon: GlobeIcon,
-        status: 'Upcoming',
-        type: 'Conference',
-        name: 'GDSC',
-        description: "Google's global developer festival arrives at NIHUB — featuring talks on Google Cloud, Flutter, Android, and FUTMinna DevFest Events.",
-        date: 'Oct 18, 2026',
-        starts: '10:00 AM - 6:00 PM',
-        venue: 'FUTMinna Senate Chamber',
-        seats: '200',
-        keywords: ['Google', 'Flutter', 'Cloud'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-        {
-        rgb: [220, 38, 38],
-        icon: SheildIcon,
-        status: 'Upcoming',
-        type: 'Competition',
-        name: 'NIHUB CTF Challenge Buildathon',
-        description: "Capture the Flag — NIHUB's annual cybersecurity competition open to all skill levels. Compete solo or in teams to complete the objective and win prizes",
-        date: 'Nov 1, 2026',
-        starts: '10:00 AM - 10:00 PM',
-        venue: 'Online + NIHUB Lab',
-        seats: '200',
-        keywords: ['CTF', 'Cybersecurity', 'Prizes'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    },
-        {
-        rgb: [202, 128, 4],
-        icon: RocketIcon,
-        status: 'Upcoming',
-        type: 'Workshop',
-        name: 'NIHUB Startup Demo Day',
-        description: "NIHUB's incubation cohort takes the stage. Six early-stage startups pitch to a panel of investors, mentors, and potential parnters who are looking to support strong startup projects.",
-        date: 'Dec 6, 2026',
-        starts: '2:00 PM - 6:00 PM',
-        venue: 'FUTMinna Innovation Centre',
-        seats: '200',
-        keywords: ['Startups', 'Pitching', 'Investors'],
-        registerLink: '#',
-        learnMoreLink: '#'
-
-    }
-        
-]
 
 const AllEventsSection = () => {
   return (
