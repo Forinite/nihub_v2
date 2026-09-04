@@ -24,6 +24,7 @@ export const metadata :Metadata ={
     url: 'https://nihub.futminna.edu.ng/',
     type: 'website',
     siteName: 'NIHUB FUTMinna',
+    locale: 'en_US',
     images: [ 
       {
         url: 'og-image.png',
@@ -32,6 +33,17 @@ export const metadata :Metadata ={
         height: 630,
       }
     ]
+
+  },
+
+
+    twitter: {
+      card: 'summary_large_image',
+      title: 'NIHUB | FUTMinna - Nigeria Innovation Hub',
+      description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future.',
+      site: '@NihubFutminna',
+      creator: '@NihubFutminna',
+      images: ['/og-image.png'],
   },
 
 
