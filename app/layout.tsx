@@ -23,7 +23,7 @@ export const metadata :Metadata ={
     description: 'NIHUB — the Nigeria Innovation Hub — is the technology incubator of the Federal University of Technology, Minna. Since our founding, we have served as the intersection of academia, entrepreneurship, and cutting-edge technology.',
     url: 'https://www.nihub.org.ng',
     type: 'website',
-    images: [
+    images: [ 
       {
         url: 'og-image.png',
         alt: 'NIHUB - Nigeria Innovation Hub',
