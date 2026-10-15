@@ -9,15 +9,14 @@ const getLongInitials = (textArray :string[]) => {
 }
 
 export const getComplexInitials = (text: string) => {
-    let textArray = text.split(' ')
+    const textArray = text.split(' ')
     let newTextArray = []
 
     if (textArray.length <= 2) {
         return getInitials (text)
     } else {
-        textArray[0].includes('.') ? newTextArray = textArray.splice(1) :newTextArray = textArray
+        newTextArray = textArray[0].includes('.') ? textArray.slice(1) : textArray
     }
 
     return getLongInitials(newTextArray)
 }
-

@@ -3,9 +3,23 @@ import { Bai_Jamjuree, JetBrains_Mono } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const jetbrainsmono = JetBrains_Mono()
-const baiJamjuree_400 = Bai_Jamjuree({weight: '400'})
-const baiJamjuree_300 = Bai_Jamjuree({weight: '300'})
+// const jetbrainsmono = JetBrains_Mono()
+// const baiJamjuree_400 = Bai_Jamjuree({weight: '400'})
+// const baiJamjuree_300 = Bai_Jamjuree({weight: '300'})
+
+
+
+const jetbrainsmono = JetBrains_Mono({ subsets: ['latin'] })
+
+const baiJamjuree_400 = Bai_Jamjuree({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+const baiJamjuree_300 = Bai_Jamjuree({
+  weight: '300',
+  subsets: ['latin'],
+})
 
 
 const navs = [

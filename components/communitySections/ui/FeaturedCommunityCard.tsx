@@ -3,6 +3,7 @@ import { LinkIcon } from "@/components/SVGAids/SVG"
 
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import type { Community } from "@/lib/content-types"
 
 const linkShadow =[ {boxShadow: '0px 4px 14px 0px #4285F444' , background: '#4285F4'}, {boxShadow: '0px 4px 14px 0px #F9731644', background: '#F97316'}, ]
 const baseTextColor = [{color: '#4285F4'}, {color: '#F97316'}]
@@ -11,24 +12,8 @@ const gradientBG = [
     {background: 'linear-gradient(135deg, rgba(66, 133, 244, 0.933) 0%, rgba(66, 133, 244, 0.6) 100%)'}, 
     {background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.933) 0%, rgba(249, 115, 22, 0.6) 100%)'}
 ]
-export interface communityProps{
-    community :
-        {
-            icon: any ,
-            name: string,
-            catchPhrase: string,
-            abbr: string,
-            mainConcept: string,
-            description: string,
-            keywords: string[],
-            stats: {
-                members: string,
-                meetings: string,
-                partner?: string,
-            },
-            joinLink: string,
-            learnMoreLink: string,
-    }
+export interface communityProps {
+    community: Community
     index: number
 }
 const FeaturedCommunityCard = ({community, index} :communityProps) => {

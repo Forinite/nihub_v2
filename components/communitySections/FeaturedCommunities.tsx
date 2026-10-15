@@ -1,11 +1,13 @@
-import { FeaturedCommunities } from "@/static-data/communties_data"
+import { getCommunities } from "@/lib/supabase/communities"
 import { Bai_700} from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import FeaturedCommunityCard from "./ui/FeaturedCommunityCard"
 
 
 
-const FeaturedCommunitiesSection = () => {
+const FeaturedCommunitiesSection = async () => {
+  const communities = await getCommunities({ featured: true })
+
   return (
     <section className="md:py-56 py-20 pink-bg">
       <div className="max-w-[1022px] mx-auto px-8">
@@ -15,8 +17,8 @@ const FeaturedCommunitiesSection = () => {
           </div>
 
           <div className='pt-12 flex flex-col gap-8'>
-            {FeaturedCommunities.map((community, index) => (
-              <FeaturedCommunityCard key={index} index={index} community={community}  />
+            {communities.map((community, index) => (
+              <FeaturedCommunityCard key={community.name} index={index} community={community}  />
             ))}
           </div>
       </div>

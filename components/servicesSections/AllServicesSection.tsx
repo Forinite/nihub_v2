@@ -1,9 +1,11 @@
-import { ServicesList } from "@/static-data/services_data"
+import { getServices } from "@/lib/supabase/services"
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import ServiceCard from "./ui/ServiceCard"
 
-const AllServicesSection = () => {
+const AllServicesSection = async () => {
+    const services = await getServices()
+
   return (
     <section className="max-w-[1022px] px-8 py-28 py-20 mx-auto">
         <div className="flex md:flex-row flex-col md:gap-6 gap-6 items-end justify-between">
@@ -17,8 +19,8 @@ const AllServicesSection = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 pt-10">
-            {ServicesList.map((service, index) => (
-                <ServiceCard key={index} service={service} />
+            {services.map((service) => (
+                <ServiceCard key={service.label} service={service} />
             ))}
         </div>
     </section>

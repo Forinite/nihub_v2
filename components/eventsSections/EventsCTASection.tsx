@@ -3,11 +3,13 @@ import { Bai_700, Jet_600, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 
 import { LinkTemp1 } from "../ui/LinkTemps"
-import { AllEventsList } from "@/static-data/events_data"
+import { getEvents } from "@/lib/supabase/events"
 import DotGridBG from "../homeSections/bg/DotGridBG"
 import { CalenderIcon } from "../SVGAids/SVG"
 
-const EventsCTASection = () => {
+const EventsCTASection = async () => {
+    const events = await getEvents()
+
   return (
       <section className="pink-bg w-full h-fit relative overflow-y-hidden  overflow-x-hidden ">
 
@@ -33,8 +35,8 @@ const EventsCTASection = () => {
             <div className="pt-10 flex flex-wrap items-baseine justify-center gap-2 ">
                 <Jet_700  className="text-[11px] tracking-[0.28px] base-purple-text-300"  text="Coming Up:"/>
 
-                    {AllEventsList.slice(0,3).map((event, index) => (
-                        <div key={index} style={{border: `1px solid rgba(${event.rgb}, 0.14)`, background: `rgba(${event.rgb}, 0.06)`, color: `rgb(${event.rgb})`}} className="py-1 px-2.5 w-fit h-fit rounded-full flex flex-wrap items-center gap-1.5"> 
+                    {events.slice(0,3).map((event) => (
+                        <div key={event.name} style={{border: `1px solid rgba(${event.rgb}, 0.14)`, background: `rgba(${event.rgb}, 0.06)`, color: `rgb(${event.rgb})`}} className="py-1 px-2.5 w-fit h-fit rounded-full flex flex-wrap items-center gap-1.5">
                             <div style={{ background: `rgb(${event.rgb})`}}  className="  w-1.5 h-1.5 rounded-full"/>
                             <Jet_600 text={event.name} className=" w-fit h-fit rounded-full text-[11px]" />
                         </div>

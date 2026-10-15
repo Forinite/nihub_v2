@@ -1,14 +1,16 @@
 import Image from "next/image"
 import { Bai_700, Jet_400, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
-import { aboutImg, BuildingIcon, GradientBarVector, PeopleIcon } from "@/static-data/images"
+import { aboutImg, BuildingIcon, PeopleIcon } from "@/static-data/images"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import CorePillarCard from "../homeSections/ui/CorePillarCard"
-import { Statements } from "@/static-data/about_data"
+import { getImageContentItems } from "@/lib/supabase/home"
 
 
 
-const AboutSection = () => {
+const AboutSection = async () => {
+  const statements = await getImageContentItems("about_statements")
+
   return (
     <section className=" relative mt-8   "> 
 
@@ -54,7 +56,7 @@ const AboutSection = () => {
 
                     <div className='absolute z-20  -left-4 -top-3 flex items-center gap-2.5 py-3 px-4 bg-white rounded-[14px]  aboutpage-about-minicard-shadow'>
                         <div className='w-fit h-7.5 icon-box-bg rounded-[10px] flex  items-center justify-center'>
-                            <Image  alt={'Building Icon'} src={BuildingIcon} width={20} height={30}  /> 
+                            <Image alt="Building Icon" src={BuildingIcon} width={20} height={30} style={{ height: "auto" }} />
                         </div>
                         
                         <div className=''>
@@ -62,7 +64,13 @@ const AboutSection = () => {
                             <Jet_400 text='FUTMinna Campus' className='text-[10px]  base-grey-text-100' />
                         </div>
                     </div>
-                    <Image className="rounded-2xl " src={aboutImg} alt="image" fill/>
+                    <Image
+                        className="rounded-2xl"
+                        src={aboutImg}
+                        alt="image"
+                        fill
+                        sizes="(min-width: 768px) 440px, 0px"
+                    />
 
                     <div className='absolute -right-4.25 -bottom-3.25  items-center gap-2.5 py-3 px-4 bg-white rounded-[14px] aboutpage-about-minicard-shadow'>
                         <div className='w-8 h-8 icon-box-bg rounded-[10px] flex  items-center justify-center'>
@@ -82,9 +90,9 @@ const AboutSection = () => {
 
         <div className="pt-20 pb-3 grid md:grid-cols-3 gap-6">
 
-            {Statements.map((statement, index) => (
+            {statements.map((statement) => (
                 <CorePillarCard 
-                    key={index} 
+                    key={statement.title}
                     title={statement.title} 
                     description={statement.description} 
                     img={statement.img} 

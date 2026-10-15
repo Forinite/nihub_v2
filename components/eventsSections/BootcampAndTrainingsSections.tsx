@@ -1,10 +1,12 @@
-import { TrainingsList } from "@/static-data/events_data"
+import { getTrainings } from "@/lib/supabase/events"
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import TrainingsCard from "./ui/TrainingsCard"
 
 
-const BootcampAndTrainingsSections = () => {
+const BootcampAndTrainingsSections = async () => {
+    const trainings = await getTrainings()
+
   return (
     <section className="pink-bg md:py-28 py-20">
         <div className="max-w-[1022px] mx-auto md:px-8 px-6">
@@ -18,8 +20,8 @@ const BootcampAndTrainingsSections = () => {
                 </div>
             </div>
             <div className="grid md:grid-cols-2 gap-6 pt-14">
-                {TrainingsList.map((training, index) => (
-                    <TrainingsCard key={index}  training={training}/>
+                {trainings.map((training) => (
+                    <TrainingsCard key={training.name} training={training}/>
                 ))}
             </div>
         </div>  

@@ -4,23 +4,10 @@ import { LinkTemp1 } from "@/components/ui/LinkTemps"
 import { CalenderIcon, LocationIcon } from "@/static-data/images"
 import Image from "next/image"
 import Link from "next/link"
+import type { TrainingContent } from "@/lib/content-types"
 
 interface TrainingsProps {
-    training: {  
-        rgb: number[], 
-        icon: any, 
-        name: string,
-        description: string, 
-        status: string,
-        date: string,
-        duration: string,
-        venue: string,
-        partner?: string,
-        cost: string,
-        applylink: string , 
-        detailLink: string,
-
-    }
+    training: TrainingContent
 }
 const TrainingsCard = ({training} :TrainingsProps) => {
   return (

@@ -1,17 +1,8 @@
 import { Bai_700, Jet_600, Pop_400 } from "@/components/fontAids/Fonts"
-import { getComplexInitials } from "@/lib/largerFunctions/GetComplexInitials"
 import { getSocialIcon } from "@/lib/largerFunctions/GetSocialIcon"
 import { TeamCardDarkGradientVector } from "@/static-data/images"
 import Image from "next/image"
-
-interface TeamCardProps {
-    image: any,
-    name: string,
-    role: string,
-    statement: string,
-    socials: string[],
-    index: number,
-}
+import type { TeamMemberContent } from "@/lib/content-types"
 
 // const baseColors = [
 //     '#2B1043',
@@ -55,7 +46,7 @@ const bgStyles = [
     },
 ]
 
-const  TeamCard = ({name, role, statement, socials, image, index} : TeamCardProps) => {
+const  TeamCard = ({name, role, statement, socials, image, index} : TeamMemberContent & { index: number }) => {
   return (
     <div className=" rounded-2xl overflow-hidden team-card-shadow border-t border-[#2B10430F]" >
         <div className={` relative overflow-hidden w-full h-52 bg-linear-[135deg] from-[13.3%] to-[26.7%] ${bgStyles[index % (bgStyles.length -1)].card} flex items-center justify-center `} >

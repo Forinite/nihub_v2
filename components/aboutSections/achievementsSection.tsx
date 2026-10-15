@@ -5,7 +5,7 @@ import { ArrowBentRightIcon, BookIcon, ChipIcon,  PurpleBoltIcon, PurpleMedalIco
 import AchievementCard from "./ui/AchievementCard"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import DotGridBG from "../homeSections/bg/DotGridBG"
-import { achievements } from "@/static-data/about_data"
+import { getAchievements } from "@/lib/supabase/about"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
@@ -13,7 +13,9 @@ import { ArrowRight } from "lucide-react"
 
 
 
-const AchievementsSection = () => {
+const AchievementsSection = async () => {
+  const achievements = await getAchievements()
+
   return (
     <section className="  common-section-padding pink-bg">
 

@@ -3,10 +3,16 @@ import { LinkTemp1 } from "../ui/LinkTemps"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import PathIndicator from "../PathIndicator"
 import FeaturedEventCard from "./ui/FeaturedEventCard"
-import { eventsStats } from "@/static-data/events_data"
+import { getSiteStats } from "@/lib/supabase/home"
+import { getEvents } from "@/lib/supabase/events"
 
 
-const EventsHero = () => {
+const EventsHero = async () => {
+  const [eventsStats, featuredEvents] = await Promise.all([
+    getSiteStats("events_hero"),
+    getEvents({ featured: true }),
+  ])
+
   return (
     <section className=" relative h-fit md:pt-40 pt-32 overflow-hidden  ">
 
@@ -51,7 +57,7 @@ const EventsHero = () => {
                 </aside>
 
                 <aside className='w-[44.8%] h-full md:flex hidden items-center justify-end '>
-                    <FeaturedEventCard />
+                    <FeaturedEventCard event={featuredEvents[0]} />
                 </aside>
             </div>
 

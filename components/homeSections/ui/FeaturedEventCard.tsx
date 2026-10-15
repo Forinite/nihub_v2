@@ -3,17 +3,7 @@ import {CalenderIcon, LocationIcon, TicketIcon} from '@/static-data/images'
 import Image from 'next/image'
 import Link from 'next/link'
 import CountdownSection from './countdownSection'
-
-const FeaturedEvent = {
-    title: "Tech Week",
-    host: "Nihub",
-    description: "Innovation · Buildathon · Talks",
-    status: "upcoming", // or "past",
-    dateString: "Aug 11-15, 2026",
-    Location: "Futminna Campus",
-    link: "/events/tech-week",
-
-}
+import type { EventContent } from '@/lib/content-types'
 
 // const startsIn = {
 //     days: 42,
@@ -22,9 +12,10 @@ const FeaturedEvent = {
 //     seconds: 48,
 // }
 
-const FeaturedEventCard = () => {
+const FeaturedEventCard = ({ event }: { event?: EventContent }) => {
+    if (!event) return null
 
-    const statusIsUpcoming = FeaturedEvent.status === 'upcoming'
+    const statusIsUpcoming = event.status.toLowerCase() === 'upcoming'
     const contClassname = statusIsUpcoming? 'bg-[#22C55E1F]' : 'bg-[#1111111F]'
     const dotClassname  =  statusIsUpcoming? 'bg-[#22C55E]' : 'bg-[#111111]'
     const textClassname  =  statusIsUpcoming? 'text-[#16A34A]' : 'text-gray-500'
@@ -40,7 +31,7 @@ const FeaturedEventCard = () => {
 
                 <Bai_600
                     className={`uppercase text-[10px] ${textClassname}`}
-                    text={FeaturedEvent.status}
+                    text={event.status}
                 /> 
             </div>
 
@@ -53,15 +44,19 @@ const FeaturedEventCard = () => {
                 <Bai_600 className='text-[10px] tracking-[1px] text-[#FFFFFF80] uppercase' text=' Featured Event' />
                 
                 <div className='text-[22px] uppercase tracking-[-0.55px] leading-[27.5px] pt-1'>
-                    <Bai_700 className='text-[22px] uppercase tracking-[-0.55px] text-white' text={FeaturedEvent.host} />
-                    <Bai_700 className='text-[#6A3FA0]' text={FeaturedEvent.title}/>
+                    <Bai_700 className='text-[22px] uppercase tracking-[-0.55px] text-white' text={event.name} />
                 </div>
 
-                <Pop_400 className='text-[11px] pt-1 text-[#FFFFFF8C]' text={FeaturedEvent.description} />
+                <Pop_400 className='text-[11px] pt-1 text-[#FFFFFF8C]' text={event.description} />
             </div>
         </div>
 
-        <Bai_600 text='Starts In' className='pt-4 text-[10px] base-grey-text-100 uppercase tracking-[1px]' />
+        {event.startsAt && (
+            <>
+                <Bai_600 text='Starts In' className='pt-4 text-[10px] base-grey-text-100 uppercase tracking-[1px]' />
+                <CountdownSection targetDate={event.startsAt} />
+            </>
+        )}
         {/* <div className='flex items-center justify-between pt-2 w-full '>
             {(["days", "hours", "minutes", "seconds"] as const).map((unit) => (
                 <div key={unit} className={"flex flex-col items-center justify-center text-center   w-[71px] h-[50px] rounded-[10px] p-2 bg-[#F5F5F5]"}>
@@ -71,22 +66,20 @@ const FeaturedEventCard = () => {
             ))}
         </div> */}
 
-        <CountdownSection />
-
         <div className='pt-4 flex items-center justify-between'>
             <div className='flex items-center w-fit base-grey-text-100 space-x-2'>
                 <Image src={CalenderIcon} alt={'Date'} width={11} height={11}/>
-                <Bai_400 text={FeaturedEvent.dateString} className='text-[11px]'/>
+                <Bai_400 text={event.date} className='text-[11px]'/>
             </div>
 
             <div className='flex items-center w-fit base-grey-text-100 space-x-2'>
                 <Image src={LocationIcon} alt={'Date'} width={11} height={11}/>
 
-                <Bai_400 text={FeaturedEvent.Location} className='text-[11px]'/>
+                <Bai_400 text={event.venue} className='text-[11px]'/>
             </div>
         </div>
         <div>
-            <Link href={FeaturedEvent.link} className='text-[13px] mt-4 py-2.5 h-fit base-purple-bg gap-2 text-white rounded-[10px] link-shadow flex items-center justify-center'>
+            <Link href={event.registerLink} className='text-[13px] mt-4 py-2.5 h-fit base-purple-bg gap-2 text-white rounded-[10px] link-shadow flex items-center justify-center'>
                 
                 <Image className='w-3.25 h-3.25 ' alt='Register Icon' src={TicketIcon} width={13} height={13} />
                 <Bai_700 text='Register Now' className='text-[13px] text-white' />

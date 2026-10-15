@@ -2,7 +2,7 @@ import { Filter } from "lucide-react"
 import { Bai_700, Jet_400, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import EventCard from "./ui/EventCard"
-import { AllEventsList } from "@/static-data/events_data"
+import { getEvents } from "@/lib/supabase/events"
 
 
 const activeBG = {background: '#2B1043', borderTop: '1px solid #000000', boxShadow: '0px 4px 12px 0px #2B10434D'}
@@ -10,7 +10,9 @@ const inActiveBG = {background: '#2B10430F', border: '1px solid #2B10431F'}
 
 const filters = ['Hackathon', 'Workshop', 'Talk', 'Conference', 'Competition', 'Training']
 
-const AllEventsSection = () => {
+const AllEventsSection = async () => {
+  const events = await getEvents()
+
   return (
     <section className="py-20 md:py-28 md:px-8 px-6 max-w-[1022px] bg-white mx-auto">
         <div className="md:flex items-end justify-between">
@@ -41,8 +43,8 @@ const AllEventsSection = () => {
         </div>
 
         <div className="pt-10 grid md:grid-cols-2 gap-6 ">
-                {AllEventsList.map((event, index) => (
-                    <EventCard key={index} event={event} />
+                {events.map((event) => (
+                    <EventCard key={event.name} event={event} />
                 ))}
         </div>
     </section>

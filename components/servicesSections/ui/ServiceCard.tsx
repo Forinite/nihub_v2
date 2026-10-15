@@ -1,19 +1,10 @@
-import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600 } from "@/components/fontAids/Fonts"
+import { Bai_700, Jet_600, Jet_700, Pop_400, Pop_600 } from "@/components/fontAids/Fonts"
 import { LinkTemp1 } from "@/components/ui/LinkTemps"
 import Link from "next/link"
+import type { ServiceContent } from "@/lib/content-types"
 
 interface serviceProps {
-    service : {
-        icon: any, 
-        label: string, 
-        mainConcept: string,
-        description: string, 
-        rgb: number[], 
-        catchPhrase: string, 
-        keywords: string[], 
-        apply: {label: string , link: string },  
-        detailLink: string
-    }
+    service: ServiceContent
 }
 
 const ServiceCard = ({service} :serviceProps) => {

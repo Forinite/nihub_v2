@@ -1,9 +1,7 @@
-import { CommunitiesList } from "@/static-data/communties_data"
+import { getCommunities } from "@/lib/supabase/communities"
 import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import CommunityCard from "./ui/CommunityCard"
-
-const activeClassNames = 'text-white'
 
 const activeBG = {background: '#2B1043', borderTop: '1px solid #000000', boxShadow: '0px 4px 12px 0px #2B10434D'}
 const inActiveBG = {background: '#2B10430F', border: '1px solid #2B10431F'}
@@ -12,7 +10,9 @@ const filters = ['Development', 'AI/ML', 'Security', 'Networking', 'Blockchain',
 
 
 
-const AllCommuntiesSection = () => {
+const AllCommuntiesSection = async () => {
+  const communities = await getCommunities()
+
   return (
     <section className="md:max-w-[1022px] mx-auto py-28 px-8">
         <div className="md:flex items-end justify-between">
@@ -29,7 +29,7 @@ const AllCommuntiesSection = () => {
             <div className="flex  items-center flex-wrap gap-2 pr-4">
                 <div style={activeBG} className="flex items-center justify-center gap-1.25 w-[83px] h-8 rounded-full">
                     <Jet_700 className="text-white text-[12px] tracking-[0.6px] w-fit" text="All" />
-                    <Jet_700 className="text-white text-[10px] tracking-[0.6px] w-fit  opacity-70" text='(8)' />
+                    <Jet_700 className="text-white text-[10px] tracking-[0.6px] w-fit  opacity-70" text={`(${communities.length})`} />
                 </div>
 
                 {filters.map((item, index) => (
@@ -43,8 +43,8 @@ const AllCommuntiesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 pt-10">
-            {CommunitiesList.map((community, index) => (
-                <CommunityCard key={index} community={community} index={index} />
+            {communities.map((community, index) => (
+                <CommunityCard key={community.name} community={community} index={index} />
             ))}
         </div>
 

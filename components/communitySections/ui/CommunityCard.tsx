@@ -1,5 +1,5 @@
 import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400, Pop_600, Pop_600_Italic } from "@/components/fontAids/Fonts"
-import { communityProps } from "./FeaturedCommunityCard"
+import type { communityProps } from "./FeaturedCommunityCard"
 import Image from "next/image"
 import { CalenderIcon, PeopleIcon } from "@/components/SVGAids/SVG"
 
