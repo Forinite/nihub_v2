@@ -5,6 +5,7 @@ import CommunityImpactSection from '@/components/communitySections/CommunityImpa
 import NewCommunitySection from '@/components/communitySections/NewCommunitySection'
 import HiddenH1 from '@/components/HiddenH1'
 
+export const revalidate = 60
 
 const CommunitiesPage = () => {
   return (

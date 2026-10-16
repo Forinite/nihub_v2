@@ -6,7 +6,7 @@ const DotGridBG_Hero = () => {
         <div className="absolute w-full h-full top-0 ">
           <div className="z-10  absolute top-0 w-full h-full overflow-hidden">
             <div className="flex items-center justify center w-full h-full">
-              <Image className='w-[1008px]  mx-auto opacity-20' src={dotGridImage2} alt="bg dots" width={1008} height={772}  />
+              <Image className='w-[1008px] mx-auto opacity-20' src={dotGridImage2} alt="bg dots" width={1008} height={772} style={{ height: "auto" }} />
             </div>
           </div>
 

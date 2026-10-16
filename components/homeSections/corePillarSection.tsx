@@ -3,11 +3,13 @@ import { Pop_400 } from '../fontAids/Fonts'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import CorePillarCard from './ui/CorePillarCard'
-import { CorePillarInfo } from '@/static-data/home_data'
+import { getImageContentItems } from '@/lib/supabase/home'
 
 
 
-const CorePillarSection = () => {
+const CorePillarSection = async () => {
+    const corePillars = await getImageContentItems("core_pillars")
+
   return (
     <section className='core-pillar-section-shadow core-pillar-section-bg common-section-padding px-6'>
         <div className='text-center flex flex-col items-center justifty-center'>
@@ -18,9 +20,9 @@ const CorePillarSection = () => {
                 
         </div>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-10 mt-14  common-max-width mx-auto'>
-            {CorePillarInfo.map((pillar, index) => (
+            {corePillars.map((pillar) => (
                 <CorePillarCard 
-                    key={index} 
+                    key={pillar.title}
                     title={pillar.title} 
                     description={pillar.description} 
                     img={pillar.img} 

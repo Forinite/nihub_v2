@@ -2,10 +2,10 @@ import SectionHeaderText from '../ui/SectionHeaderText'
 import SectionSubHeaderText from '../ui/SectionSubHeaderText'
 import FeaturedProgramCard from './ui/FeaturedProgramCard'
 import { LinkTemp1 } from '../ui/LinkTemps'
-import { programmes } from '@/static-data/home_data'
+import { getHomePrograms } from '@/lib/supabase/home'
 
-
-const TrainingSection = () => {
+const TrainingSection = async () => {
+    const programmes = await getHomePrograms()
   return (
     <section className='common-section-padding px-8 common-max-width mx-auto '>
         <div className='relative md:h-24 w-full'>
@@ -22,8 +22,8 @@ const TrainingSection = () => {
 
         <div className='pt-12'>
             <div className='grid md:grid-cols-2  gap-6 md:gap-10'> 
-                {programmes.map(({image, status, title, description, venue, date, link }, index) => (
-                    <FeaturedProgramCard  key={index}
+                {programmes.map(({image, status, title, description, venue, date, link }) => (
+                    <FeaturedProgramCard  key={title}
                         image={image} 
                         status={status}
                         title={title}

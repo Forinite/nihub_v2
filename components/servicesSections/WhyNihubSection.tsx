@@ -1,9 +1,14 @@
-import { partners, WhyNIHUBList } from "@/static-data/services_data"
 import { Bai_700, Jet_700, Pop_400 } from "../fontAids/Fonts"
 import SectionHeaderText from "../ui/SectionHeaderText"
+import { getServiceEditorialItems, getServicePartners } from "@/lib/supabase/services"
 
 
-const WhyNihubSection = () => {
+const WhyNihubSection = async () => {
+  const [reasons, partners] = await Promise.all([
+    getServiceEditorialItems("service_benefits"),
+    getServicePartners(),
+  ])
+
   return (
      <section className="pink-bg w-full">
         <div className="max-w-[1022px] mx-auto  md:py-28 py-20 md:px-8 px-6">
@@ -19,13 +24,13 @@ const WhyNihubSection = () => {
             
             <div className="pt-14 grid md:grid-cols-2 gap-6">
 
-                {WhyNIHUBList.map((reason, index) => (
-                    <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={index} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
+                {reasons.map((reason) => (
+                    <div style={{boxShadow: "0px 2px 14px 0px #2B10430F"}} key={reason.title} className="bg-white rounded-2xl border border-[#2B10430F] relative flex justify-center">
                         <div className="p-6 flex flex-col ">
                             <div className="bg-[#2B104312] rounded-[14px] w-10 h-10 flex items-center justify-center  ">
                                 <reason.icon  color="#2B1043" width="20" height="20"/>    
                             </div>
-                            <Bai_700 className="text-[15px] base-purple-text pt-4 "  text={reason.header}/>
+                            <Bai_700 className="text-[15px] base-purple-text pt-4 "  text={reason.title}/>
                             <Pop_400 className="text-[13px] base-purple-text-200 pt-2" text={reason.description} />
                         </div>
                     </div>
@@ -36,8 +41,8 @@ const WhyNihubSection = () => {
                 <Jet_700 className="tracking-[1.98px] uppercase text-[11px] base-purple-text text-center"  text="Service Partners & Accreditors"/>
                 <div className="pt-7 flex flex-wrap items-center justify-center gap-5">
 
-                    {partners.map((partner, index) => (
-                        <div  key={index} style={{boxShadow: "0px 2px 10px 0px #2B104314"}} className="w-fit h-fit rounded-[14px]  "> 
+                    {partners.map((partner) => (
+                        <div  key={partner} style={{boxShadow: "0px 2px 10px 0px #2B104314"}} className="w-fit h-fit rounded-[14px]  ">
                             <Bai_700 className="text-[14px] base-black-text w-fit h-fit py-2.5 px-5 rounded-[14px] border border-[#2B104312] " text={partner}/>
                         </div>
                     ))}

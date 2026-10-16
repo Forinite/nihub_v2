@@ -5,6 +5,8 @@ import HiddenH1 from '@/components/HiddenH1'
 import DotGridBG from '@/components/homeSections/bg/DotGridBG'
 import PathIndicator from '@/components/PathIndicator'
 
+export const revalidate = 60
+
 const AboutSectionOrganised = () => {
   return(
         <div className='relative pt-40 overflow-hidden bg-white'>

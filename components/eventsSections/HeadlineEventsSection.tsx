@@ -1,9 +1,11 @@
 import { Bai_700 } from "@/components/fontAids/Fonts"
 import SectionHeaderText from "@/components/ui/SectionHeaderText"
 import HeadlineEventsCard from "./ui/HeadlineEventsCard"
-import { HeadlineEvents } from "@/static-data/events_data"
+import { getEvents } from "@/lib/supabase/events"
 
-const HeadlineEventsSection = () => {
+const HeadlineEventsSection = async () => {
+  const events = await getEvents({ headline: true })
+
   return (
     <section className=" py-20 md:py-28 pink-bg">
       <div className="max-w-[1022px] mx-auto md:px-8 px-6">
@@ -13,8 +15,8 @@ const HeadlineEventsSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 grid-cols-1 pt-12 gap-6">
-              {HeadlineEvents.map((event, index) => (
-                <HeadlineEventsCard key={index} event={event} />
+              {events.map((event) => (
+                <HeadlineEventsCard key={event.name} event={event} />
               ))}
           </div>
 

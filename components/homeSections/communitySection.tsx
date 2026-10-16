@@ -1,10 +1,12 @@
-import { comments } from "@/static-data/home_data"
+import { getTestimonials } from "@/lib/supabase/home"
 import SectionHeaderText from "../ui/SectionHeaderText"
 import SectionSubHeaderText from "../ui/SectionSubHeaderText"
 import CommentCard from "./ui/CommentCard"
 
 
-const CommunitySection = () => {
+const CommunitySection = async () => {
+    const comments = await getTestimonials()
+
   return (
     <section className="bg-white common-section-padding md:px-auto px-6">
         <div className="flex flex-col items-center text-center">
@@ -16,7 +18,7 @@ const CommunitySection = () => {
         <div className="pt-14 w-full max-w-[1004] grid md:grid-cols-3 gap-[21px] mx-auto">
             {comments.map((comment, index) => (
                 <CommentCard 
-                    key={index}
+                    key={`${comment.name}-${comment.title}`}
                     name={comment.name} 
                     title={comment.title} 
                     comment={comment.comment} 

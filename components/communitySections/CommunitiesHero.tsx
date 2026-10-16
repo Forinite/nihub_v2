@@ -1,11 +1,13 @@
 import PathIndicator from '../PathIndicator'
 import SectionHeaderText from '../ui/SectionHeaderText'
-import { Bai_700, Jet_600, Pop_400, Pop_600 } from '../fontAids/Fonts'
+import { Bai_700, Jet_600, Pop_400 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
-import { communityStats } from '@/static-data/communties_data'
+import { getSiteStats } from '@/lib/supabase/home'
 
 
-const CommunitiesHero = () => {
+const CommunitiesHero = async () => {
+  const communityStats = await getSiteStats("community_hero")
+
   return (
     <section className='py-36  max-w-[1022px] mx-auto'>
         <PathIndicator basePath='Home' nextPaths={['Communities']} />
@@ -20,9 +22,7 @@ const CommunitiesHero = () => {
                 </div>
 
                 <div className='pt-6 md:max-w-140 text-[17px] leading-[30.6px] base-purple-text-100  '>
-                    <Pop_400 text='NIHUB is home to ' className='inline' />
-                    <Pop_600 text='8 active communities ' className='base-purple-text inline' />
-                    <Pop_400  className='inline' text='spanning AI, blockchain, cybersecurity, cloud, and more. Find yours, join the conversation, and start building.' />
+                    <Pop_400 text='NIHUB brings students together across active communities spanning AI, blockchain, cybersecurity, cloud, and more. Find yours, join the conversation, and start building.' className='inline' />
                 </div>
 
                 
@@ -33,8 +33,8 @@ const CommunitiesHero = () => {
 
                 <div className='pt-16'>
                     <div className='flex md:flex-row flex-col  md:items-center gap-4'>
-                    {communityStats.map((stat, index) => (
-                            <div key={index} className=' py-4 px-5 rounded-[14px] w-fit  bg-white communities-stats-shadow  '> 
+                    {communityStats.map((stat) => (
+                            <div key={stat.label} className=' py-4 px-5 rounded-[14px] w-fit  bg-white communities-stats-shadow  '>
                                 <div className='flex items-center h-fit  w gap-3'> 
                                     <Bai_700 text={stat.value} className='text-[20px]  base-purple-text h-fit' />
                                     <Jet_600 text={stat.label} className='text-[11px] base-purple-text-300 uppercase h-fit pb-1' />

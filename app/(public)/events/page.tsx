@@ -6,6 +6,7 @@ import EventsImpactSections from "@/components/eventsSections/EventsImpactSectio
 import HeadlineEventsSection from "@/components/eventsSections/HeadlineEventsSection"
 import HiddenH1 from "@/components/HiddenH1"
 
+export const revalidate = 60
 
 const EventsPage = () => {
   return (

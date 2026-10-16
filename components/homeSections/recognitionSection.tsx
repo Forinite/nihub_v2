@@ -3,14 +3,14 @@ import SectionHeaderText from "../ui/SectionHeaderText"
 import SectionSubHeaderText from "../ui/SectionSubHeaderText"
 import RecognisedIndustryCard from "./ui/RecognisedIndustryCard"
 import Image from "next/image"
-import { awards, trustedPartnersAndSponsors } from "@/static-data/home_data"
+import { getPartners, getRecognitionAwards } from "@/lib/supabase/home"
 
-const partners = [
-    'Huawei', 'CISCO', 'Google', 'Microsoft', 'MTN Foundation', 'FUTMinna'
-]
+const RecognitionSection = async () => {
+    const [awards, trustedPartnersAndSponsors] = await Promise.all([
+        getRecognitionAwards(),
+        getPartners(),
+    ])
 
-
-const RecognitionSection = () => {
   return (
     <section className=" h-full    ">
         <div className="common-section-padding  bg-[#F5F5F5] px-8">
@@ -42,9 +42,15 @@ const RecognitionSection = () => {
 
                 <div className="md:flex  hidden items-center justify-center pt-8">
                     <ul className="flex gap-3">
-                        {trustedPartnersAndSponsors.map((item, index) => (
-                            <li key={index} className=" px-6 py-3  w-32.5 h-32.5 rounded-md shadow-md bg-white flex items-center justify-center"> 
-                                <Image className="w-full  " alt={item.partner} src={item.img}   /> 
+                        {trustedPartnersAndSponsors.map((item) => (
+                            <li key={item.partner} className=" px-6 py-3  w-32.5 h-32.5 rounded-md shadow-md bg-white flex items-center justify-center">
+                                <Image
+                                    className="h-full w-full object-contain"
+                                    alt={item.partner}
+                                    src={item.image}
+                                    width={130}
+                                    height={130}
+                                />
                             </li>
                         ))}
                     </ul>
@@ -54,8 +60,8 @@ const RecognitionSection = () => {
                     <Jet_700 className="tracking-[1.98px] uppercase text-[11px] smaller-text-9 base-purple-text text-center"  text="Trusted Partners & Sponsors"/>
                     <div className="pt-8 flex flex-wrap items-center  justify-center gap-5">
 
-                        {partners.map((partner, index) => (
-                            <div  key={index} style={{boxShadow: "0px 2px 10px 0px #2B104314"}} className="w-fit h-fit rounded-[14px]  "> 
+                        {trustedPartnersAndSponsors.map(({partner}) => (
+                            <div  key={partner} style={{boxShadow: "0px 2px 10px 0px #2B104314"}} className="w-fit h-fit rounded-[14px]  ">
                                 <Bai_700 className="text-[14px] smaller-text-11 base-black-text w-fit h-fit py-2.5 px-5 rounded-[14px] border border-[#2B104312] " text={partner}/>
                             </div>
                         ))}

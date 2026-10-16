@@ -10,6 +10,8 @@ import TrainingSection from "@/components/homeSections/trainingSection";
 
 
 
+export const revalidate = 60
+
 export default function HomePage() {
   return (
     <main className="">

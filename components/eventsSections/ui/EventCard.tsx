@@ -1,25 +1,10 @@
 import { Bai_700, Jet_400, Jet_600, Jet_700, Pop_400 } from "@/components/fontAids/Fonts"
 import { CalenderIcon, LocationIcon, PeopleIcon } from "@/static-data/images"
 import Image from "next/image"
+import type { EventContent } from "@/lib/content-types"
 
 interface EventProps {
-    event: 
-    {
-        rgb: number[],
-        icon: any,
-        status: string,
-        type: string,
-        name: string,
-        description: string,
-        date: string,
-        starts: string,
-        venue: string,
-        seats: string,
-        keywords: string[],
-        registerLink: string,
-        learnMoreLink: string
-
-    }
+    event: EventContent
 }
 
 

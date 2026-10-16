@@ -1,4 +1,4 @@
-import { teamMembers } from "@/static-data/about_data"
+import { getTeamMembers } from "@/lib/supabase/about"
 import { Bai_700, Pop_400 } from "../fontAids/Fonts"
 import { LinkTemp1 } from "../ui/LinkTemps"
 import SectionHeaderText from "../ui/SectionHeaderText"
@@ -6,7 +6,9 @@ import TeamCard from "./ui/TeamCard"
 
 
 
-const TeamSection = () => {
+const TeamSection = async () => {
+  const teamMembers = await getTeamMembers()
+
   return (
     <section  className="common-section-padding">
       <div className="about-page-common-max-width mx-auto">
@@ -24,7 +26,7 @@ const TeamSection = () => {
         <div className="pt-14 md:grid grid-cols-2 gap-6">
 
           {teamMembers.map((item, index) => (
-            <TeamCard key={index} image={item.image} name={item.name} role={item.role} statement={item.statement} socials={item.socials} index={index} />
+            <TeamCard key={`${item.name}-${index}`} image={item.image} name={item.name} role={item.role} statement={item.statement} socials={item.socials} index={index} />
           ))}
 
         </div>

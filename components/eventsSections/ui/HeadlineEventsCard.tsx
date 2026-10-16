@@ -3,25 +3,10 @@ import { CalenderIcon, ClockIcon, LocationIcon, PeopleIcon } from "@/components/
 import {TicketIcon } from "@/static-data/images"
 import Image from "next/image"
 import Link from "next/link"
+import type { EventContent } from "@/lib/content-types"
 
 interface EventProps {
-    event: 
-    {
-        rgb: number[],
-        icon: any,
-        status: string,
-        type: string,
-        name: string,
-        description: string,
-        date: string,
-        starts: string,
-        venue: string,
-        seats: string,
-        keywords: string[],
-        registerLink: string,
-        learnMoreLink: string
-
-    }
+    event: EventContent
 }
 const HeadlineEventsCard = ({event} : EventProps ) => {
   return (

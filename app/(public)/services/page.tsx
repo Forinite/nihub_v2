@@ -5,6 +5,7 @@ import ServiceCTASection from "@/components/servicesSections/ServiceCTASection"
 import ServicesHero from "@/components/servicesSections/ServicesHero"
 import WhyNihubSection from "@/components/servicesSections/WhyNihubSection"
 
+export const revalidate = 60
 
 const ServicesPage = () => {
   return (

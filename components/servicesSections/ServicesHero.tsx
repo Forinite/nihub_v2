@@ -2,11 +2,12 @@ import PathIndicator from '../PathIndicator'
 import SectionHeaderText from '../ui/SectionHeaderText'
 import { Bai_700, Jet_400, Pop_400, Pop_600 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
-import { BarChartIcon, BookIcon, BuildingsIcon, GlobeIcon, MedalIcon, MessageIcon, RocketIcon, WifiIcon } from '../SVGAids/SVG'
-import { ServicesSummaryList } from '@/static-data/services_data'
+import { getServices } from '@/lib/supabase/services'
 
 
-const ServicesHero = () => {
+const ServicesHero = async () => {
+    const services = await getServices()
+
   return (
     <section className=' '>
         <div className='absolute z-10 ' style={{background: 'radial-gradient(50% 60% at 5% 85%, rgba(255, 178, 52, 0.07) 0%, rgba(255, 178, 52, 0) 100%)'}}/>
@@ -38,14 +39,14 @@ const ServicesHero = () => {
                             </div>
                         </div>
                         <div className='grid grid-cols-2 gap-3 w-full'>
-                            {ServicesSummaryList.map((service, index) => (
-                                <div key={index} style={{boxShadow: '0px 2px 12px 0px #2B104312'}} className='p-4 flex items-center gap-4 bg-white border border-[#2B10430F] rounded-[14px]'>
+                            {services.map((service) => (
+                                <div key={service.label} style={{boxShadow: '0px 2px 12px 0px #2B104312'}} className='p-4 flex items-center gap-4 bg-white border border-[#2B10430F] rounded-[14px]'>
                                     <div style={{background: `rgba(${service.rgb}, 0.05)`}} className='w-9 h-9 min-w-9 flex items-center justify-center rounded-[10px]'>
                                         <service.icon color={`rgb(${service.rgb})`} width='22' height='22' />
                                     </div>
                                     <div>
-                                        <Bai_700 className='text-[10px] md:text-[12px]    base-purple-text' text={service.label} />
-                                        <Jet_400  className='text-[10px] smaller-text-8 base-purple-text-300' text={service.description}/>
+                                        <Bai_700 className='text-[10px] md:text-[12px]    base-purple-text' text={service.mainConcept} />
+                                        <Jet_400  className='text-[10px] smaller-text-8 base-purple-text-300' text={service.label}/>
                                     </div>
                                 </div>
                             ))}

@@ -1,6 +1,7 @@
 import FeaturedEventCard from './ui/FeaturedEventCard'
 import SectionHeaderText from '../ui/SectionHeaderText'
-import { heroStats } from '@/static-data'
+import { getSiteStats } from '@/lib/supabase/home'
+import { getEvents } from '@/lib/supabase/events'
 import { Bai_700, Jet_400, Pop_400 } from '../fontAids/Fonts'
 import { LinkTemp1 } from '../ui/LinkTemps'
 import Image from 'next/image'
@@ -8,7 +9,12 @@ import { LongArrowDownIcon } from '@/static-data/images'
 import DotGridBG from './bg/DotGridBG'
 
 
-const HeroSection = () => {
+const HeroSection = async () => {
+  const [heroStats, featuredEvents] = await Promise.all([
+    getSiteStats("home_hero"),
+    getEvents({ featured: true }),
+  ])
+
   return (
     <section className=" relative h-fit py-12  overflow-hidden   ">
         
@@ -61,7 +67,7 @@ const HeroSection = () => {
                 </aside>
 
                 <aside className='w-[44.8%]  h-full md:flex hidden items-center justify-center '>
-                    <FeaturedEventCard />
+                    <FeaturedEventCard event={featuredEvents[0]} />
                 </aside>
             </div>
             <div className='w-fit h-fit md:block hidden absolute bottom-0 left-1/2 -ml-1.5'>

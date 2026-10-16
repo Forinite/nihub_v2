@@ -3,18 +3,17 @@
 import { Bai_700, Jet_400 } from '@/components/fontAids/Fonts';
 import { useCountdown } from '@/hooks/useCountdown';
 import { padNum } from '@/lib/utils';
-import React, { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
 
-const CountdownSection = ({className}: {className? :string}) => {
-  // Target: August 11th at 11:00 AM (Ensure you specify the year)
-  const targetDate = "2026-08-11T11:00:00"; 
+const subscribe = () => () => {};
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+const CountdownSection = ({className, targetDate}: {className? :string; targetDate: string}) => {
   const startsIn = useCountdown(targetDate);
   
   // Hydration fix: Only render the numbers once the component has mounted on the client
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   if (!isMounted) {
     // Return a skeleton or null during SSR to prevent mismatch

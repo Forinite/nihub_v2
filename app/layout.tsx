@@ -19,6 +19,7 @@ export const viewport: Viewport = {
   themeColor: "#2B1043",
 }
 export const metadata :Metadata ={
+  metadataBase: new URL('https://nihub.futminna.edu.ng'),
   title: 'NIHUB | FUTMinna - Nigeria Innovation Hub | FUTMinna',
   description: 'NIHUB is the technology incubator of the Federal University of Technology, Minna — empowering students, entrepreneurs, and innovators to build the future. ',
 
